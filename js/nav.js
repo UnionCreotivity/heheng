@@ -18,7 +18,7 @@ $(window).on("load", function () {
 
   src += `<div class="nav-left"><div class="nav-left-icon">
         <a href="index.html"
-            ><img src="../img/share/icon.svg" alt="icon"
+            ><img src="@/img/share/icon.svg" alt="icon"
         /></a>
     </div>`;
   src += `<button class="nav-hamb-icon">
