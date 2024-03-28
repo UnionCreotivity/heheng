@@ -824,6 +824,8 @@
           duration: 1.5,
         });
 
+        let cut5Ymove = window.innerWidth <= 1024 ? "10vw" : "5vw";
+        console.log(cut5Ymove);
         const cut5ImgTop = gsap.from(".cut-5-img2 img", {
           scrollTrigger: {
             trigger: ".cut-5",
@@ -831,7 +833,7 @@
             end: "bottom bottom",
             scrub: 1,
           },
-          y: "-5vw",
+          y: `-${cut5Ymove}`,
         });
 
         const cut5ImgBottom = gsap.from(".cut-5-img1 img,.cut-5-img3 img", {
@@ -841,7 +843,7 @@
             end: "bottom bottom",
             scrub: 1,
           },
-          y: "5vw",
+          y: cut5Ymove,
         });
       });
     </script>
