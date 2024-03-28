@@ -772,7 +772,6 @@
         });
         addDelay(".cut-3-para-h1 div");
 
-        console.log(xMove);
         const cut3Par = gsap.from(".cut-3-para-h1", {
           scrollTrigger: {
             trigger: ".cut-3",
@@ -788,6 +787,7 @@
           type: "chars",
         });
         addDelay(".cut-4-para-h1 div");
+
         const cut4Par = gsap.from(".cut-4-para-h1", {
           scrollTrigger: {
             trigger: ".cut-4",
@@ -813,6 +813,7 @@
           type: "chars",
         });
         addDelay(".cut-5-left-h1 div");
+
         const cut5Par = gsap.from(".cut-5-left-h1", {
           scrollTrigger: {
             trigger: ".cut-5",
@@ -842,18 +843,6 @@
           },
           y: "5vw",
         });
-
-        // cut5Img
-        //   .to(".cut-5-img1 img", {
-        //     y: "0.5vw",
-        //     duration: 1,
-        //     ease: "power1.inOut",
-        //   })
-        //   .to(".cut-5-img1 img", {
-        //     y: "0vw",
-        //     duration: 1,
-        //     ease: "power1.inOut",
-        //   });
       });
     </script>
   </body>
