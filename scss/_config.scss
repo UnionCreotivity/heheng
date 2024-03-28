@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800&display=swap"); //黑體
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700&display=swap"); //明體
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"); //英文字型
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap"); //日期
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap"); //Roboto
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"); //swiper css
+
+//字型
+$sans: "Noto Sans TC", sans-serif; //黑體
+$serif: "Noto Serif TC", serif; //明體
+$cor: "Cormorant Garamond", serif; //英文字型
+$jost: "Jost", sans-serif; //日期
+$micro: "Microsoft JhengHei"; //微軟正黑體
+
+//字型大小 電腦版
+$mainTitle: 3.5vw; //主標
+$subTitle: 1vw;
+$contentSize: 0.9vw; //內文
+
+//字型大小 平板
+$brandTitleTb: 3.6vw;
+$contentSizeTb: 2.75vw; //內文
+
+//字型大小 手機版
+$mainTitlePH: 9.75vw; //主標
+$subTitlePH: 4.25vw;
+$contentSizePH: 3.75vw; //內文
+
+@mixin laptop() {
+  @media all and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media all and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media all and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin para() {
+  h1 {
+    font-family: $cor;
+    font-size: $mainTitle;
+    font-weight: 400;
+  }
+  h3 {
+    font-family: $serif;
+    font-size: $subTitle;
+    margin-bottom: 1vw;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  p {
+    font-family: $micro;
+    font-size: $contentSize;
+    line-height: 2;
+    letter-spacing: 2px;
+  }
+  .line {
+    background-color: black;
+    width: 5vw;
+    height: 1px;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+  }
+  @include tablet {
+    h1 {
+      font-size: $mainTitlePH;
+    }
+    h3 {
+      font-size: $subTitlePH;
+      margin-bottom: 5vw;
+    }
+    p {
+      font-size: $contentSizePH;
+      line-height: 1.8;
+    }
+    .line {
+      width: 12vw;
+      margin-top: 6vw;
+      margin-bottom: 6vw;
+    }
+  }
+}
