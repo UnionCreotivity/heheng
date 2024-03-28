@@ -227,11 +227,11 @@
             <p>台北華爾街 國際飯店╳企總大樓 億級聚場</p>
             <p>世界掌心中的 菁英棲心居所</p>
             <div class="swiper-button">
-              <div class="swiper-button-prev">
+              <div class="swiper-button-prev swiper-button-prev-1">
                 <img src="./img/share/prev.svg" alt="prev" />
               </div>
               <div class="swiper-line"></div>
-              <div class="swiper-button-next">
+              <div class="swiper-button-next swiper-button-next-1">
                 <img src="./img/share/next.svg" alt="next" />
               </div>
             </div>
@@ -469,6 +469,12 @@
                       />
                     </div>
                     <h3>植感入宅</h3>
+                    <div class="cut-4-pic-para-weird-line">
+                      <img
+                        src="./img/home/cut-4-weird-line.svg"
+                        alt="cut-4-weird-line"
+                      />
+                    </div>
                     <p>
                       踏入空間便能感受植栽與設計<br />結合帶來的舒服、和諧與溫暖
                     </p>
@@ -487,6 +493,12 @@
                       />
                     </div>
                     <h3>永續發展</h3>
+                    <div class="cut-4-pic-para-weird-line">
+                      <img
+                        src="./img/home/cut-4-weird-line.svg"
+                        alt="cut-4-weird-line"
+                      />
+                    </div>
                     <p>實現資源循環與再利用<br />為未來世代締造更美好的居所</p>
                   </div>
                 </div>
@@ -503,6 +515,12 @@
                       />
                     </div>
                     <h3>社區共享</h3>
+                    <div class="cut-4-pic-para-weird-line">
+                      <img
+                        src="./img/home/cut-4-weird-line.svg"
+                        alt="cut-4-weird-line"
+                      />
+                    </div>
                     <p>
                       促進鄰里情誼，享受居民交流<br />建造令人嚮往的溫馨和諧社區
                     </p>
@@ -521,6 +539,12 @@
                       />
                     </div>
                     <h3>卓越設計</h3>
+                    <div class="cut-4-pic-para-weird-line">
+                      <img
+                        src="./img/home/cut-4-weird-line.svg"
+                        alt="cut-4-weird-line"
+                      />
+                    </div>
                     <p>
                       構築舒適、實用且具美感的居住環境<br />始終堅持卓越品質
                     </p>
@@ -539,6 +563,12 @@
                       />
                     </div>
                     <h3>貼心服務</h3>
+                    <div class="cut-4-pic-para-weird-line">
+                      <img
+                        src="./img/home/cut-4-weird-line.svg"
+                        alt="cut-4-weird-line"
+                      />
+                    </div>
                     <p>
                       專屬社區服務團隊為您提供專業服務<br />讓您居住無憂，享受尊榮待遇
                     </p>
@@ -557,10 +587,25 @@
                       />
                     </div>
                     <h3>安全守護</h3>
+                    <div class="cut-4-pic-para-weird-line">
+                      <img
+                        src="./img/home/cut-4-weird-line.svg"
+                        alt="cut-4-weird-line"
+                      />
+                    </div>
                     <p>位於繁華地段，遠離車流喧囂<br />安心居住在安寧的環境</p>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="swiper-button-2 ph">
+            <div class="swiper-button-prev swiper-button-prev-2">
+              <img src="./img/share/prev.svg" alt="prev" />
+            </div>
+            <div class="swiper-line"></div>
+            <div class="swiper-button-next swiper-button-next-2">
+              <img src="./img/share/next.svg" alt="next" />
             </div>
           </div>
         </div>
@@ -652,9 +697,13 @@
             slidesPerView: 1,
             spaceBetween: 50,
             effect: "fade",
-            autoplay: true,
+            // autoplay: true,
             loop: true,
             allowTouchMove: false,
+            navigation: {
+              prevEl: ".swiper-button-prev-2",
+              nextEl: ".swiper-button-next-2",
+            },
           });
         }
         //六角形圖片展開
