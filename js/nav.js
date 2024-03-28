@@ -21,11 +21,18 @@ $(window).on("load", function () {
             ><img src="img/share/icon.svg" alt="icon"
         /></a>
     </div>`;
-  src += `<button class="nav-hamb-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button></div>`;
+  //   <button class="nav-hamb-icon">
+  //   <span></span>
+  //   <span></span>
+  //   <span></span>
+  // </button>
+  src += `
+  <button class="hamburger hamburger--spring nav-hamb-icon ph" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button></div>
+            `;
   src += `
         <div class="nav-right">
           <ul class="nav-right-list">`;
@@ -71,12 +78,14 @@ $(window).on("load", function () {
     $(".nav-hamb-icon").on("click", function (e) {
       e.preventDefault();
 
-      if (!$(this).hasClass("hamb-isActive")) {
-        $(".nav-hamb-icon").addClass("hamb-isActive"); //漢堡選單變成叉叉
+      if (!$(this).hasClass("is-active")) {
+        $(".nav-hamb-icon").addClass("is-active"); //漢堡選單變成叉叉
         $("#nav").addClass("bg53");
+        console.log("yes");
       } else {
-        $(".nav-hamb-icon").removeClass("hamb-isActive"); //漢堡選單移除叉叉
+        $(".nav-hamb-icon").removeClass("is-active"); //漢堡選單移除叉叉
         $("#nav").removeClass("bg53");
+        console.log("no");
       }
 
       $(".nav-right").toggle("slide", { direction: "right" });
