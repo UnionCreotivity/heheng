@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>關於我們</title>
+  </head>
+  <body>
+    <nav id="nav"></nav>
+    <main id="origin"></main>
+    <footer id="footer">
+      <span>Copyright © <span class="year">2024</span>恆合機構版權所有</span
+      ><span>地址：231台灣新店區寶橋路140巷11號11樓</span
+      ><span>TEL： 02-2910-8718</span>
+    </footer>
+    <script src="./js/nav.js"></script>
+    <script src="./js/gsap/gsap.min.js"></script>
+    <script src="./js/gsap/ScrollTrigger.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        if (window.innerWidth <= 1024) {
+          $(".pc").remove();
+        } else {
+          $(".ph").remove();
+        }
+      });
+    </script>
+  </body>
+</html>
