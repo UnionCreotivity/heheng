@@ -60,7 +60,7 @@
     gap: 1vw;
     @include tablet {
       width: 65%;
-      gap: 7vw;
+      gap: 10vw;
     }
   }
   .cut-1-left-para-line {
@@ -80,20 +80,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    > h4 {
-      position: relative;
-
-      font-size: 4.5vw;
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        height: 1px;
-        width: 10vw;
-        background-color: black;
-        left: 0;
-      }
-    }
     @include tablet {
       width: 65%;
       gap: 6vw;
@@ -116,7 +102,7 @@
   }
   .cut-1-left-para-line-second {
     width: 1px;
-    height: 9vw;
+    height: 7vw;
     position: relative;
     background-color: black;
   }
@@ -252,9 +238,6 @@
     p {
       text-align: center;
     }
-    br {
-      display: none;
-    }
     .line {
       margin-top: 0.5vw;
       margin-bottom: 4vw;
@@ -364,6 +347,7 @@
       right: unset;
       top: unset;
       width: 85%;
+      margin-top: 5%;
     }
   }
   .cut-2-right-bottom-heng-hong-img {
