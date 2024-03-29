@@ -1,5 +1,6 @@
 @import "_config";
 @import "_index";
+@import "_origin";
 
 *,
 ::after,
@@ -40,9 +41,10 @@ section {
 //navbar
 #nav {
   display: flex;
+  justify-content: space-between;
   list-style-type: none;
-  padding-left: 7vw;
-  padding-right: 5vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
   padding-top: 2vw;
   width: 100%;
   z-index: 99999;
@@ -60,7 +62,6 @@ section {
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  width: 100%;
   @include tablet {
     padding-left: 7vw;
     padding-right: 5vw;
@@ -78,7 +79,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   @include tablet {
     width: 75%;
     left: 25%;

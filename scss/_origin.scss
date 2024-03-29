@@ -1,0 +1,482 @@
+@import "_config";
+
+#origin {
+  .cut-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vw;
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+
+  .cut-1-left {
+    position: relative;
+    height: 100%;
+    margin-top: 1vw;
+  }
+  .cut-1-left-banner {
+    width: 30.5vw;
+    @include tablet {
+      width: 50%;
+    }
+  }
+  .cut-1-left-para {
+    position: absolute;
+    top: 0;
+    writing-mode: vertical-rl;
+    line-height: 1;
+    margin-left: 14vw;
+    h1 {
+      font-size: 9vw;
+      font-family: $cor;
+      font-weight: 400;
+    }
+    h4 {
+      font-family: $serif;
+      font-size: 1.5vw;
+      letter-spacing: 5px;
+    }
+    @include tablet {
+      writing-mode: unset;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 22%;
+      margin-left: 0;
+      padding-left: 4vw;
+      h1 {
+        font-size: 14vw;
+      }
+    }
+  }
+  .cut-1-left-para-first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    gap: 1vw;
+    @include tablet {
+      width: 65%;
+      gap: 7vw;
+    }
+  }
+  .cut-1-left-para-line {
+    width: 1px;
+    height: 5vw;
+    left: -1vw;
+    position: relative;
+    background-color: black;
+    @include tablet {
+      top: 2vw;
+      left: unset;
+      width: 17vw;
+      height: 1px;
+    }
+  }
+  .cut-1-left-para-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > h4 {
+      position: relative;
+
+      font-size: 4.5vw;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        width: 10vw;
+        background-color: black;
+        left: 0;
+      }
+    }
+    @include tablet {
+      width: 65%;
+      gap: 6vw;
+      > h4 {
+        position: relative;
+        font-size: 5.5vw;
+        width: 100%;
+        padding-bottom: 1vw;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -30%;
+          height: 1px;
+          width: 100%;
+          background-color: black;
+          left: 0;
+        }
+      }
+    }
+  }
+  .cut-1-left-para-line-second {
+    width: 1px;
+    height: 9vw;
+    position: relative;
+    background-color: black;
+  }
+  .cut-1-right-img {
+    position: relative;
+    top: 8vw;
+  }
+  .cut-1-right-img-1 {
+    position: absolute;
+    top: 13.5vw;
+    width: 24vw;
+    left: -10vw;
+    z-index: 2;
+  }
+  .cut-1-right-img-2 {
+    width: 38vw;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cut-1-fixed-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 17vw;
+    filter: drop-shadow(1px 1px 1px black);
+  }
+
+  //第2cut
+  .cut-2 {
+    display: flex;
+    margin-top: 10vw;
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .cut-2-left {
+    position: sticky;
+    top: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5vw;
+    width: 11vw;
+    height: 5vw;
+    @include tablet {
+      width: 100%;
+      flex-direction: row;
+      width: 85%;
+      gap: 10vw;
+      > .cut-2-link:nth-child(1) {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: black;
+          width: 1px;
+          height: 70%;
+          right: -18%;
+        }
+      }
+    }
+  }
+  .cut-2-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 12vw;
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 1vw;
+      > :nth-child(1) {
+        color: #918781;
+      }
+      > :nth-child(2) {
+        color: #cfb38e;
+      }
+      h3 {
+        font-size: $subTitle;
+        font-weight: 400;
+      }
+    }
+    @include tablet {
+      width: auto;
+      margin-left: 0;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 3vw;
+        > :nth-child(1) {
+        }
+        > :nth-child(2) {
+        }
+        h3 {
+          font-size: $contentSizePH;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .cut-2-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 12vw;
+    @include para();
+    @include tablet {
+      padding-right: 0;
+    }
+  }
+  .cut-2-right-top-img {
+    width: 85%;
+    margin-top: 10%;
+  }
+  .cut-2-right-top-para {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      text-align: center;
+      letter-spacing: 2px;
+    }
+    p {
+      text-align: center;
+    }
+    br {
+      display: none;
+    }
+    .line {
+      margin-top: 0.5vw;
+      margin-bottom: 4vw;
+    }
+    @include tablet {
+      width: 85%;
+      br {
+        display: block;
+      }
+      h1 {
+        font-size: 4vw;
+        color: #666666;
+      }
+      h3 {
+        text-align: center;
+        order: -1;
+        margin-top: 12%;
+      }
+      .line {
+        margin-bottom: 7vw;
+        margin-top: 7vw;
+      }
+      p {
+        text-align: start;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .cut-2-right-people {
+    position: relative;
+    width: 27vw;
+    margin-top: 3vw;
+    z-index: 1;
+    @include tablet {
+      width: 85%;
+      margin-top: 10%;
+    }
+  }
+
+  .cut-2-right-middle-para {
+    width: 70%;
+    margin-top: 12vw;
+    @include para();
+    .line {
+      margin-top: 0.5vw;
+      margin-bottom: 4vw;
+    }
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 85%;
+      h1 {
+        display: flex;
+        align-items: center;
+        color: #666666;
+        font-size: 4vw;
+        gap: 3vw;
+        letter-spacing: 2px;
+        br {
+          display: none;
+        }
+      }
+      h3 {
+        order: -1;
+        margin-bottom: 3vw;
+      }
+      .line {
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+      }
+    }
+  }
+
+  //cut-2背後的線
+  .cut-2-right-people-line {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 22vw;
+    width: 100%;
+    @include tablet {
+      display: none;
+    }
+  }
+  .rising-curve,
+  .decrease-curve {
+    width: 100%;
+  }
+
+  .decrease-curve {
+    position: relative;
+    top: 7vw;
+  }
+  .cut-2-right-bottom-heng-hong {
+    position: relative;
+    right: -12vw;
+    top: -12vw;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: unset;
+      top: unset;
+      width: 85%;
+    }
+  }
+  .cut-2-right-bottom-heng-hong-img {
+    width: 43vw;
+    filter: drop-shadow(1px 1px 1px black);
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .cut-2-right-bottom-heng-hong-para {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cut-2-right-bottom-heng-hong-para-top {
+    text-align: center;
+    width: 42%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 64%;
+    top: 51.5%;
+
+    @include para();
+    h3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .heng-hong-para-top-en {
+      font-family: $cor;
+      font-weight: 500;
+    }
+    @include tablet {
+      h1 {
+        font-size: 6.75vw;
+        margin-bottom: 1vw;
+      }
+      h3 {
+        margin-bottom: 1vw;
+      }
+      text-align: center;
+      width: 60%;
+      position: relative;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 51.5%;
+    }
+  }
+  .cut-2-right-bottom-heng-hong-para-top-line {
+    display: inline-block;
+    background-color: black;
+    width: 5vw;
+    height: 1px;
+    margin: auto;
+    @include tablet {
+      width: 12vw;
+    }
+  }
+  .cut-2-right-bottom-heng-hong-para-bottom {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .heng-hong-circle {
+    position: absolute;
+    top: 0;
+    width: 11vw;
+    @include tablet {
+      width: 30vw;
+    }
+  }
+  .heng-hong-circle-1 {
+    top: -9%;
+    right: 4.5%;
+    @include tablet {
+      top: -12%;
+      right: -2.5%;
+    }
+  }
+  .heng-hong-circle-2 {
+    left: -6.5%;
+    top: 23%;
+    @include tablet {
+      left: 1.5%;
+      top: -15%;
+    }
+  }
+  .heng-hong-circle-3 {
+    right: 21%;
+    top: 62%;
+    @include tablet {
+      right: 32%;
+      top: 53%;
+    }
+  }
+
+  //第3cut
+  .cut-3 {
+    margin-top: -17vw;
+    margin-bottom: -8vw;
+  }
+  .cut-3-img {
+    width: 37.5vw;
+    z-index: 1;
+    position: relative;
+  }
+  .cut-3-fixed {
+    position: absolute;
+    left: 3vw;
+    bottom: -1vw;
+    width: 25vw;
+    filter: drop-shadow(1px 1px 1px black);
+  }
+}
