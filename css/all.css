@@ -440,6 +440,7 @@
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  transform-origin: left center;
 }
 @keyframes shine {
   0% {
@@ -963,6 +964,9 @@
     width: 100%;
   }
 }
+#home .cut-4-para-h1 {
+  overflow: hidden;
+}
 #home .cut-4-para-h1 div {
   animation-name: shine;
   animation-duration: 3.8s;
@@ -1067,6 +1071,9 @@
     width: 85%;
     gap: 2vw;
   }
+}
+#home .cut-5-left-h1 {
+  overflow: hidden;
 }
 #home .cut-5-left-h1 div {
   animation-name: shine;
@@ -1380,7 +1387,7 @@ section {
   padding-top: 1vw;
   padding-bottom: 1vw;
   font-weight: 300;
-  margin-top: 8%;
+  margin-top: 8vw;
 }
 #footer span {
   color: #fff;

@@ -319,6 +319,7 @@
       animation-fill-mode: both;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
+      transform-origin: left center;
     }
   }
   @keyframes shine {
@@ -716,6 +717,7 @@
     }
   }
   .cut-4-para-h1 {
+    overflow: hidden;
     div {
       animation-name: shine;
       animation-duration: 3.8s;
@@ -774,6 +776,7 @@
     }
   }
   .cut-5-left-h1 {
+    overflow: hidden;
     div {
       animation-name: shine;
       animation-duration: 3.8s;

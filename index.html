@@ -771,15 +771,28 @@
         });
         addDelay(".cut-2-right-h1 div");
         let xMove = window.innerWidth <= 1024 ? "-130%" : "-105%";
-        gsap.from(".cut-2-right-h1", {
-          scrollTrigger: {
-            trigger: ".cut-2-container",
-            start: "center 75%",
-          },
-          x: xMove,
-          ease: "power3.inOut",
-          duration: 1.5,
-        });
+        if (window.innerWidth <= 1024) {
+          gsap.from(cut2Title.chars, {
+            scrollTrigger: {
+              trigger: ".cut-2-container",
+              start: "center 75%",
+            },
+            stagger: 0.05,
+            rotation: "40",
+            y: "70%",
+          });
+        } else {
+          gsap.from(".cut-2-right-h1", {
+            scrollTrigger: {
+              trigger: ".cut-2-container",
+              start: "center 75%",
+            },
+            x: xMove,
+            ease: "power3.inOut",
+            duration: 1.5,
+          });
+        }
+
         const cut2ImgPar1 = gsap.fromTo(
           ".cut-2-left-img-1 img",
           {
@@ -821,32 +834,54 @@
           type: "chars",
         });
         addDelay(".cut-3-para-h1 div");
-
-        const cut3Par = gsap.from(".cut-3-para-h1", {
-          scrollTrigger: {
-            trigger: ".cut-3",
-            start: "25% 75%",
-          },
-          x: xMove,
-          ease: "power3.inOut",
-          duration: 1.5,
-        });
+        if (window.innerWidth <= 1024) {
+          gsap.from(cut3Title.chars, {
+            scrollTrigger: {
+              trigger: ".cut-3",
+              start: "center 75%",
+            },
+            stagger: 0.05,
+            rotation: "40",
+            y: "90%",
+          });
+        } else {
+          const cut3Par = gsap.from(".cut-3-para-h1", {
+            scrollTrigger: {
+              trigger: ".cut-3",
+              start: "25% 75%",
+            },
+            x: xMove,
+            ease: "power3.inOut",
+            duration: 1.5,
+          });
+        }
 
         //cut4
         const cut4Title = new SplitText(".cut-4-para-h1", {
           type: "chars",
         });
         addDelay(".cut-4-para-h1 div");
-
-        const cut4Par = gsap.from(".cut-4-para-h1", {
-          scrollTrigger: {
-            trigger: ".cut-4",
-            start: "25% 75%",
-          },
-          x: xMove,
-          ease: "power3.inOut",
-          duration: 1.5,
-        });
+        if (window.innerWidth <= 1024) {
+          const cut4Par = gsap.from(cut4Title.chars, {
+            scrollTrigger: {
+              trigger: ".cut-4-para",
+              start: "25% 75%",
+            },
+            stagger: 0.05,
+            rotation: "40",
+            y: "90%",
+          });
+        } else {
+          const cut4Par = gsap.from(".cut-4-para-h1", {
+            scrollTrigger: {
+              trigger: ".cut-4",
+              start: "25% 75%",
+            },
+            x: xMove,
+            ease: "power3.inOut",
+            duration: 1.5,
+          });
+        }
 
         const cut4Img = gsap.from(".cut-4-container", {
           scrollTrigger: {
@@ -864,15 +899,27 @@
         });
         addDelay(".cut-5-left-h1 div");
 
-        const cut5Par = gsap.from(".cut-5-left-h1", {
-          scrollTrigger: {
-            trigger: ".cut-5",
-            start: "25% 75%",
-          },
-          x: xMove,
-          ease: "power3.inOut",
-          duration: 1.5,
-        });
+        if (window.innerWidth <= 1024) {
+          const cut5Par = gsap.from(cut5Title.chars, {
+            scrollTrigger: {
+              trigger: ".cut-5-left",
+              start: "25% bottom",
+            },
+            stagger: 0.05,
+            rotation: "40",
+            y: "90%",
+          });
+        } else {
+          const cut5Par = gsap.from(".cut-5-left-h1", {
+            scrollTrigger: {
+              trigger: ".cut-5",
+              start: "25% 75%",
+            },
+            x: xMove,
+            ease: "power3.inOut",
+            duration: 1.5,
+          });
+        }
 
         let cut5Ymove = window.innerWidth <= 1024 ? "10vw" : "5vw";
         console.log(cut5Ymove);
