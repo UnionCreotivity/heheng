@@ -150,10 +150,10 @@
     justify-content: center;
     flex-direction: column;
     gap: 0.5vw;
-    width: 11vw;
+    width: 20%;
     height: 5vw;
+    padding-left: 5%;
     @include tablet {
-      width: 100%;
       flex-direction: row;
       width: 85%;
       gap: 10vw;
@@ -174,7 +174,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin-left: 12vw;
     a {
       display: flex;
       align-items: center;
@@ -215,8 +214,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
-    padding-right: 12vw;
+    width: 80%;
+    padding-right: 10%;
     @include para();
     @include tablet {
       padding-right: 0;
@@ -236,6 +235,9 @@
       letter-spacing: 2px;
     }
     p {
+      text-align: center;
+    }
+    h3 {
       text-align: center;
     }
     .line {

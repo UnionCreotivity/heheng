@@ -39,6 +39,13 @@ section {
   }
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  &::after {
+    content: unset;
+  }
+}
+
 //navbar
 #nav {
   display: flex;
