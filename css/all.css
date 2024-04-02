@@ -1281,13 +1281,13 @@
 #origin .cut-2 {
   display: flex;
   margin-top: 10vw;
-  overflow: hidden;
 }
 @media all and (max-width: 1024px) {
   #origin .cut-2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 }
 #origin .cut-2-left {

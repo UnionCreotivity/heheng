@@ -135,11 +135,12 @@
   .cut-2 {
     display: flex;
     margin-top: 10vw;
-    overflow: hidden;
+
     @include tablet {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
   }
 
