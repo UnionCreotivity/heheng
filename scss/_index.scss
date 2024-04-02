@@ -557,8 +557,12 @@
     margin-bottom: 0.5vw;
   }
   .cut-4-pic-para-weird-line {
-    width: 0.8vw;
-    margin-bottom: 3vw;
+    width: 0.3vw;
+    margin-bottom: 1vw;
+    @include tablet {
+      width: 0.8vw;
+      margin-bottom: 3vw;
+    }
   }
   .cut-4-circle-1,
   .cut-4-circle-2,

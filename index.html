@@ -782,14 +782,14 @@
             y: "70%",
           });
         } else {
-          gsap.from(".cut-2-right-h1", {
+          gsap.from(cut2Title.chars, {
             scrollTrigger: {
               trigger: ".cut-2-container",
               start: "center 75%",
             },
-            x: xMove,
-            ease: "power3.inOut",
-            duration: 1.5,
+            stagger: 0.05,
+            rotation: "40",
+            y: "70%",
           });
         }
 
@@ -845,14 +845,14 @@
             y: "90%",
           });
         } else {
-          const cut3Par = gsap.from(".cut-3-para-h1", {
+          const cut3Par = gsap.from(cut3Title.chars, {
             scrollTrigger: {
               trigger: ".cut-3",
               start: "25% 75%",
             },
-            x: xMove,
-            ease: "power3.inOut",
-            duration: 1.5,
+            stagger: 0.05,
+            rotation: "40",
+            y: "90%",
           });
         }
 
@@ -872,14 +872,14 @@
             y: "90%",
           });
         } else {
-          const cut4Par = gsap.from(".cut-4-para-h1", {
+          const cut4Par = gsap.from(cut4Title.chars, {
             scrollTrigger: {
               trigger: ".cut-4",
               start: "25% 75%",
             },
-            x: xMove,
-            ease: "power3.inOut",
-            duration: 1.5,
+            stagger: 0.05,
+            rotation: "40",
+            y: "90%",
           });
         }
 
@@ -910,14 +910,14 @@
             y: "90%",
           });
         } else {
-          const cut5Par = gsap.from(".cut-5-left-h1", {
+          const cut5Par = gsap.from(cut5Title.chars, {
             scrollTrigger: {
               trigger: ".cut-5",
               start: "25% 75%",
             },
-            x: xMove,
-            ease: "power3.inOut",
-            duration: 1.5,
+            stagger: 0.05,
+            rotation: "40",
+            y: "90%",
           });
         }
 

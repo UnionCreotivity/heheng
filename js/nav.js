@@ -3,7 +3,7 @@ const navItem = [
     number: "01",
     name: "關於恆合",
     enName: "About",
-    url: "#",
+    url: "About_Origin.html",
   },
   { number: "02", name: "最新消息", enName: "Least News", url: "#" },
   { number: "03", name: "熱銷建案", enName: "New Project", url: "#" },
