@@ -214,7 +214,7 @@
     justify-content: center;
     flex-direction: column;
     width: 80%;
-    padding-right: 10%;
+    padding-right: 17.5%;
     overflow: hidden;
     @include para();
     @include tablet {
@@ -383,7 +383,7 @@
   }
   .cut-2-right-bottom-heng-hong {
     position: relative;
-    right: -12vw;
+    right: -15vw;
     top: -12vw;
     @include tablet {
       display: flex;
@@ -416,7 +416,7 @@
     left: 64%;
     top: 51.5%;
     mask-image: url("../img/share/cloud.webp");
-    mask-size: 0%;
+    mask-size: 200%;
     mask-repeat: no-repeat;
     mask-position: center;
     @include para();

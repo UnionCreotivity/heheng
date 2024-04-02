@@ -215,7 +215,10 @@
             start: "top center",
           },
         });
-
+        const cut2MaskSet = gsap.set(".cut-2-right-bottom-heng-hong-para-top", {
+          maskSize: "200%",
+        });
+        cut2CircleTl.add(cut2MaskSet);
         cut2CircleTl
           .from(".cut-2-right-bottom-heng-hong-para-bottom", {
             rotation: "180",
@@ -230,13 +233,14 @@
             },
             "<"
           )
-          .to(
+          .from(
             ".cut-2-right-bottom-heng-hong-para-top",
             {
-              maskSize: "200%",
+              maskSize: "0%",
+              autoAlpha: 0,
               duration: 3,
             },
-            "<+1"
+            "<+1.25"
           );
 
         // gsap.from(".cut-2-right-bottom-heng-hong-para-bottom", {
