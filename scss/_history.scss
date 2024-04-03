@@ -117,11 +117,13 @@
     width: 24vw;
     left: -10vw;
     z-index: 2;
+    overflow: hidden;
   }
   .cut-1-right-img-2 {
     width: 38vw;
     position: relative;
     z-index: 1;
+    overflow: hidden;
   }
 
   .cut-1-fixed-img {
@@ -142,7 +144,32 @@
       align-items: center;
     }
   }
-
+  .cut-2-right-top-para-h1 {
+    position: relative;
+    overflow: hidden;
+    div {
+      animation-name: shine;
+      animation-duration: 3.8s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      transform-origin: left center;
+    }
+  }
+  @keyframes shine {
+    0% {
+      color: #666666;
+    }
+    20% {
+      color: yellow;
+    }
+    40% {
+      color: #666666;
+    }
+    100% {
+      color: #666666;
+    }
+  }
   .cut-2-left {
     position: sticky;
     top: 10vw;
@@ -184,6 +211,7 @@
       align-items: center;
       text-decoration: none;
       gap: 1vw;
+      font-family: $serif;
       > :nth-child(1) {
         color: #918781;
       }
@@ -351,6 +379,7 @@
       position: absolute;
       top: 0;
       transform: scale(0);
+      pointer-events: none;
     }
     @include mobile {
       h4 {
@@ -379,6 +408,7 @@
       transition: all 1s;
       transform: scale(4);
       opacity: 0;
+      pointer-events: none;
     }
   }
 
@@ -411,6 +441,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     &:first-child {
       .cut-2-swiper-main-content-year {
         margin-top: 0%;

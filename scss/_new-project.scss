@@ -1,0 +1,310 @@
+@import "_config";
+
+.new_project-cut-1-left-fixed-img {
+  position: absolute;
+  bottom: -7vw;
+  width: 80vw;
+  left: -6vw;
+  z-index: -1;
+}
+#new_project {
+  position: relative;
+  .cut-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vw;
+    @include tablet {
+      margin-top: 0;
+      flex-direction: column;
+    }
+  }
+
+  .cut-1-left {
+    position: sticky;
+    top: 4vw;
+    height: 100%;
+    @include tablet {
+      position: relative;
+      top: unset;
+    }
+  }
+  .cut-1-left-container {
+    position: relative;
+    height: 100%;
+    margin-top: 1vw;
+    margin-left: 8vw;
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+  .cut-1-left-fixed-img {
+    position: absolute;
+    top: 12vw;
+    width: 26vw;
+  }
+  .cut-1-left-banner {
+    img {
+      height: 38vw;
+      width: 24.5vw;
+    }
+    @include tablet {
+      width: 100%;
+      img {
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
+  .cut-1-left-para {
+    position: absolute;
+    top: 0;
+    writing-mode: vertical-rl;
+    line-height: 1;
+    margin-left: 14vw;
+    h1 {
+      font-size: 8vw;
+      font-family: $cor;
+      font-weight: 400;
+    }
+    h4 {
+      font-family: $serif;
+      font-weight: 400;
+      font-size: 1.75vw;
+      letter-spacing: 20px;
+      margin-right: 2vw;
+    }
+    @include tablet {
+      writing-mode: unset;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 22%;
+      margin-left: 0;
+      padding-left: 4vw;
+      h1 {
+        font-size: 14vw;
+      }
+    }
+  }
+  .cut-1-left-para-first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    gap: 1vw;
+    @include tablet {
+      width: 70%;
+      gap: 0vw;
+      margin-left: 10vw;
+      h4 {
+        position: relative;
+        font-size: 5.5vw;
+        width: auto;
+        padding-bottom: 1vw;
+        letter-spacing: 5px;
+        margin-right: 0;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -30%;
+          height: 1px;
+          width: 90%;
+          background-color: black;
+          left: 0;
+        }
+      }
+    }
+  }
+  .cut-1-left-para-line {
+    width: 1px;
+    height: 5vw;
+    left: -1vw;
+    position: relative;
+    background-color: black;
+    @include tablet {
+      top: 2vw;
+      left: unset;
+      width: 17vw;
+      height: 1px;
+    }
+  }
+  .cut-1-left-para-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet {
+      width: 70%;
+      gap: 0vw;
+      margin-left: 10vw;
+      > h4 {
+        position: relative;
+        font-size: 5.5vw;
+        width: 100%;
+        padding-bottom: 1vw;
+      }
+    }
+  }
+  .cut-1-left-para-line-second {
+    width: 1px;
+    height: 7vw;
+    position: relative;
+    background-color: black;
+    @include tablet {
+      width: 53%;
+      height: 1px;
+      position: relative;
+      background-color: black;
+    }
+  }
+  .cut-1-right {
+    width: 29vw;
+    margin-right: 12%;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  .cut-1-right-item-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5vw;
+    margin-bottom: 7vw;
+    gap: 3vw;
+    z-index: 1;
+    @include tablet {
+      width: 85%;
+      margin-top: 12vw;
+    }
+  }
+  .cut-1-right-item {
+    position: relative;
+    width: 100%;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  .cut-1-right-item:hover {
+    .cut-1-right-item-more {
+      opacity: 1;
+      transition: all 0.75s;
+    }
+  }
+  .cut-1-right-item-more {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include para();
+    color: white;
+    h3 {
+      font-size: 1.25vw;
+      margin-bottom: 0.5vw;
+      margin-top: 0.5vw;
+    }
+    p {
+      margin-bottom: 2vw;
+      font-family: $micro;
+    }
+    a {
+      text-decoration: none;
+      font-size: 0.8vw;
+      color: white;
+      border: none;
+      background-color: #ba9274;
+      padding: 0.5vw 4.75vw;
+    }
+    transition: all 0.75s;
+    @include tablet {
+      align-items: flex-start;
+      opacity: 1;
+      position: relative;
+      color: black;
+      background-color: transparent;
+      h3 {
+        width: 100%;
+        font-size: $subTitlePH;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+        span {
+          color: #666666;
+          margin-left: 3vw;
+          margin-right: 3vw;
+          font-size: 3.5vw;
+        }
+      }
+      p {
+        font-size: 3.5vw;
+        color: #666666;
+        margin-bottom: 0;
+        margin-top: 1vw;
+      }
+      a {
+        font-size: $contentSizePH;
+        padding: 1vw 5vw;
+        margin-bottom: 8vw;
+      }
+    }
+  }
+  .cut-1-right-img {
+    position: relative;
+    top: 8vw;
+  }
+  .cut-1-right-img-1 {
+    position: absolute;
+    top: 13.5vw;
+    width: 24vw;
+    left: -10vw;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .cut-1-right-img-2 {
+    width: 38vw;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .cut-1-fixed-img {
+    position: absolute;
+    right: 0;
+    top: 15vw;
+    width: 21vw;
+    filter: drop-shadow(1px 1px 1px black);
+    @include tablet {
+      top: 35vw;
+      width: 47vw;
+    }
+  }
+}
+#footer {
+  bottom: 0;
+}
+.new_project-cut-1-left-fixed-img {
+  @include tablet {
+    position: absolute;
+    bottom: 0;
+    width: 62vw;
+    filter: drop-shadow(1px 1px 1px black);
+  }
+}

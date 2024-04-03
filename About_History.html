@@ -66,7 +66,7 @@
         </aside>
         <div class="cut-2-right">
           <div class="cut-2-right-top-para">
-            <h1>HENG HO HISTORY</h1>
+            <h1 class="cut-2-right-top-para-h1">HENG HO HISTORY</h1>
             <div class="cut-2-right-top-para-line line"></div>
             <h3>恆合機構 穿越歲月長河</h3>
             <p>
@@ -840,6 +840,8 @@
     ></script>
     <script src="./js/nav.js"></script>
     <script src="./js/gsap/gsap.min.js"></script>
+    <script src="./js/gsap/ScrollTrigger.min.js"></script>
+    <script src="./js/gsap/SplitText.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script>
       $(document).ready(function () {
@@ -851,6 +853,7 @@
       });
       const totalTitle = ["草創期", "發展期", "茁壯期"];
       $(window).on("load", function () {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
         let cut2Swiper = new Swiper(".cut-2-swiper", {
           navigation: {
             prevEl: ".cut-2-swiper-button-prev",
@@ -917,6 +920,45 @@
             },
           },
         });
+
+        //動畫延遲
+        function addDelay(tag) {
+          let delay = 300;
+          $(tag).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 100;
+          });
+        }
+        const cut1Tl = gsap.timeline({ delay: 1 });
+
+        cut1Tl
+          .from(".cut-1-right-img-2 img", {
+            y: "-105%",
+            duration: "1.5",
+          })
+          .from(
+            ".cut-1-right-img-1 img",
+            {
+              y: "-105%",
+              duration: "1.5",
+            },
+            "<+0.2"
+          );
+        //拆字
+        const cut2TopTitle = new SplitText(".cut-2-right-top-para-h1", {
+          type: "chars",
+        });
+        addDelay(".cut-2-right-top-para-h1 div");
+        gsap.from(cut2TopTitle.chars, {
+          scrollTrigger: {
+            trigger: ".cut-2-right",
+            start: "top 75%",
+          },
+          stagger: 0.05,
+          opacity: 0,
+          rotation: "40",
+          y: "70%",
+        });
         // $(".cut-2-swiper-main-content-para-left").hover(function () {
         //   const back = document.querySelector(
         //     ".cut-2-swiper-main-content-para-dot"
@@ -927,6 +969,31 @@
         //     left: -backPosition / 2,
         //   });
         // });
+
+        if (window.innerWidth <= 1024) {
+          let i = 0;
+          $(".cut-2-swiper-slide").each(function () {
+            $(this)
+              .find(".cut-2-swiper-main-content-year")
+              .each(function () {
+                $(this).addClass(`year-${i}`);
+                i++;
+              });
+          });
+
+          $(".cut-2-swiper-main-content-year").each(function () {
+            let name = $(this).attr("class");
+            let classArray = name.split(" ");
+            gsap.from(`.${classArray[1]}`, {
+              scrollTrigger: {
+                trigger: `.${classArray[1]}`,
+                top: "top 75%",
+              },
+              x: "-110%",
+              duration: 1.5,
+            });
+          });
+        }
       });
     </script>
   </body>

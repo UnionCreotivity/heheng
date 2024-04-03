@@ -90,7 +90,10 @@
             <img src="./img/origin/origin-people.webp" alt="people" />
           </div>
           <div class="cut-2-right-middle-para">
-            <h1 class="cut-2-right-middle-para-h1">OUR<br />CONSTRUCTION</h1>
+            <h1 class="cut-2-right-middle-para-h1">
+              OUR <br />
+              CONSTRUCTION
+            </h1>
             <div class="cut-2-right-middle-para-line line"></div>
             <h3>企業體系</h3>
           </div>
@@ -187,6 +190,23 @@
       $(window).on("load", function () {
         gsap.registerPlugin(ScrollTrigger, SplitText);
 
+        //第1cut動畫
+        const cut1Tl = gsap.timeline({ delay: 1 });
+
+        cut1Tl
+          .from(".cut-1-right-img-2 img", {
+            y: "-105%",
+            duration: "1.5",
+          })
+          .from(
+            ".cut-1-right-img-1 img",
+            {
+              y: "-105%",
+              duration: "1.5",
+            },
+            "<+0.2"
+          );
+
         //動畫延遲
         function addDelay(tag) {
           let delay = 300;
@@ -195,6 +215,29 @@
             delay += 100;
           });
         }
+
+        //第2cut動畫
+        const cut2TopImgTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".cut-2-right-top-img",
+            start: "center center",
+          },
+        });
+
+        cut2TopImgTl
+          .from(".cut-2-right-top-img", {
+            "--imgLeft": "100%",
+            duration: 1,
+          })
+          .to(".cut-2-right-top-img img", {
+            opacity: 1,
+            duration: 0.2,
+          })
+          .to(".cut-2-right-top-img", {
+            "--imgLeft": "-100%",
+            duration: 1,
+          });
+
         //拆字
         const cut2TopTitle = new SplitText(".cut-2-right-top-para-h1", {
           type: "chars",
@@ -202,17 +245,72 @@
 
         addDelay(".cut-2-right-top-para-h1 div");
 
+        gsap.from(cut2TopTitle.chars, {
+          scrollTrigger: {
+            trigger: ".cut-2-right-top-para",
+            start: "25% 75%",
+          },
+          stagger: 0.05,
+          opacity: 0,
+          rotation: "40",
+          y: "70%",
+        });
+
         //cut2中間拆字
         const cut2MiddleTitle = new SplitText(".cut-2-right-middle-para-h1", {
           type: "chars",
         });
         addDelay(".cut-2-right-middle-para-h1 div");
 
+        gsap.from(cut2MiddleTitle.chars, {
+          scrollTrigger: {
+            trigger: ".cut-2-right-middle-para",
+            start: "top 75%",
+          },
+          stagger: 0.05,
+          opacity: 0,
+          rotation: "40",
+          y: "70%",
+        });
+
+        //人動畫
+        let cut2PeopleTl;
+        if (window.innerWidth <= 1024) {
+          cut2PeopleTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".cut-2-right-people",
+              start: "center center",
+              markers: true,
+            },
+          });
+        } else {
+          cut2PeopleTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".cut-2-right-people",
+              start: "top center",
+            },
+          });
+        }
+
+        cut2PeopleTl
+          .from(".cut-2-right-people", {
+            "--peopeleLeft": "100%",
+            duration: 1,
+          })
+          .to(".cut-2-right-people img", {
+            opacity: 1,
+            duration: 0.2,
+          })
+          .to(".cut-2-right-people", {
+            "--peopeleLeft": "-100%",
+            duration: 1,
+          });
+
         //圓圈轉進動畫
         const cut2CircleTl = gsap.timeline({
           scrollTrigger: {
-            trigger: ".cut-2-right-middle-para",
-            start: "top center",
+            trigger: ".cut-2-right-bottom-heng-hong",
+            start: "25% 75%",
           },
         });
         const cut2MaskSet = gsap.set(".cut-2-right-bottom-heng-hong-para-top", {
@@ -240,7 +338,7 @@
               autoAlpha: 0,
               duration: 3,
             },
-            "<+1.25"
+            "<+1.4"
           );
 
         // gsap.from(".cut-2-right-bottom-heng-hong-para-bottom", {

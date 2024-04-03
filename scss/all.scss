@@ -2,6 +2,8 @@
 @import "_index";
 @import "_origin";
 @import "_history";
+@import "_new-project";
+@import "_new-project-inner";
 
 *,
 ::after,
@@ -14,6 +16,11 @@
 html {
   height: 100%;
 }
+
+body {
+  position: relative;
+}
+
 img,
 video,
 canvas {
@@ -52,7 +59,7 @@ section {
   justify-content: space-between;
   list-style-type: none;
   padding-left: 10vw;
-  padding-right: 10vw;
+  padding-right: 12vw;
   padding-top: 2vw;
   width: 100%;
   z-index: 99999;
@@ -297,6 +304,7 @@ section {
   padding-bottom: 1vw;
   font-weight: 300;
   margin-top: 8vw;
+  z-index: 999;
   span {
     color: #fff;
     font-family: $micro;
@@ -314,6 +322,7 @@ section {
     margin-right: 0;
   }
   @include tablet {
+    position: relative !important;
     flex-direction: column;
     font-size: 2vw;
     margin-top: 25vw;
