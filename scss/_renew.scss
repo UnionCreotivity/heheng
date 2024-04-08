@@ -1,0 +1,208 @@
+#renew {
+  .cut-1 {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+
+  .cut-1-left {
+    position: relative;
+    height: 100%;
+    margin-top: 1vw;
+  }
+  .cut-1-left-banner {
+    width: 30.5vw;
+    @include tablet {
+      width: 50%;
+    }
+  }
+  .cut-1-left-para {
+    position: absolute;
+    top: 0;
+    writing-mode: vertical-rl;
+    line-height: 1;
+    margin-left: 14vw;
+    h1 {
+      font-size: 9vw;
+      font-family: $cor;
+      font-weight: 400;
+    }
+    h4 {
+      font-family: $serif;
+      font-size: 1.5vw;
+      letter-spacing: 5px;
+    }
+    @include tablet {
+      writing-mode: unset;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 22%;
+      margin-left: 0;
+      padding-left: 4vw;
+      h1 {
+        font-size: 14vw;
+      }
+    }
+  }
+  .cut-1-left-para-first {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    gap: 1vw;
+    @include tablet {
+      width: 65%;
+      gap: 2vw;
+    }
+  }
+  .cut-1-left-para-line {
+    width: 1px;
+    height: 5vw;
+    left: -1vw;
+    position: relative;
+    background-color: black;
+    display: none;
+    @include tablet {
+      display: block;
+      top: 2vw;
+      left: unset;
+      width: 17vw;
+      height: 1px;
+    }
+  }
+  .cut-1-left-para-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+    @include tablet {
+      width: 65%;
+      gap: 6vw;
+      > h4 {
+        position: relative;
+        font-size: 5.5vw;
+        width: 100%;
+        padding-bottom: 1vw;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -30%;
+          height: 1px;
+          width: 100%;
+          background-color: black;
+          left: 0;
+        }
+      }
+    }
+  }
+  .cut-1-left-para-line-second {
+    width: 1px;
+    height: 7vw;
+    position: relative;
+    background-color: black;
+  }
+
+  //第2cut
+  .cut-2 {
+    position: relative;
+    margin-bottom: 20vw;
+  }
+
+  .cut-2-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+    gap: 15vw 5vw;
+    margin-top: -15vw;
+    @include tablet {
+      flex-direction: column;
+      margin-top: 0vw;
+    }
+  }
+
+  .cut-2-item {
+    width: 35vw;
+    position: relative;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .cut-2-item-content {
+    position: absolute;
+    top: 14vw;
+    right: -8vw;
+    padding: 1.5vw 1.5vw 1vw 1.5vw;
+    width: 26vw;
+    background-color: white;
+    border: 1px solid #d0b18d;
+    z-index: 1;
+    @include para();
+    h1 {
+      font-size: 1.25vw;
+      margin-bottom: 0.5vw;
+    }
+    .line {
+      margin-top: 2vw;
+      margin-bottom: 2vw;
+    }
+    @include tablet {
+      position: relative;
+      width: 100%;
+      right: unset;
+      top: unset;
+      padding: 4vw;
+      h1 {
+        font-size: 4.25vw;
+        font-weight: 600;
+        margin-bottom: 2vw;
+      }
+      h3 {
+        font-weight: 400;
+        font-size: 4vw;
+        color: #666666;
+        margin-bottom: 0;
+      }
+      .line {
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+      }
+    }
+  }
+  .load-more {
+    text-align: center;
+    margin-top: 16vw;
+    button {
+      font-size: $contentSize;
+      padding: 0.5vw 4vw;
+      border: 1px solid #d0b18d;
+      color: #d0b18d;
+      background-color: transparent;
+      cursor: pointer;
+      z-index: 10;
+    }
+    @include tablet {
+      margin-top: 15vw;
+      margin-bottom: -10vw;
+      button {
+        font-size: 3.75vw;
+        padding: 3vw 14vw;
+      }
+    }
+  }
+}
+.renew-right-fixed-L {
+  position: absolute;
+  width: 37vw;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 3vw;
+  @include tablet {
+    display: none;
+  }
+}

@@ -1,0 +1,214 @@
+#last-news-inner {
+  position: relative;
+  .cut-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .cut-1-title {
+    display: flex;
+    align-items: baseline;
+    width: 80%;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+    @include para();
+    h3 {
+      margin-bottom: 0;
+      position: relative;
+      bottom: 0.25vw;
+      font-size: 1.5vw;
+    }
+    span {
+      font-size: 1.75vw;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      position: relative;
+      bottom: 0.25vw;
+    }
+    @include tablet {
+      width: 85%;
+      margin-top: 20vw;
+      margin-bottom: 7vw;
+      justify-content: center;
+      h3 {
+        font-size: $subTitlePH;
+      }
+      span {
+        font-size: 4.75vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+      }
+    }
+  }
+  .cut-1-pic {
+    position: relative;
+    width: 80%;
+    @include tablet {
+      width: 85%;
+    }
+  }
+  .cut-1-pic-main {
+    width: 87%;
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  //第2cut
+  .cut-2-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4vw;
+    @include tablet {
+      width: 85%;
+      margin-top: 7vw;
+    }
+  }
+  .cut-2-top-left {
+    @include para();
+    h3 {
+      font-family: $cor;
+      font-size: $subTitle;
+      color: #999999;
+    }
+    h1 {
+      font-size: 1.25vw;
+      font-family: $serif;
+      letter-spacing: 2px;
+    }
+    .line {
+      margin-top: 2vw;
+    }
+    @include tablet {
+      h3 {
+        font-size: $subTitlePH;
+      }
+      h1 {
+        font-size: $subTitlePH;
+        text-align: center;
+      }
+      .line {
+        margin: 0 auto;
+        margin-top: 6vw;
+        margin-bottom: 6vw;
+      }
+    }
+  }
+
+  .cut-2-top-right {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5vw;
+    p {
+      font-family: $micro;
+      font-size: 0.9vw;
+      letter-spacing: 2px;
+      margin-right: 1vw;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  .cut-2-top-right-connect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 4.5vw;
+  }
+  .cut-2-top-right-fb {
+    width: 0.5vw;
+  }
+  .cut-2-top-right-ig {
+    width: 1vw;
+  }
+  .cut-2-top-right-line {
+    width: 1vw;
+  }
+
+  .cut-2-content {
+    width: 80%;
+    margin: 0 auto;
+    @include para();
+    h3 {
+      font-family: $serif;
+    }
+    @include tablet {
+      width: 85%;
+      h3 {
+        text-align: center;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .cut-2-basic {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4vw;
+    @include para();
+    @include tablet {
+      width: 85%;
+      margin-top: 10vw;
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+  .cut-2-basic-content {
+    list-style-type: none;
+  }
+  .cut-2-basic-content-li {
+    display: flex;
+    align-items: center;
+    @include tablet {
+      display: block;
+    }
+  }
+  .cut-2-basic-content-li-title {
+    @include tablet {
+      float: left;
+    }
+  }
+  .back {
+    text-align: center;
+    margin-top: 15vw;
+    button {
+      text-decoration: none;
+      font-size: $contentSize;
+      padding: 0.5vw 4vw;
+      background-color: #ba9274;
+      border: none;
+      color: white;
+      cursor: pointer;
+      z-index: 10;
+    }
+    @include tablet {
+      margin-top: 15vw;
+      margin-bottom: -10vw;
+      button {
+        font-size: $contentSizePH;
+        padding: 3vw 14vw;
+      }
+    }
+  }
+  .last-inner-left-fixed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24vw;
+    margin-top: 11vw;
+    z-index: -1;
+  }
+  .last-inner-right-fixed {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 28vw;
+    margin-bottom: -11vw;
+    z-index: -1;
+  }
+}

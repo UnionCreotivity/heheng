@@ -5,10 +5,25 @@ const navItem = [
     enName: "About",
     url: "About_Origin.html",
   },
-  { number: "02", name: "最新消息", enName: "Least News", url: "#" },
-  { number: "03", name: "熱銷建案", enName: "New Project", url: "#" },
-  { number: "04", name: "經典建案", enName: "History", url: "#" },
-  { number: "05", name: "都更專區", enName: "Renewal Cases", url: "#" },
+  {
+    number: "02",
+    name: "最新消息",
+    enName: "Least News",
+    url: "Last_News.html",
+  },
+  {
+    number: "03",
+    name: "熱銷建案",
+    enName: "New Project",
+    url: "New_Project.html",
+  },
+  { number: "04", name: "經典建案", enName: "Classic", url: "Classic.html" },
+  {
+    number: "05",
+    name: "都更專區",
+    enName: "Renewal Cases",
+    url: "Renew.html",
+  },
   { number: "06", name: "聯絡我們", enName: "Contact Us", url: "#" },
 ];
 

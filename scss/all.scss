@@ -4,6 +4,11 @@
 @import "_history";
 @import "_new-project";
 @import "_new-project-inner";
+@import "_renew";
+@import "_renew-inner";
+@import "_last-news";
+@import "_last-news-inner";
+@import "_classic";
 
 *,
 ::after,
@@ -59,7 +64,7 @@ section {
   justify-content: space-between;
   list-style-type: none;
   padding-left: 10vw;
-  padding-right: 12vw;
+  padding-right: 10vw;
   padding-top: 2vw;
   width: 100%;
   z-index: 99999;

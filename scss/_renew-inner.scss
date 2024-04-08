@@ -1,0 +1,350 @@
+#renew-inner {
+  .cut-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .cut-1-title {
+    display: flex;
+    align-items: baseline;
+    width: 80%;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+    @include para();
+    h3 {
+      margin-bottom: 0;
+      position: relative;
+      bottom: 0.25vw;
+      font-size: 1.5vw;
+    }
+    span {
+      font-size: 1.75vw;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      position: relative;
+      bottom: 0.25vw;
+    }
+    @include tablet {
+      width: 85%;
+      margin-top: 20vw;
+      margin-bottom: 7vw;
+      justify-content: center;
+      h3 {
+        font-size: $subTitlePH;
+      }
+      span {
+        font-size: 4.75vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+      }
+    }
+  }
+  .cut-1-pic {
+    position: relative;
+    width: 80%;
+    @include tablet {
+      width: 85%;
+    }
+  }
+  .cut-1-pic-main {
+    width: 87%;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .cut-1-pic-para {
+    position: absolute;
+    background-color: #a59481;
+    width: 38%;
+    right: 0;
+    bottom: 0;
+    padding: 3vw 4vw;
+    @include para();
+    .cut-1-pic-para-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        font-size: 1.5vw;
+        color: white;
+        letter-spacing: 2px;
+      }
+      span {
+        font-size: $contentSize;
+        color: #a59481;
+        background-color: white;
+        padding: 0.25vw 2vw;
+        letter-spacing: 2px;
+      }
+    }
+    .line {
+      background-color: white;
+      width: 3.5vw;
+      margin-top: 2vw;
+      margin-bottom: 2vw;
+    }
+    p {
+      color: white;
+    }
+    @include tablet {
+      position: relative;
+      width: 100%;
+      padding: 6vw 5vw;
+      .cut-1-pic-para-title {
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        h1 {
+          font-size: 5.5vw;
+        }
+        span {
+          font-size: 4vw;
+          margin-top: 3vw;
+        }
+      }
+      .line {
+        display: none;
+      }
+      p {
+        margin-top: 7vw;
+      }
+    }
+  }
+  .cut-2-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .cut-2-item {
+    @include para();
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 7vw;
+    h1 {
+      font-size: 1.25vw;
+      font-family: $serif;
+      position: relative;
+      margin-bottom: 1.5vw;
+      letter-spacing: 2px;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 13px;
+        width: 13px;
+        background-color: #b69272;
+        top: 0.65vw;
+        left: -2vw;
+      }
+    }
+    @include tablet {
+      width: 85%;
+      justify-content: center;
+      flex-direction: column-reverse;
+      padding: 0vw 6vw;
+      h1 {
+        font-size: 4.25vw;
+        margin-bottom: 4vw;
+        &::after {
+          top: 1.75vw;
+          left: -5vw;
+        }
+      }
+    }
+  }
+  .cut-2-item-left {
+    margin-left: 2vw;
+    width: 50%;
+    @include tablet {
+      width: 100%;
+      margin-left: 0vw;
+    }
+  }
+  .cut-2-item-info {
+    @include tablet {
+      width: 100%;
+      margin-top: 8vw;
+    }
+  }
+  .cut-2-item-download {
+    margin-top: 5vw;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .cut-2-item-right {
+    padding-left: 5vw;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      width: 100%;
+      padding-left: 0vw;
+      margin-top: 5vw;
+    }
+  }
+  .cut-2-imple {
+    display: flex;
+    align-items: center;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    @include tablet {
+      display: block;
+      > p:nth-child(1) {
+        float: left;
+        font-weight: 600;
+      }
+    }
+  }
+  .download {
+    display: flex;
+    align-items: center;
+    a {
+      font-family: $micro;
+      text-decoration: none;
+      color: white;
+      background-color: #b69272;
+      font-size: 0.7vw;
+      padding: 0.075vw 0.25vw;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      a {
+        font-size: 3.25vw;
+        padding: 0.25vw 1vw;
+        margin-left: 4vw;
+        margin-top: 2vw;
+      }
+    }
+  }
+  .cut-2-item-download-main {
+    height: 18vw;
+    @include tablet {
+      height: auto;
+    }
+  }
+  .download-content {
+    margin-left: 1vw;
+    @include tablet {
+      width: 100%;
+      margin-left: 0vw;
+      margin-top: 0vw;
+      order: 5;
+    }
+  }
+  .download-time {
+    @include tablet {
+      margin-top: 2vw;
+    }
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    @include tablet {
+      justify-content: center;
+      margin-top: 5vw;
+    }
+  }
+  .left-arrow,
+  .right-arrow {
+    width: 2vw;
+    cursor: pointer;
+    @include tablet {
+      width: 9vw;
+    }
+  }
+  .left-arrow {
+    margin-right: 0.75vw;
+    @include tablet {
+      margin-right: 3.75vw;
+    }
+  }
+  .right-arrow {
+    margin-left: 0.75vw;
+    @include tablet {
+      margin-left: 3.75vw;
+    }
+  }
+  .page-number-container {
+    display: flex;
+    align-items: center;
+  }
+  .page-number {
+    font-family: $micro;
+    font-size: $contentSize;
+    color: #a3a3a3;
+    margin: 0 0.25vw;
+    cursor: pointer;
+    @include tablet {
+      font-size: $contentSizePH;
+      margin: 0 1.25vw;
+    }
+  }
+  .page-number-active {
+    color: #7c573d;
+  }
+
+  //第3cut
+  .cut-3-container {
+    width: 67%;
+    margin: 0 auto;
+    margin-top: 7vw;
+    position: relative;
+    overflow: hidden;
+    @include tablet {
+      width: 85%;
+      margin-top: 10vw;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 2.5vw;
+    @include tablet {
+      width: 7vw;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: white !important;
+  }
+
+  //第4cut
+  .cut-4-container {
+    width: 67%;
+    margin: 0 auto;
+    margin-top: 7vw;
+    h1 {
+      font-size: 1.25vw;
+      font-family: $serif;
+      position: relative;
+      margin-bottom: 1.5vw;
+      margin-left: 2vw;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 13px;
+        width: 13px;
+        background-color: #b69272;
+        top: 0.65vw;
+        left: -2vw;
+      }
+    }
+    @include tablet {
+      width: 85%;
+      margin-top: 10vw;
+      h1 {
+        padding-left: 4vw;
+        font-size: 4.25vw;
+        margin-bottom: 5vw;
+        margin-left: 2vw;
+        &::after {
+          content: "";
+          top: 1.75vw;
+        }
+      }
+    }
+  }
+}
