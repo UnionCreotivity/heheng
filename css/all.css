@@ -3448,6 +3448,9 @@
   }
 }
 
+#renew a {
+  text-decoration: none;
+}
 #renew .cut-1 {
   display: flex;
   justify-content: space-between;
@@ -3649,10 +3652,14 @@
 #renew .cut-2-item-content h1 {
   font-size: 1.25vw;
   margin-bottom: 0.5vw;
+  color: black;
 }
 #renew .cut-2-item-content h3 {
   font-family: "Microsoft JhengHei";
   color: #666666;
+}
+#renew .cut-2-item-content p {
+  color: black;
 }
 #renew .cut-2-item-content .line {
   margin-top: 2vw;
