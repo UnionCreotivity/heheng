@@ -147,10 +147,15 @@
       font-size: 1.25vw;
       margin-bottom: 0.5vw;
     }
+    h3 {
+      font-family: $micro;
+      color: #666666;
+    }
     .line {
       margin-top: 2vw;
       margin-bottom: 2vw;
     }
+
     @include tablet {
       position: relative;
       width: 100%;

@@ -3650,6 +3650,10 @@
   font-size: 1.25vw;
   margin-bottom: 0.5vw;
 }
+#renew .cut-2-item-content h3 {
+  font-family: "Microsoft JhengHei";
+  color: #666666;
+}
 #renew .cut-2-item-content .line {
   margin-top: 2vw;
   margin-bottom: 2vw;
