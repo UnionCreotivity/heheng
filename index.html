@@ -752,7 +752,7 @@
           }
         );
         gsap.to(
-          ".cut-1-para-first-img,.cut-1-para-second-img,.cut-1-para-third-img",
+          ".cut-1-para-first-img video,.cut-1-para-second-img video,.cut-1-para-third-img video",
           {
             top: 0,
             duration: 1,
@@ -883,14 +883,13 @@
           });
         }
 
-        const cut4Img = gsap.from(".cut-4-container", {
+        const cut4Img = gsap.from(".cut-4-all img", {
           scrollTrigger: {
             trigger: ".cut-4",
             start: "25% 75%",
           },
-          scale: "0",
-          rotation: "120",
-          duration: 1.5,
+          scale: "3",
+          duration: 1,
         });
 
         //cut5

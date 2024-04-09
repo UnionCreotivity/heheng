@@ -18,13 +18,13 @@ const navItem = [
     url: "New_Project.html",
   },
   { number: "04", name: "經典建案", enName: "Classic", url: "Classic.html" },
-  {
-    number: "05",
-    name: "都更專區",
-    enName: "Renewal Cases",
-    url: "Renew.html",
-  },
-  { number: "06", name: "聯絡我們", enName: "Contact Us", url: "#" },
+  // {
+  //   number: "05",
+  //   name: "都更專區",
+  //   enName: "Renewal Cases",
+  //   url: "Renew.html",
+  // },
+  { number: "05", name: "聯絡我們", enName: "Contact Us", url: "Contact.html" },
 ];
 
 $(window).on("load", function () {
@@ -36,11 +36,6 @@ $(window).on("load", function () {
             ><img src="img/share/icon.svg" alt="icon"
         /></a>
     </div>`;
-  //   <button class="nav-hamb-icon">
-  //   <span></span>
-  //   <span></span>
-  //   <span></span>
-  // </button>
   src += `
   <button class="hamburger hamburger--spring nav-hamb-icon ph" type="button">
   <span class="hamburger-box">

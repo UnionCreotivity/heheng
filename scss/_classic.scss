@@ -1,9 +1,13 @@
 #classic {
+  padding-top: 4.5vw;
   .cut-1 {
     display: flex;
     justify-content: space-between;
     @include tablet {
       margin-top: 0;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 0vw;
     }
   }
 
@@ -14,8 +18,17 @@
   }
   .cut-1-left-banner {
     width: 31vw;
+    @include laptop {
+      img {
+        height: 49.4vw;
+      }
+    }
     @include tablet {
-      width: 50%;
+      width: 100%;
+      img {
+        width: 50%;
+        height: auto;
+      }
     }
   }
   .cut-1-left-para {
@@ -24,7 +37,7 @@
     writing-mode: vertical-rl;
     line-height: 1;
     margin-left: 19vw;
-    margin-top: 5vw;
+    margin-top: 5.5vw;
     h1 {
       font-size: 9vw;
       font-family: $cor;
@@ -35,6 +48,9 @@
       font-size: 2vw;
       letter-spacing: 18px;
     }
+    @include laptop {
+      margin-top: 8.5vw;
+    }
     @include tablet {
       writing-mode: unset;
       display: flex;
@@ -42,7 +58,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      margin-top: 22%;
+      margin-top: 27%;
       margin-left: 0;
       padding-left: 4vw;
       h1 {
@@ -57,7 +73,8 @@
     gap: 1vw;
     @include tablet {
       width: 65%;
-      gap: 2vw;
+      gap: 7vw;
+      margin-left: 10vw;
     }
   }
   .cut-1-left-para-line {
@@ -71,7 +88,7 @@
       display: block;
       top: 2vw;
       left: unset;
-      width: 17vw;
+      width: 14vw;
       height: 1px;
     }
   }
@@ -84,13 +101,17 @@
     margin-right: 5vw;
     @include tablet {
       width: 65%;
-      gap: 6vw;
-      margin-top: 0vw;
+      gap: 0vw;
+      margin-top: 4.5vw;
+      margin-right: 0vw;
+      margin-left: 10vw;
       > h4 {
         position: relative;
         font-size: 5.5vw;
+        font-weight: 500;
         width: 100%;
         padding-bottom: 1vw;
+        letter-spacing: 5px;
         &::after {
           content: "";
           position: absolute;
@@ -108,35 +129,64 @@
     height: 50%;
     position: relative;
     background-color: black;
+    @include laptop {
+      height: 44%;
+    }
   }
 
   //
   .cut-1-right {
     width: 60%;
+    position: relative;
+    overflow: hidden;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .right-fixed {
+    position: absolute;
+    right: 0;
+    bottom: -8vw;
+    width: 26vw;
+    filter: drop-shadow(1px 1px 1px black);
+    z-index: -1;
   }
   .cut-1-right-date-picker {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 2vw;
-    margin-top: 4vw;
-    top: 4vw;
-    z-index: 10;
+    margin-left: 7vw;
+    margin-top: 3vw;
+    @include tablet {
+      width: 85%;
+      margin-left: 0vw;
+      margin: 0 auto;
+      margin-top: 10vw;
+    }
   }
   .date-picker-zh,
   .date-picker-en {
     font-family: $serif;
     font-size: 1vw;
+    @include tablet {
+      font-size: $contentSizePH;
+    }
   }
 
   .date-picker-zh {
     color: #918781;
     margin-right: 1vw;
     letter-spacing: 2px;
+    @include tablet {
+      margin-right: 2vw;
+    }
   }
   .date-picker-en {
     color: #cfb38e;
-    margin-right: 1.5vw;
+    margin-right: 2.5vw;
+    @include tablet {
+      margin-right: 4.5vw;
+    }
   }
 
   .date-picker-main {
@@ -156,6 +206,13 @@
       text-align-last: center;
       padding-right: 0.25vw;
     }
+    @include tablet {
+      padding: 1.25vw 3.5vw;
+
+      select {
+        font-size: 3.25vw;
+      }
+    }
   }
 
   .date-picker-time {
@@ -165,6 +222,10 @@
   .date-icon {
     width: 0.8vw;
     padding-top: 0.1vw;
+    @include tablet {
+      width: 3vw;
+      padding-top: 0.25vw;
+    }
   }
   .date-picker-line {
     width: 1vw;
@@ -172,13 +233,76 @@
     background-color: black;
     margin: 0vw 1vw;
     margin-top: 0.1vw;
+    @include tablet {
+      margin: 0vw 2vw;
+      margin-top: 1vw;
+      width: 3vw;
+    }
   }
 
+  .date-picker-button {
+    button {
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: #ba9274;
+      padding: 0.29vw 0.75vw 0.28vw;
+      font-family: $serif;
+      font-size: 0.8vw;
+      color: white;
+      letter-spacing: 2px;
+      gap: 0.35vw;
+      img {
+        width: 0.8vw;
+        padding-top: 0.15vw;
+      }
+    }
+    @include tablet {
+      button {
+        font-size: 3.25vw;
+        padding: 2.25vw 2.25vw 2vw;
+        gap: 1.35vw;
+        img {
+          padding: 0;
+          width: 3vw;
+        }
+      }
+    }
+  }
   //
   .cut-1-right-item-container {
     width: 100%;
-    height: 75vh;
+    height: 76vh;
     overflow: hidden;
+    margin-top: 1.1vw;
+  }
+  @media screen and (max-width: 1920px) {
+    .cut-1-right-item-container {
+      height: 79vh;
+      margin-top: 1.15vw;
+    }
+  }
+  .cut-1-right-item-container {
+    @include laptop {
+      height: 74vh;
+      margin-top: 3.95vw;
+    }
+  }
+  @media screen and (max-width: 1366px) {
+    .cut-1-right-item-container {
+      margin-top: 4vw;
+    }
+  }
+  .cut-1-right-item-container {
+    @include tablet {
+      width: 85%;
+      height: auto;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
   }
   .swiper-slide {
     display: flex;
@@ -187,11 +311,20 @@
   .swiper-slide-item {
     width: 33.5%;
     overflow: hidden;
+    @include laptop {
+      height: 100%;
+    }
   }
   .swiper-slide-item-img {
     position: relative;
     img {
       transition: all 1s;
+    }
+    @include laptop {
+      height: 100%;
+      img {
+        height: 100%;
+      }
     }
   }
   .swiper-slide-item-img-back {
@@ -235,8 +368,45 @@
       transition: all 1s;
     }
   }
+  //手機版
+  .right-item {
+    padding-bottom: 5vw;
+    width: 100%;
+  }
+  .right-item-main {
+    width: 100%;
+    margin-top: 10vw;
+  }
+  .right-item-img {
+    width: 100%;
+  }
+  .right-item-para {
+    display: flex;
+    align-items: center;
+    @include para();
+    h3 {
+      margin-bottom: 0;
+      margin-top: 3vw;
+    }
+    .line {
+      width: 1px;
+      height: 4.25vw;
+      margin-bottom: 0;
+      margin-top: 3.5vw;
+      margin-left: 4vw;
+      margin-right: 4vw;
+    }
+    h1 {
+      color: #af9e8e;
+      font-size: 14vw;
+      line-height: 0.8;
+    }
+  }
 }
 #classic ~ #footer {
-  bottom: -0.4vw;
+  bottom: 0vw;
   margin-top: 0vw;
+  @include tablet {
+    margin-top: 30vw;
+  }
 }

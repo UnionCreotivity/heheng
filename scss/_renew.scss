@@ -1,4 +1,5 @@
 #renew {
+  padding-top: 4.5vw;
   a {
     text-decoration: none;
   }
@@ -148,7 +149,8 @@
     @include para();
     h1 {
       font-size: 1.25vw;
-      margin-bottom: 0.5vw;
+      margin-bottom: 1vw;
+      font-family: $serif;
       color: black;
     }
     h3 {

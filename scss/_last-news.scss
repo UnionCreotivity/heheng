@@ -1,5 +1,6 @@
 #last-news {
   position: relative;
+  padding-top: 4.5vw;
   .cut-1 {
     display: flex;
     justify-content: space-between;
@@ -34,7 +35,7 @@
   }
   .cut-1-left-banner {
     img {
-      width: 26.5vw;
+      width: 30.5vw;
     }
     @include tablet {
       width: 100%;

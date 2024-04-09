@@ -98,7 +98,10 @@
     flex-direction: column;
     width: 32%;
     margin-top: 2vw;
+    position: sticky;
+    top: 5vw;
     @include tablet {
+      position: relative;
       width: 100%;
       margin-bottom: 5vw;
     }
@@ -325,6 +328,7 @@
       font-size: $contentSize;
       font-family: $serif;
       width: 70%;
+      margin-left: 1vw;
     }
     textarea {
       border: none;
@@ -332,6 +336,7 @@
       font-size: $contentSize;
       font-family: $serif;
       width: 100%;
+      margin-top: 1vw;
     }
     @include tablet {
       label {
@@ -372,6 +377,7 @@
     margin: 0 auto;
     margin-top: 2vw;
     border: none;
+    cursor: pointer;
     @include tablet {
       font-size: $contentSizePH;
       padding: 1.5vw 15vw;

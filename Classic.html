@@ -12,7 +12,13 @@
       <section class="cut-1">
         <div class="cut-1-left">
           <div class="cut-1-left-banner">
-            <img src="./img/classic/banner-L.webp" alt="banner-L" />
+            <picture>
+              <source
+                media="(max-width:1024px)"
+                srcset="./img/classic/cut-1-L-ph.webp"
+              />
+              <img src="./img/classic/banner-L.webp" alt="banner-L" />
+            </picture>
           </div>
           <div class="cut-1-left-para">
             <div class="cut-1-left-para-first">
@@ -96,10 +102,17 @@
                 </div>
               </div>
             </div>
-            <div class="date-picker-button"><button>查詢</button></div>
+            <div class="date-picker-button">
+              <button>
+                <span class="pc">搜尋</span>
+                <span
+                  ><img src="./img/classic/search-icon.svg" alt="search-icon"
+                /></span>
+              </button>
+            </div>
           </div>
           <div class="cut-1-right-item-container">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper pc">
               <div class="swiper-slide">
                 <div class="swiper-slide-item">
                   <div class="swiper-slide-item-img">
@@ -198,6 +211,105 @@
                 </div>
               </div>
             </div>
+            <div class="right-item ph">
+              <div class="right-item-main">
+                <div class="right-item-img">
+                  <img
+                    src="./img/classic/ph/classic-pic-1.webp"
+                    alt="classic-pic-1"
+                  />
+                </div>
+                <div class="right-item-para">
+                  <h1>2022</h1>
+                  <div class="line"></div>
+                  <h3>恆合芝山</h3>
+                </div>
+              </div>
+              <div class="right-item-main">
+                <div class="right-item-img">
+                  <img
+                    src="./img/classic/ph/classic-pic-2.webp"
+                    alt="classic-pic-1"
+                  />
+                </div>
+                <div class="right-item-para">
+                  <h1>2022</h1>
+                  <div class="line"></div>
+                  <h3>江山</h3>
+                </div>
+              </div>
+              <div class="right-item-main">
+                <div class="right-item-img">
+                  <img
+                    src="./img/classic/ph/classic-pic-3.webp"
+                    alt="classic-pic-1"
+                  />
+                </div>
+                <div class="right-item-para">
+                  <h1>2020</h1>
+                  <div class="line"></div>
+                  <h3>大安MONEY</h3>
+                </div>
+              </div>
+              <div class="right-item-main">
+                <div class="right-item-img">
+                  <img
+                    src="./img/classic/ph/classic-pic-4.webp"
+                    alt="classic-pic-1"
+                  />
+                </div>
+                <div class="right-item-para">
+                  <h1>2019</h1>
+                  <div class="line"></div>
+                  <h3>瑋石天好韻</h3>
+                </div>
+              </div>
+              <div class="right-item-main">
+                <div class="right-item-img">
+                  <img
+                    src="./img/classic/ph/classic-pic-5.webp"
+                    alt="classic-pic-1"
+                  />
+                </div>
+                <div class="right-item-para">
+                  <h1>2017</h1>
+                  <div class="line"></div>
+                  <h3>I世紀</h3>
+                </div>
+              </div>
+              <div class="right-item-main">
+                <div class="right-item-img">
+                  <img
+                    src="./img/classic/ph/classic-pic-6.webp"
+                    alt="classic-pic-1"
+                  />
+                </div>
+                <div class="right-item-para">
+                  <h1>2017</h1>
+                  <div class="line"></div>
+                  <h3>瑋石登峰</h3>
+                </div>
+              </div>
+              <div class="right-item-main">
+                <div class="right-item-img">
+                  <img
+                    src="./img/classic/ph/classic-pic-7.webp"
+                    alt="classic-pic-1"
+                  />
+                </div>
+                <div class="right-item-para">
+                  <h1>2012</h1>
+                  <div class="line"></div>
+                  <h3>大師大</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-fixed">
+            <img
+              src="./img/classic/classic-right-fixed.png"
+              alt="classic-right-fixed"
+            />
           </div>
         </div>
       </section>
@@ -218,6 +330,7 @@
     <script src="./js/gsap/gsap.min.js"></script>
     <script src="./js/gsap/ScrollTrigger.min.js"></script>
     <script src="./js/gsap/SplitText.min.js"></script>
+    <script src="./js/classic.json"></script>
     <script>
       $(document).ready(function () {
         if (window.innerWidth <= 1024) {
@@ -233,7 +346,6 @@
           const toDate = $("#date-from-to").val();
           if (fromDate >= toDate) {
             let plus = Number(fromDate) + 1;
-            console.log(plus);
             $("#date-from-to").val(`${plus}`).change();
           }
         });
@@ -245,18 +357,84 @@
             $("#date-from-select").val(`${minus}`).change();
           }
         });
-
-        const classicSwiper = new Swiper(".cut-1-right-item-container", {
-          direction: "vertical",
-          mousewheel: true,
-          speed: 800,
-          slidesPerView: "1",
-          spaceBetween: 100,
-          breakpoints: {
-            500: {
-              spaceBetween: 50,
+        let classicSwiper;
+        if (window.innerWidth > 1024) {
+          classicSwiper = new Swiper(".cut-1-right-item-container", {
+            direction: "vertical",
+            mousewheel: true,
+            speed: 800,
+            slidesPerView: "1",
+            spaceBetween: 50,
+          });
+        }
+        $(".date-picker-button button").on("click", function () {
+          const fromDate = $("#date-from-select").val();
+          const toDate = $("#date-from-to").val();
+          $.ajax({
+            url: "./js/classic.json",
+            type: "GET",
+            dataType: "json",
+            success: function (response) {
+              // console.log(fromDate);
+              const start = response.findIndex((el) => el.year === fromDate);
+              const end = response.findIndex((el) => el.year === toDate);
+              if (start == -1 || end == -1) return alert("請選擇日期！！！");
+              const data = response.slice(start, end + 1);
+              const dataLength = data.length;
+              const length = Math.ceil(dataLength / 3);
+              let src = "";
+              let count = 0;
+              if (window > 1024) {
+                classicSwiper.removeAllSlides();
+                for (let i = 0; i < length; i++) {
+                  for (let j = 0; j < 3; j++) {
+                    if (data[count]) {
+                      src += `
+                      <div class="swiper-slide-item">
+                      <div class="swiper-slide-item-img">
+                        <img
+                          src="${data[count].img}"
+                          alt="classic-pic"
+                        />
+                        <div class="swiper-slide-item-img-back">
+                          <h3>${data[count].title}</h3>
+                          <div class="line"></div>
+                          <h1>${data[count].year}</h1>
+                        </div>
+                      </div>
+                    </div>`;
+                    }
+                    count++;
+                  }
+                  classicSwiper.appendSlide(
+                    `<div class="swiper-slide">${src}</div>`
+                  );
+                  src = ``;
+                }
+              } else {
+                for (let i = 0; i < dataLength; i++) {
+                  src += ` <div class="right-item-main">
+                <div class="right-item-img">
+                  <img
+                    src="${data[i].img}"
+                    alt="classic-pic-1"
+                  />
+                </div>
+                <div class="right-item-para">
+                  <h1>${data[i].year}</h1>
+                  <div class="line"></div>
+                  <h3>${data[i].title}</h3>
+                </div>
+              </div>`;
+                }
+                $(".right-item").empty().append(src);
+                src = "";
+              }
             },
-          },
+            error: function (reject) {
+              alert("錯誤！！！");
+            },
+          });
         });
       });
     </script>
