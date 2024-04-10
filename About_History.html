@@ -22,13 +22,13 @@
           </div>
           <div class="cut-1-left-para">
             <div class="cut-1-left-para-first">
-              <h1>About</h1>
+              <h1 class="cut-1-left-para-first-h1">About</h1>
               <div class="cut-1-left-para-line"></div>
             </div>
             <div class="cut-1-left-para-second">
               <div class="cut-1-left-para-line-second pc"></div>
-              <h4>關於恆合</h4>
-              <h1>Us</h1>
+              <h4 class="cut-1-left-para-second-h4">關於恆合</h4>
+              <h1 class="cut-1-left-para-second-h1">Us</h1>
             </div>
           </div>
         </div>
@@ -926,11 +926,29 @@
             },
           },
         });
-
+        const titleSplit = new SplitText(
+          ".cut-1-left-para-first h1,.cut-1-left-para-second h4,.cut-1-left-para-second h1",
+          {
+            type: "chars",
+          }
+        );
+        addDelay(
+          ".cut-1-left-para-first-h1 div",
+          ".cut-1-left-para-second-h4 div",
+          ".cut-1-left-para-second-h1 div"
+        );
         //動畫延遲
-        function addDelay(tag) {
+        function addDelay(tag, tag1, tag2) {
           let delay = 300;
           $(tag).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 100;
+          });
+          $(tag1).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 100;
+          });
+          $(tag2).each(function (index) {
             $(this).css("animation-delay", `${delay}ms`);
             delay += 100;
           });
@@ -938,10 +956,20 @@
         const cut1Tl = gsap.timeline({ delay: 1 });
 
         cut1Tl
-          .from(".cut-1-right-img-2 img", {
-            y: "-105%",
-            duration: "1.5",
+          .from(titleSplit.chars, {
+            stagger: 0.05,
+            rotation: "40",
+            x: "-110%",
+            duration: 1,
           })
+          .from(
+            ".cut-1-right-img-2 img",
+            {
+              y: "-105%",
+              duration: "1.5",
+            },
+            "<+0.5"
+          )
           .from(
             ".cut-1-right-img-1 img",
             {

@@ -50,17 +50,18 @@
     top: 0;
     writing-mode: vertical-rl;
     line-height: 1;
-    margin-left: 15vw;
+    margin-left: 14vw;
+    margin-top: 1vw;
     h1 {
-      font-size: 8vw;
+      font-size: 9vw;
       font-family: $cor;
       font-weight: 400;
     }
     h4 {
       font-family: $serif;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 1.75vw;
-      letter-spacing: 20px;
+      letter-spacing: 10px;
       margin-right: 2vw;
     }
     @include tablet {
@@ -84,7 +85,6 @@
     justify-content: space-between;
     line-height: 1;
     gap: 1vw;
-    padding-bottom: 0.75vw;
     @include tablet {
       justify-content: space-between;
       width: 65%;
@@ -112,7 +112,6 @@
   .cut-1-left-para-line {
     width: 1px;
     height: 8vw;
-    left: -1vw;
     position: relative;
     background-color: black;
     @include tablet {
@@ -192,6 +191,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @include tablet {
+      overflow: hidden;
+    }
   }
   .cut-2-news-line {
     position: absolute;
@@ -234,16 +236,22 @@
       background-color: #d1af8b;
       width: 10px;
       height: 100%;
-      left: 0;
+      left: -20.5%;
       top: 0;
       bottom: 0;
-      margin-left: -5.95vw;
       opacity: 0;
       transition: all 0.5s;
     }
     @include tablet {
       &::after {
         display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 1920px) {
+    .cut-2-news-item-img {
+      &::after {
+        left: -21.6%;
       }
     }
   }

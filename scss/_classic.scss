@@ -14,30 +14,49 @@
   .cut-1-left {
     top: 1vw;
     height: 100%;
-    margin-top: 1vw;
+    position: relative;
   }
   .cut-1-left-banner {
-    width: 31vw;
-    @include laptop {
-      img {
-        height: 49.4vw;
-      }
-    }
-    @include tablet {
-      width: 100%;
-      img {
-        width: 50%;
-        height: auto;
-      }
+    width: 30.5vw;
+    @media screen and (max-width: 1920px) {
+      width: 29.5vw;
     }
   }
+  // .cut-1-left-banner {
+  //   width: 31.025vw;
+  //   @media screen and (max-width: 1920px) {
+  //     width: 31vw;
+  //   }
+  //   @include laptop {
+  //     img {
+  //       height: 49.4vw;
+  //     }
+  //   }
+  //   @media screen and (max-width: 1440px) {
+  //     img {
+  //       height: 53.95vw;
+  //     }
+  //   }
+  //   @media screen and (max-width: 1366px) {
+  //     img {
+  //       height: 49.4vw;
+  //     }
+  //   }
+  //   @include tablet {
+  //     width: 100%;
+  //     img {
+  //       width: 50%;
+  //       height: auto;
+  //     }
+  //   }
+  // }
   .cut-1-left-para {
     position: absolute;
     top: 0;
     writing-mode: vertical-rl;
     line-height: 1;
-    margin-left: 19vw;
-    margin-top: 5.5vw;
+    margin-left: 14vw;
+    margin-top: 1vw;
     h1 {
       font-size: 9vw;
       font-family: $cor;
@@ -46,6 +65,7 @@
     h4 {
       font-family: $serif;
       font-size: 2vw;
+      font-weight: 500;
       letter-spacing: 18px;
     }
     @include laptop {
@@ -252,6 +272,7 @@
       color: white;
       letter-spacing: 2px;
       gap: 0.35vw;
+      cursor: pointer;
       img {
         width: 0.8vw;
         padding-top: 0.15vw;
@@ -272,28 +293,26 @@
   //
   .cut-1-right-item-container {
     width: 100%;
-    height: 76vh;
+    height: 74vh;
     overflow: hidden;
     margin-top: 1.1vw;
-  }
-  @media screen and (max-width: 1920px) {
-    .cut-1-right-item-container {
-      height: 79vh;
-      margin-top: 1.15vw;
-    }
-  }
-  .cut-1-right-item-container {
-    @include laptop {
-      height: 74vh;
-      margin-top: 3.95vw;
-    }
-  }
-  @media screen and (max-width: 1366px) {
-    .cut-1-right-item-container {
-      margin-top: 4vw;
-    }
-  }
-  .cut-1-right-item-container {
+    // @media screen and (max-width: 1920px) {
+    //   .cut-1-right-item-container {
+    //     height: 79vh;
+    //     margin-top: 1.15vw;
+    //   }
+    // }
+    // .cut-1-right-item-container {
+    //   @include laptop {
+    //     height: 74vh;
+    //     margin-top: 3.95vw;
+    //   }
+    // }
+    // @media screen and (max-width: 1366px) {
+    //   .cut-1-right-item-container {
+    //     margin-top: 4vw;
+    //   }
+    // }
     @include tablet {
       width: 85%;
       height: auto;
@@ -304,12 +323,14 @@
       flex-direction: column;
     }
   }
+
   .swiper-slide {
     display: flex;
     align-items: center;
   }
   .swiper-slide-item {
     width: 33.5%;
+    height: 100%;
     overflow: hidden;
     @include laptop {
       height: 100%;
@@ -317,7 +338,9 @@
   }
   .swiper-slide-item-img {
     position: relative;
+    height: 100%;
     img {
+      height: 100%;
       transition: all 1s;
     }
     @include laptop {

@@ -18,7 +18,7 @@
                   media="(max-width:1024px)"
                   srcset="./img/new_project/banner-L-phone.png"
                 />
-                <img src="./img/new_project/banner-L.png" alt="banner-L" />
+                <img src="./img/new_project/banner-L.webp" alt="banner-L" />
               </picture>
             </div>
             <div class="cut-1-left-para">
@@ -114,5 +114,40 @@
     <script src="./js/gsap/gsap.min.js"></script>
     <script src="./js/gsap/ScrollTrigger.min.js"></script>
     <script src="./js/gsap/SplitText.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        if (window.innerWidth <= 1024) {
+          $(".pc").remove();
+        } else {
+          $(".ph").remove();
+        }
+      });
+      $(window).on("load", function () {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        let all = 0; //掛載id gasp動畫用
+        $(".cut-1-right-item").each(function () {
+          $(this).attr("id", `right-item-${all}`);
+          all++;
+        });
+        function lastNewsAnimation(selector, xVal) {
+          $(selector).each(function () {
+            let thisId = $(this)[0].id;
+            gsap.from(`#${thisId}`, {
+              scrollTrigger: {
+                trigger: `#${thisId}`,
+                toggleActions: "play none none none",
+                start: "center bottom",
+              },
+              opacity: 0,
+              x: xVal,
+              duration: 2,
+            });
+          });
+        }
+
+        lastNewsAnimation(".cut-1-right-item", 100);
+      });
+    </script>
   </body>
 </html>

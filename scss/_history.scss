@@ -31,6 +31,7 @@
     writing-mode: vertical-rl;
     line-height: 1;
     margin-left: 14vw;
+    margin-top: 1vw;
     h1 {
       font-size: 9vw;
       font-family: $cor;
@@ -40,7 +41,7 @@
       font-family: $serif;
       font-size: 1.5vw;
       letter-spacing: 5px;
-      font-weight: 600;
+      font-weight: 500;
     }
     @include tablet {
       writing-mode: unset;
@@ -61,7 +62,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1;
+
     gap: 1vw;
     @include tablet {
       width: 65%;
@@ -73,6 +74,7 @@
   .cut-1-left-para-line {
     width: 1px;
     height: 5vw;
+    line-height: 1;
     left: -1vw;
     position: relative;
     background-color: black;
@@ -152,7 +154,9 @@
       align-items: center;
     }
   }
-  .cut-2-right-top-para-h1 {
+  .cut-1-left-para-first-h1,
+  .cut-1-left-para-second-h4,
+  .cut-1-left-para-second-h1 {
     position: relative;
     overflow: hidden;
     div {
@@ -166,16 +170,16 @@
   }
   @keyframes shine {
     0% {
-      color: #666666;
+      color: #000000;
     }
     20% {
       color: yellow;
     }
     40% {
-      color: #666666;
+      color: #000000;
     }
     100% {
-      color: #666666;
+      color: #000000;
     }
   }
   .cut-2-left {

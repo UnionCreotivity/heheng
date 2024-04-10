@@ -340,6 +340,8 @@
         }
       });
       $(window).on("load", function () {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+
         //日期選擇防呆
         $("#date-from-select").on("change", function () {
           const fromDate = $("#date-from-select").val();
@@ -366,8 +368,14 @@
             slidesPerView: "1",
             spaceBetween: 50,
           });
+          gsap.from(".swiper-slide-item-img", {
+            y: "-100%",
+            delay: 1,
+            stagger: 0.25,
+            duration: 1.5,
+          });
         }
-        $(".date-picker-button button").on("click", function () {
+        $(".date-picker-button").on("click", function () {
           const fromDate = $("#date-from-select").val();
           const toDate = $("#date-from-to").val();
           $.ajax({
@@ -375,7 +383,6 @@
             type: "GET",
             dataType: "json",
             success: function (response) {
-              // console.log(fromDate);
               const start = response.findIndex((el) => el.year === fromDate);
               const end = response.findIndex((el) => el.year === toDate);
               if (start == -1 || end == -1) return alert("請選擇日期！！！");
@@ -384,8 +391,8 @@
               const length = Math.ceil(dataLength / 3);
               let src = "";
               let count = 0;
-              if (window > 1024) {
-                classicSwiper.removeAllSlides();
+              if (window.innerWidth > 1024) {
+                classicSwiper.removeAllSlides(); //刪除全部的swiper-slide
                 for (let i = 0; i < length; i++) {
                   for (let j = 0; j < 3; j++) {
                     if (data[count]) {

@@ -34,6 +34,7 @@
     writing-mode: vertical-rl;
     line-height: 1;
     margin-left: 14vw;
+    margin-top: 1vw;
     h1 {
       font-size: 9vw;
       font-family: $cor;
@@ -41,7 +42,7 @@
     }
     h4 {
       font-family: $serif;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.5vw;
       letter-spacing: 5px;
     }
@@ -64,13 +65,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1;
     gap: 1vw;
     @include tablet {
       width: 65%;
       gap: 9vw;
       margin-left: 10vw;
       justify-content: space-between;
+    }
+  }
+  .cut-1-left-para-first-h1,
+  .cut-1-left-para-second-h4,
+  .cut-1-left-para-second-h1 {
+    position: relative;
+    overflow: hidden;
+    div {
+      animation-name: shine;
+      animation-duration: 3.8s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      transform-origin: left center;
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      color: #000000;
+    }
+    20% {
+      color: yellow;
+    }
+    40% {
+      color: #000000;
+    }
+    100% {
+      color: #000000;
     }
   }
   .cut-1-left-para-line {
@@ -90,6 +119,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    line-height: 1;
     @include tablet {
       width: 65%;
       gap: 4vw;

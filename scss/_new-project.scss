@@ -6,8 +6,8 @@
   z-index: -1;
 }
 #new_project {
+  padding-top: 4.5vw;
   @include tablet {
-    padding-top: 4.5vw;
   }
   position: relative;
   .cut-1 {
@@ -21,8 +21,9 @@
 
   .cut-1-left {
     position: sticky;
-    top: 4vw;
+    top: 5.2vw;
     height: 100%;
+    margin-top: 1vw;
     @include tablet {
       position: relative;
       top: unset;
@@ -31,8 +32,7 @@
   .cut-1-left-container {
     position: relative;
     height: 100%;
-    margin-top: 4vw;
-    margin-left: 5vw;
+    width: 30.5vw;
     @include tablet {
       margin-left: 0;
       margin-top: 1vw;
@@ -44,10 +44,6 @@
     width: 26vw;
   }
   .cut-1-left-banner {
-    img {
-      height: 38vw;
-      width: 24.5vw;
-    }
     @include tablet {
       width: 100%;
       img {
@@ -62,14 +58,15 @@
     writing-mode: vertical-rl;
     line-height: 1;
     margin-left: 14vw;
+    margin-top: 1vw;
     h1 {
-      font-size: 8vw;
+      font-size: 9vw;
       font-family: $cor;
       font-weight: 400;
     }
     h4 {
       font-family: $serif;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 1.75vw;
       letter-spacing: 20px;
       margin-right: 2vw;
@@ -168,6 +165,7 @@
       justify-content: center;
       flex-direction: column;
       width: 100%;
+      overflow: hidden;
     }
   }
   .cut-1-right-item-container {
