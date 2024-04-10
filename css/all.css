@@ -2747,8 +2747,9 @@
 }
 @media all and (max-width: 1024px) {
   #new_project .cut-1-left-container {
+    width: 100%;
     margin-left: 0;
-    margin-top: 1vw;
+    margin-top: 0vw;
   }
 }
 #new_project .cut-1-left-fixed-img {
@@ -2855,7 +2856,7 @@
 @media all and (max-width: 1024px) {
   #new_project .cut-1-left-para-second {
     width: 65%;
-    gap: 0vw;
+    gap: 6vw;
     margin-left: 10vw;
   }
   #new_project .cut-1-left-para-second > h4 {
@@ -2877,6 +2878,7 @@
     height: 1px;
     position: relative;
     background-color: black;
+    margin-top: 3vw;
   }
 }
 #new_project .cut-1-right {
@@ -3164,6 +3166,9 @@
   }
   #new_project-inner .cut-1-title h3 {
     font-size: 4.25vw;
+  }
+  #new_project-inner .cut-1-title h1 {
+    font-size: 9.75vw;
   }
   #new_project-inner .cut-1-title span {
     font-size: 4.75vw;
@@ -3653,6 +3658,11 @@
   height: 100%;
   margin-top: 1vw;
 }
+@media all and (max-width: 1024px) {
+  #renew .cut-1-left {
+    width: 100%;
+  }
+}
 #renew .cut-1-left-banner {
   width: 30.5vw;
 }
@@ -3663,7 +3673,11 @@
 }
 @media all and (max-width: 1024px) {
   #renew .cut-1-left-banner {
+    width: 100%;
+  }
+  #renew .cut-1-left-banner img {
     width: 50%;
+    height: auto;
   }
 }
 #renew .cut-1-left-para {
@@ -3693,7 +3707,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 22%;
+    margin-top: 27%;
     margin-left: 0;
     padding-left: 4vw;
   }
@@ -3711,6 +3725,7 @@
   #renew .cut-1-left-para-first {
     width: 65%;
     gap: 2vw;
+    margin-left: 10vw;
   }
 }
 #renew .cut-1-left-para-line {
@@ -3740,6 +3755,7 @@
   #renew .cut-1-left-para-second {
     width: 65%;
     gap: 6vw;
+    margin-left: 10vw;
   }
   #renew .cut-1-left-para-second > h4 {
     position: relative;
@@ -3864,6 +3880,7 @@
 @media all and (max-width: 1024px) {
   #renew .cut-2-item-content {
     position: relative;
+    display: block;
     width: 100%;
     right: unset;
     top: unset;
@@ -4008,6 +4025,9 @@
     font-size: 4.75vw;
     margin-left: 5vw;
     margin-right: 5vw;
+  }
+  #renew-inner .cut-1-title h1 {
+    font-size: 9.75vw;
   }
 }
 #renew-inner .cut-1-subtitle {
@@ -5366,8 +5386,12 @@
   }
 }
 @media all and (max-width: 1600px) {
+  #classic .cut-1-left-banner {
+    width: 100%;
+  }
   #classic .cut-1-left-banner img {
-    height: 49vw;
+    width: 50%;
+    height: auto;
   }
 }
 #classic .cut-1-left-para {

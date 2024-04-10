@@ -22,8 +22,10 @@
       width: 29vw;
     }
     @include laptop {
+      width: 100%;
       img {
-        height: 49vw;
+        width: 50%;
+        height: auto;
       }
     }
   }
