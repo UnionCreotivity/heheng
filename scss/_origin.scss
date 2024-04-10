@@ -82,7 +82,7 @@
     position: relative;
     overflow: hidden;
     div {
-      animation-name: shine;
+      animation-name: origin_shine;
       animation-duration: 3.8s;
       animation-fill-mode: both;
       animation-timing-function: ease-in-out;
@@ -94,12 +94,12 @@
     }
   }
 
-  @keyframes shine {
+  @keyframes origin_shine {
     0% {
       color: #000000;
     }
     20% {
-      color: yellow;
+      color: rgb(201 201 0);
     }
     40% {
       color: #000000;
@@ -272,7 +272,7 @@
       padding-right: 0;
       width: 85%;
       overflow: unset;
-      padding-bottom: 5vw;
+      padding-bottom: 7vw;
     }
   }
   .cut-2-right-top-img {

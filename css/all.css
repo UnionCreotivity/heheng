@@ -1249,7 +1249,7 @@
 #origin .cut-1-left-para-first-h1 div,
 #origin .cut-1-left-para-second-h4 div,
 #origin .cut-1-left-para-second-h1 div {
-  animation-name: shine;
+  animation-name: origin_shine;
   animation-duration: 3.8s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -1263,12 +1263,12 @@
     overflow: unset;
   }
 }
-@keyframes shine {
+@keyframes origin_shine {
   0% {
     color: #000000;
   }
   20% {
-    color: yellow;
+    color: rgb(201, 201, 0);
   }
   40% {
     color: #000000;
@@ -1492,7 +1492,7 @@
     padding-right: 0;
     width: 85%;
     overflow: unset;
-    padding-bottom: 5vw;
+    padding-bottom: 7vw;
   }
 }
 #origin .cut-2-right-top-img {
@@ -2117,7 +2117,7 @@
 #history .cut-1-left-para-first-h1 div,
 #history .cut-1-left-para-second-h4 div,
 #history .cut-1-left-para-second-h1 div {
-  animation-name: shine;
+  animation-name: history_shine;
   animation-duration: 3.8s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -2131,12 +2131,12 @@
     overflow: unset;
   }
 }
-@keyframes shine {
+@keyframes history_shine {
   0% {
     color: #000000;
   }
   20% {
-    color: yellow;
+    color: rgb(201, 201, 0);
   }
   40% {
     color: #000000;
@@ -2771,7 +2771,7 @@
   top: 0;
   writing-mode: vertical-rl;
   line-height: 1;
-  margin-left: 14vw;
+  margin-left: 13vw;
   margin-top: 1vw;
 }
 #new_project .cut-1-left-para h1 {
@@ -3067,6 +3067,46 @@
   #new_project .cut-1-fixed-img {
     top: 35vw;
     width: 47vw;
+  }
+}
+#new_project .cut-1-left-para-first-h1 {
+  padding-left: 1vw;
+}
+#new_project .cut-1-left-para-second-h1,
+#new_project .cut-1-left-para-second-h2,
+#new_project .cut-1-left-para-first-h1 {
+  position: relative;
+  overflow: hidden;
+}
+#new_project .cut-1-left-para-second-h1 div,
+#new_project .cut-1-left-para-second-h2 div,
+#new_project .cut-1-left-para-first-h1 div {
+  animation-name: new_project_shine;
+  animation-duration: 3.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: left center;
+}
+@media all and (max-width: 1024px) {
+  #new_project .cut-1-left-para-second-h1,
+  #new_project .cut-1-left-para-second-h2,
+  #new_project .cut-1-left-para-first-h1 {
+    overflow: unset;
+  }
+}
+@keyframes new_project_shine {
+  0% {
+    color: #000000;
+  }
+  20% {
+    color: rgb(201, 201, 0);
+  }
+  40% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
   }
 }
 
@@ -4622,7 +4662,7 @@
 #last-news .cut-1-left-para-second-h1 div,
 #last-news .cut-1-left-para-second-h4 div,
 #last-news .cut-1-left-para-first-h1 div {
-  animation-name: shine;
+  animation-name: last_shine;
   animation-duration: 3.8s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -4636,12 +4676,12 @@
     overflow: unset;
   }
 }
-@keyframes shine {
+@keyframes last_shine {
   0% {
     color: black;
   }
   20% {
-    color: yellow;
+    color: rgb(201, 201, 0);
   }
   40% {
     color: black;
@@ -5510,7 +5550,7 @@
   justify-content: space-between;
   gap: 1vw;
   margin-top: 0.25vw;
-  margin-right: 5vw;
+  margin-right: 4vw;
 }
 @media all and (max-width: 1024px) {
   #classic .cut-1-left-para-second {
@@ -5912,6 +5952,43 @@
   color: #af9e8e;
   font-size: 14vw;
   line-height: 0.8;
+}
+#classic .cut-1-left-para-first-h1 {
+  padding-left: 1vw;
+}
+#classic .cut-1-left-para-first-h1,
+#classic .cut-1-left-para-second-h4 {
+  position: relative;
+  overflow: hidden;
+}
+#classic .cut-1-left-para-first-h1 div,
+#classic .cut-1-left-para-second-h4 div {
+  animation-name: classic_shine;
+  animation-duration: 3.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: left center;
+}
+@media all and (max-width: 1024px) {
+  #classic .cut-1-left-para-first-h1,
+  #classic .cut-1-left-para-second-h4 {
+    overflow: unset;
+  }
+}
+@keyframes classic_shine {
+  0% {
+    color: #000000;
+  }
+  20% {
+    color: rgb(201, 201, 0);
+  }
+  40% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
 }
 
 #classic ~ #footer {

@@ -23,14 +23,14 @@
             </div>
             <div class="cut-1-left-para">
               <div class="cut-1-left-para-second">
-                <h1>New</h1>
-                <h4 class="pc">熱銷建案</h4>
+                <h1 class="cut-1-left-para-second-h1">New</h1>
+                <h4 class="cut-1-left-para-second-h2 pc">熱銷建案</h4>
                 <div class="cut-1-left-para-line-second ph"></div>
               </div>
               <div class="cut-1-left-para-first">
                 <div class="cut-1-left-para-line pc"></div>
                 <h4 class="ph">熱銷建案</h4>
-                <h1>Project</h1>
+                <h1 class="cut-1-left-para-first-h1">Project</h1>
               </div>
             </div>
           </div>
@@ -124,6 +124,43 @@
       });
       $(window).on("load", function () {
         gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        function addDelay(tag, tag1, tag2) {
+          let delay = 300;
+          $(tag).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 200;
+          });
+          $(tag1).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 200;
+          });
+          $(tag2).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 200;
+          });
+        }
+        if (window.innerWidth > 1024) {
+          const titleSplit = new SplitText(
+            ".cut-1-left-para-second-h1,.cut-1-left-para-second-h2,.cut-1-left-para-first-h1",
+            {
+              type: "chars",
+            }
+          );
+          addDelay(
+            ".cut-1-left-para-second-h1 div",
+            ".cut-1-left-para-second-h2 div",
+            ".cut-1-left-para-first-h1 div"
+          );
+
+          gsap.from(titleSplit.chars, {
+            stagger: 0.1,
+            rotation: "40",
+            x: "-110%",
+            duration: 1,
+            delay: 0.5,
+          });
+        }
 
         let all = 0; //掛載id gasp動畫用
         $(".cut-1-right-item").each(function () {

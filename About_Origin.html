@@ -215,7 +215,7 @@
           );
           cut1Tl
             .from(titleSplit.chars, {
-              stagger: 0.05,
+              stagger: 0.1,
               rotation: "40",
               x: "-110%",
               duration: 1,
@@ -261,15 +261,15 @@
           let delay = 300;
           $(tag).each(function (index) {
             $(this).css("animation-delay", `${delay}ms`);
-            delay += 100;
+            delay += 200;
           });
           $(tag1).each(function (index) {
             $(this).css("animation-delay", `${delay}ms`);
-            delay += 100;
+            delay += 200;
           });
           $(tag2).each(function (index) {
             $(this).css("animation-delay", `${delay}ms`);
-            delay += 100;
+            delay += 200;
           });
         }
 
