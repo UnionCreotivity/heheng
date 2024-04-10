@@ -53,8 +53,8 @@
                       <image
                         href="./img/home/img_0.png"
                         preserveAspectRatio="xMidYMid slice"
-                        width="400px"
-                        height="400px"
+                        width="700px"
+                        height="700px"
                       ></image>
                     </g>
                   </g>
@@ -107,8 +107,8 @@
                       <image
                         href="./img/home/img_0.png"
                         preserveAspectRatio="xMidYMid slice"
-                        width="400px"
-                        height="400px"
+                        width="700px"
+                        height="700px"
                       ></image>
                     </g>
                   </g>
@@ -161,8 +161,8 @@
                       <image
                         href="./img/home/img_0.png"
                         preserveAspectRatio="xMidYMid slice"
-                        width="400px"
-                        height="400px"
+                        width="700px"
+                        height="700px"
                       ></image>
                     </g>
                   </g>
@@ -712,15 +712,23 @@
           function opacityChange(trig1, trig2) {
             $(trig1).on("mouseover", function () {
               gsap.to(trig2, {
-                opacity: "1",
+                opacity: 1,
                 zIndex: 3,
+                duration: 1,
+              });
+              gsap.from(`${trig2} > img`, {
+                scale: "1.2",
                 duration: 1,
               });
             });
             $(trig1).on("mouseout", function () {
-              gsap.to(trig2, {
+              gsap.to(`${trig2}`, {
                 opacity: "0",
                 zIndex: 0,
+                duration: 1,
+              });
+              gsap.to(`${trig2} >img`, {
+                scale: "1",
                 duration: 1,
               });
             });

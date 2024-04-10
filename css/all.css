@@ -218,15 +218,16 @@
 }
 #home .cut-1-para-third-text h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.25vw;
+  font-size: 1vw;
   font-weight: 500;
+  padding-right: 4vw;
 }
 #home .cut-1-para-third-text h4 {
   font-family: "Noto Serif TC", serif;
-  font-size: 0.9vw;
+  font-size: 0.8vw;
   font-weight: 500;
   display: inline-block;
-  margin-top: 3%;
+  line-height: 2;
   letter-spacing: 2px;
 }
 #home .cut-1-para-third-text .cut-1-para-third-line {
@@ -244,6 +245,7 @@
   #home .cut-1-para-third-text h3 {
     font-size: 4.5vw;
     line-height: 1.5;
+    padding-right: 0vw;
   }
   #home .cut-1-para-third-text h4 {
     font-size: 4.25vw;
@@ -337,7 +339,7 @@
 }
 #home .cut-2-right h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -380,7 +382,7 @@
 }
 #home .cut-2-right h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
 }
 #home .cut-2-right p {
   font-family: "Microsoft JhengHei";
@@ -404,7 +406,7 @@
   }
   #home .cut-2-right h3 {
     font-family: "Noto Serif TC", serif;
-    font-size: 1vw;
+    font-size: 1.1vw;
     margin-bottom: 1vw;
     letter-spacing: 2px;
     font-weight: 500;
@@ -446,19 +448,19 @@
   overflow: hidden;
 }
 #home .cut-2-right-h1 div {
-  animation-name: shine;
+  animation-name: indexShine;
   animation-duration: 3.8s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   transform-origin: left center;
 }
-@keyframes shine {
+@keyframes indexShine {
   0% {
     color: #333;
   }
   20% {
-    color: yellow;
+    color: #d9d904;
   }
   40% {
     color: #333;
@@ -527,7 +529,7 @@
 }
 #home .cut-3-para-container h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -576,7 +578,7 @@
   overflow: hidden;
 }
 #home .cut-3-para-h1 div {
-  animation-name: shine;
+  animation-name: indexShine;
   animation-duration: 3.8s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -714,17 +716,14 @@
   overflow: hidden;
 }
 #home .cut-4-dot-circle img {
-  animation: dotRotate 16s infinite linear;
+  animation: dotRotate 60s infinite linear;
 }
 @keyframes dotRotate {
   0% {
     transform: rotate(0);
   }
-  50% {
-    transform: rotate(360deg);
-  }
   100% {
-    transform: rotate(0);
+    transform: rotate(360deg);
   }
 }
 #home .cut-4-pic-1,
@@ -737,7 +736,15 @@
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  z-index: 0;
+}
+#home .cut-4-pic-1 img,
+#home .cut-4-pic-2 img,
+#home .cut-4-pic-3 img,
+#home .cut-4-pic-4 img,
+#home .cut-4-pic-5 img,
+#home .cut-4-pic-6 img {
+  position: relative;
 }
 #home .cut-4-pic-para {
   position: absolute;
@@ -787,7 +794,6 @@
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
 }
 #home .cut-4-circle-1 img,
 #home .cut-4-circle-2 img,
@@ -795,6 +801,7 @@
 #home .cut-4-circle-4 img,
 #home .cut-4-circle-5 img,
 #home .cut-4-circle-6 img {
+  opacity: 0;
   height: 100%;
 }
 #home .cut-4-center {
@@ -804,7 +811,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   overflow: hidden;
 }
@@ -867,7 +874,7 @@
 }
 #home .cut-4-swiper-para h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -940,7 +947,7 @@
 }
 #home .cut-4-para h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -1001,7 +1008,7 @@
   overflow: hidden;
 }
 #home .cut-4-para-h1 div {
-  animation-name: shine;
+  animation-name: indexShine;
   animation-duration: 3.8s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -1038,7 +1045,7 @@
 }
 #home .cut-5-left h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -1109,7 +1116,7 @@
   overflow: hidden;
 }
 #home .cut-5-left-h1 div {
-  animation-name: shine;
+  animation-name: indexShine;
   animation-duration: 3.8s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -1416,7 +1423,7 @@
   color: #cfb38e;
 }
 #origin .cut-2-link a h3 {
-  font-size: 1vw;
+  font-size: 1.1vw;
   font-weight: 400;
 }
 @media all and (max-width: 1024px) {
@@ -1451,7 +1458,7 @@
 }
 #origin .cut-2-right h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -1636,7 +1643,7 @@
 }
 #origin .cut-2-right-middle-para h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -1790,7 +1797,7 @@
 }
 #origin .cut-2-right-bottom-heng-hong-para-top h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -2198,7 +2205,7 @@
   color: #cfb38e;
 }
 #history .cut-2-link a h3 {
-  font-size: 1vw;
+  font-size: 1.1vw;
   font-weight: 400;
 }
 @media all and (max-width: 1024px) {
@@ -2232,7 +2239,7 @@
 }
 #history .cut-2-right h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -2550,7 +2557,7 @@
 }
 #history .cut-2-swiper-main-content-para-left h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -2951,7 +2958,7 @@
 }
 #new_project .cut-1-right-item-more h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -3145,7 +3152,7 @@
 }
 #new_project-inner .cut-1-title h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -3293,7 +3300,7 @@
 }
 #new_project-inner .cut-2-right-top h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -3556,7 +3563,7 @@
 }
 #new_project-inner .cut-3-right h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
 }
 @media all and (max-width: 1024px) {
   #new_project-inner .cut-3-right {
@@ -3864,7 +3871,7 @@
 }
 #renew .cut-2-item-content h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -3999,7 +4006,7 @@
 }
 #renew-inner .cut-1-title h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -4131,7 +4138,7 @@
 }
 #renew-inner .cut-1-pic-para h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -4237,7 +4244,7 @@
 }
 #renew-inner .cut-2-item h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -4963,7 +4970,7 @@
 }
 #last-news .cut-2-news-item-para-time {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   color: #999999;
   letter-spacing: 2px;
 }
@@ -5063,7 +5070,7 @@
 }
 #last-news-inner .cut-1-title h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -5169,7 +5176,7 @@
 }
 #last-news-inner .cut-2-top-left h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -5207,7 +5214,7 @@
 }
 #last-news-inner .cut-2-top-left h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   color: #999999;
 }
 #last-news-inner .cut-2-top-left h1 {
@@ -5274,7 +5281,7 @@
 }
 #last-news-inner .cut-2-content h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -5334,7 +5341,7 @@
 }
 #last-news-inner .cut-2-basic h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -5817,7 +5824,7 @@
 }
 #classic .swiper-slide-item-img-back h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -5900,7 +5907,7 @@
 }
 #classic .right-item-para h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
   margin-bottom: 1vw;
   letter-spacing: 2px;
   font-weight: 500;
@@ -6181,7 +6188,7 @@
 }
 #contact .cut-3-right h3 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.1vw;
 }
 @media all and (max-width: 1024px) {
   #contact .cut-3-right {
