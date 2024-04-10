@@ -110,6 +110,37 @@
       }
     }
   }
+  .cut-1-left-para-second-h1,
+  .cut-1-left-para-second-h4,
+  .cut-1-left-para-first-h1 {
+    position: relative;
+    overflow: hidden;
+    div {
+      animation-name: shine;
+      animation-duration: 3.8s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      transform-origin: left center;
+    }
+    @include tablet {
+      overflow: unset;
+    }
+  }
+  @keyframes shine {
+    0% {
+      color: black;
+    }
+    20% {
+      color: yellow;
+    }
+    40% {
+      color: black;
+    }
+    100% {
+      color: black;
+    }
+  }
   .cut-1-left-para-line {
     width: 1px;
     height: 8vw;

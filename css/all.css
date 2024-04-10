@@ -4613,6 +4613,43 @@
     left: 0;
   }
 }
+#last-news .cut-1-left-para-second-h1,
+#last-news .cut-1-left-para-second-h4,
+#last-news .cut-1-left-para-first-h1 {
+  position: relative;
+  overflow: hidden;
+}
+#last-news .cut-1-left-para-second-h1 div,
+#last-news .cut-1-left-para-second-h4 div,
+#last-news .cut-1-left-para-first-h1 div {
+  animation-name: shine;
+  animation-duration: 3.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: left center;
+}
+@media all and (max-width: 1024px) {
+  #last-news .cut-1-left-para-second-h1,
+  #last-news .cut-1-left-para-second-h4,
+  #last-news .cut-1-left-para-first-h1 {
+    overflow: unset;
+  }
+}
+@keyframes shine {
+  0% {
+    color: black;
+  }
+  20% {
+    color: yellow;
+  }
+  40% {
+    color: black;
+  }
+  100% {
+    color: black;
+  }
+}
 #last-news .cut-1-left-para-line {
   width: 1px;
   height: 8vw;
