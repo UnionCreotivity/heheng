@@ -19,7 +19,12 @@
   .cut-1-left-banner {
     width: 30.5vw;
     @media screen and (max-width: 1920px) {
-      width: 29.5vw;
+      width: 29vw;
+    }
+    @include laptop {
+      img {
+        height: 49vw;
+      }
     }
   }
   // .cut-1-left-banner {
@@ -55,8 +60,8 @@
     top: 0;
     writing-mode: vertical-rl;
     line-height: 1;
-    margin-left: 14vw;
-    margin-top: 1vw;
+    margin-left: 60%;
+    margin-top: 4.5vw;
     h1 {
       font-size: 9vw;
       font-family: $cor;
@@ -66,10 +71,10 @@
       font-family: $serif;
       font-size: 2vw;
       font-weight: 500;
-      letter-spacing: 18px;
+      letter-spacing: 10px;
     }
     @include laptop {
-      margin-top: 8.5vw;
+      margin-top: 4.5vw;
     }
     @include tablet {
       writing-mode: unset;
@@ -146,7 +151,7 @@
   }
   .cut-1-left-para-line-second {
     width: 1px;
-    height: 50%;
+    height: 54%;
     position: relative;
     background-color: black;
     @include laptop {
@@ -302,17 +307,16 @@
     //     margin-top: 1.15vw;
     //   }
     // }
-    // .cut-1-right-item-container {
-    //   @include laptop {
-    //     height: 74vh;
-    //     margin-top: 3.95vw;
-    //   }
-    // }
-    // @media screen and (max-width: 1366px) {
-    //   .cut-1-right-item-container {
-    //     margin-top: 4vw;
-    //   }
-    // }
+    @media screen and (max-width: 1920px) {
+      height: 73vh;
+    }
+    @include laptop {
+      height: 77vh;
+    }
+
+    @media screen and (max-width: 1366px) {
+      height: 78vh;
+    }
     @include tablet {
       width: 85%;
       height: auto;

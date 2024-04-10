@@ -18,6 +18,9 @@
   }
   .cut-1-left-banner {
     width: 30.5vw;
+    @media screen and (max-width: 1920px) {
+      width: 29vw;
+    }
     @include tablet {
       width: 50%;
     }
@@ -28,6 +31,7 @@
     writing-mode: vertical-rl;
     line-height: 1;
     margin-left: 14vw;
+    margin-top: 1vw;
     h1 {
       font-size: 9vw;
       font-family: $cor;
@@ -36,6 +40,7 @@
     h4 {
       font-family: $serif;
       font-size: 1.5vw;
+      font-weight: 500;
       letter-spacing: 5px;
     }
     @include tablet {

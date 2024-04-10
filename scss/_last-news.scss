@@ -34,8 +34,8 @@
     width: 26vw;
   }
   .cut-1-left-banner {
-    img {
-      width: 30.5vw;
+    @media screen and (max-width: 1920px) {
+      width: 29vw;
     }
     @include tablet {
       width: 100%;
