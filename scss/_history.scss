@@ -170,6 +170,9 @@
       animation-iteration-count: infinite;
       transform-origin: left center;
     }
+    @include tablet {
+      overflow: unset;
+    }
   }
   @keyframes shine {
     0% {

@@ -926,17 +926,7 @@
             },
           },
         });
-        const titleSplit = new SplitText(
-          ".cut-1-left-para-first h1,.cut-1-left-para-second h4,.cut-1-left-para-second h1",
-          {
-            type: "chars",
-          }
-        );
-        addDelay(
-          ".cut-1-left-para-first-h1 div",
-          ".cut-1-left-para-second-h4 div",
-          ".cut-1-left-para-second-h1 div"
-        );
+
         //動畫延遲
         function addDelay(tag, tag1, tag2) {
           let delay = 300;
@@ -953,31 +943,65 @@
             delay += 100;
           });
         }
-        const cut1Tl = gsap.timeline({ delay: 1 });
 
-        cut1Tl
-          .from(titleSplit.chars, {
-            stagger: 0.05,
-            rotation: "40",
-            x: "-110%",
-            duration: 1,
-          })
-          .from(
-            ".cut-1-right-img-2 img",
+        let cut1Tl = gsap.timeline({ delay: 1 });
+
+        if (window.innerWidth > 1024) {
+          const titleSplit = new SplitText(
+            ".cut-1-left-para-first h1,.cut-1-left-para-second h4,.cut-1-left-para-second h1",
             {
-              y: "-105%",
-              duration: "1.5",
-            },
-            "<+0.5"
-          )
-          .from(
-            ".cut-1-right-img-1 img",
-            {
-              y: "-105%",
-              duration: "1.5",
-            },
-            "<+0.2"
+              type: "chars",
+            }
           );
+          addDelay(
+            ".cut-1-left-para-first-h1 div",
+            ".cut-1-left-para-second-h4 div",
+            ".cut-1-left-para-second-h1 div"
+          );
+
+          cut1Tl
+            .from(titleSplit.chars, {
+              stagger: 0.05,
+              rotation: "40",
+              x: "-110%",
+              duration: 1,
+            })
+            .from(
+              ".cut-1-right-img-2 img",
+              {
+                y: "-105%",
+                duration: "1.5",
+              },
+              "<+0.5"
+            )
+            .from(
+              ".cut-1-right-img-1 img",
+              {
+                y: "-105%",
+                duration: "1.5",
+              },
+              "<+0.2"
+            );
+        } else {
+          cut1Tl
+            .from(
+              ".cut-1-right-img-2 img",
+              {
+                y: "-105%",
+                duration: "1.5",
+              },
+              "<+0.5"
+            )
+            .from(
+              ".cut-1-right-img-1 img",
+              {
+                y: "-105%",
+                duration: "1.5",
+              },
+              "<+0.2"
+            );
+        }
+
         //拆字
         const cut2TopTitle = new SplitText(".cut-2-right-top-para-h1", {
           type: "chars",

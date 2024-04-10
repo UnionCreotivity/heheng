@@ -1256,6 +1256,13 @@
   animation-iteration-count: infinite;
   transform-origin: left center;
 }
+@media all and (max-width: 1024px) {
+  #origin .cut-1-left-para-first-h1,
+  #origin .cut-1-left-para-second-h4,
+  #origin .cut-1-left-para-second-h1 {
+    overflow: unset;
+  }
+}
 @keyframes shine {
   0% {
     color: #000000;
@@ -2116,6 +2123,13 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   transform-origin: left center;
+}
+@media all and (max-width: 1024px) {
+  #history .cut-1-left-para-first-h1,
+  #history .cut-1-left-para-second-h4,
+  #history .cut-1-left-para-second-h1 {
+    overflow: unset;
+  }
 }
 @keyframes shine {
   0% {
@@ -6240,6 +6254,7 @@ section {
     padding: unset;
     position: fixed;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.75);
   }
 }
 
@@ -6258,6 +6273,7 @@ section {
     padding-right: 5vw;
     padding-top: 4vw;
     padding-bottom: 4vw;
+    background-color: white;
   }
 }
 
