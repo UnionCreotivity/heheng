@@ -173,7 +173,7 @@
   align-items: center;
   justify-content: center;
   gap: 3.5vw;
-  margin-left: 8%;
+  margin-left: 6%;
   margin-top: -12%;
   overflow: hidden;
 }
@@ -4527,6 +4527,9 @@
   position: absolute;
   top: 12vw;
   width: 26vw;
+}
+#last-news .cut-1-left-banner {
+  width: 30.5vw;
 }
 @media screen and (max-width: 1920px) {
   #last-news .cut-1-left-banner {
