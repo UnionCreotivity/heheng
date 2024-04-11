@@ -7,6 +7,9 @@
 @import url("../css/hamburgers.css");
 #home {
   padding-top: 4.5vw;
+  --people1Left: 0%;
+  --people2Left: 0%;
+  --people3Left: 0%;
 }
 #home svg {
   width: 100%;
@@ -347,6 +350,7 @@
 #home .cut-2-right p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -354,7 +358,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -362,7 +366,7 @@
     font-size: 9.75vw;
   }
   #home .cut-2-right h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #home .cut-2-right p {
@@ -414,6 +418,7 @@
   #home .cut-2-right p {
     font-family: "Microsoft JhengHei";
     font-size: 0.9vw;
+    color: #333333;
     line-height: 2;
     letter-spacing: 2px;
   }
@@ -421,7 +426,7 @@
     background-color: black;
     width: 5vw;
     height: 1px;
-    margin-top: 1vw;
+    margin-top: 1.5vw;
     margin-bottom: 3vw;
   }
 }
@@ -430,7 +435,7 @@
     font-size: 9.75vw;
   }
   #home .cut-2-right h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #home .cut-2-right p {
@@ -486,6 +491,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 8%;
+  overflow: hidden;
 }
 @media all and (max-width: 1024px) {
   #home .cut-3 {
@@ -496,7 +502,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 100%;
   overflow: hidden;
 }
 @media all and (max-width: 1024px) {
@@ -508,7 +514,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 67%;
 }
 @media all and (max-width: 1024px) {
   #home .cut-3-para {
@@ -521,6 +527,7 @@
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 #home .cut-3-para-container h1 {
   font-family: "Cormorant Garamond", serif;
@@ -537,6 +544,7 @@
 #home .cut-3-para-container p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -544,7 +552,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -552,7 +560,7 @@
     font-size: 9.75vw;
   }
   #home .cut-3-para-container h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #home .cut-3-para-container p {
@@ -597,7 +605,7 @@
   position: relative;
   height: 1vw;
   width: 65%;
-  margin-top: 15vw;
+  margin-top: 4vw;
 }
 @media all and (max-width: 1024px) {
   #home .swiper-button {
@@ -737,6 +745,7 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+  opacity: 0;
 }
 #home .cut-4-pic-1 img,
 #home .cut-4-pic-2 img,
@@ -815,6 +824,15 @@
   top: 0;
   overflow: hidden;
 }
+@media all and (max-width: 1024px) {
+  #home .cut-4-all {
+    opacity: 1;
+    z-index: 12;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+}
 #home .cut-4-circle-1 {
   -webkit-clip-path: polygon(102% 60%, 50% 30%, 99.5% 2%);
           clip-path: polygon(102% 60%, 50% 30%, 99.5% 2%);
@@ -882,6 +900,7 @@
 #home .cut-4-swiper-para p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -889,7 +908,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -897,7 +916,7 @@
     font-size: 9.75vw;
   }
   #home .cut-4-swiper-para h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #home .cut-4-swiper-para p {
@@ -955,6 +974,7 @@
 #home .cut-4-para p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -962,7 +982,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -970,7 +990,7 @@
     font-size: 9.75vw;
   }
   #home .cut-4-para h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #home .cut-4-para p {
@@ -1053,6 +1073,7 @@
 #home .cut-5-left p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -1060,7 +1081,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -1068,7 +1089,7 @@
     font-size: 9.75vw;
   }
   #home .cut-5-left h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #home .cut-5-left p {
@@ -1126,6 +1147,24 @@
 #home .cut-5-img2,
 #home .cut-5-img3 {
   width: 15vw;
+  position: relative;
+  overflow: hidden;
+}
+#home .cut-5-img1 img,
+#home .cut-5-img2 img,
+#home .cut-5-img3 img {
+  position: relative;
+}
+#home .cut-5-img1::after,
+#home .cut-5-img2::after,
+#home .cut-5-img3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(158, 117, 89);
 }
 @media all and (max-width: 1024px) {
   #home .cut-5-img1,
@@ -1133,6 +1172,24 @@
   #home .cut-5-img3 {
     width: 42vw;
   }
+}
+#home .cut-5-img3 img {
+  left: var(--people3Left);
+}
+#home .cut-5-img3::after {
+  left: var(--people3Left);
+}
+#home .cut-5-img2 img {
+  left: var(--people2Left);
+}
+#home .cut-5-img2::after {
+  left: var(--people2Left);
+}
+#home .cut-5-img1 img {
+  left: var(--people1Left);
+}
+#home .cut-5-img1::after {
+  left: var(--people1Left);
 }
 #home .cut-5-img2 {
   transform: translateY(-1vw);
@@ -1242,7 +1299,7 @@
 @media all and (max-width: 1024px) {
   #origin .cut-1-left-para-first {
     width: 65%;
-    gap: 9vw;
+    gap: 4vw;
     margin-left: 10vw;
     justify-content: space-between;
   }
@@ -1267,8 +1324,29 @@
   #origin .cut-1-left-para-first-h1,
   #origin .cut-1-left-para-second-h4,
   #origin .cut-1-left-para-second-h1 {
-    overflow: unset;
+    overflow: hidden;
   }
+}
+@media all and (max-width: 1024px) {
+  #origin .cut-1-left-para-first-h1 {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1024px) {
+  #origin .cut-1-left-para-second-h4 {
+    margin-top: 2vw;
+  }
+}
+@media all and (max-width: 1024px) {
+  #origin .cut-1-left-para-second-h1 {
+    width: 35%;
+  }
+}
+#origin .bottom-line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 2vw;
 }
 @keyframes origin_shine {
   0% {
@@ -1295,7 +1373,7 @@
   #origin .cut-1-left-para-line {
     top: 2vw;
     left: unset;
-    width: 100%;
+    width: 45%;
     height: 1px;
   }
 }
@@ -1315,17 +1393,7 @@
     position: relative;
     font-size: 5.5vw;
     width: 100%;
-    padding-bottom: 1vw;
     font-weight: 500;
-  }
-  #origin .cut-1-left-para-second > h4::after {
-    content: "";
-    position: absolute;
-    bottom: -30%;
-    height: 1px;
-    width: 100%;
-    background-color: black;
-    left: 0;
   }
 }
 #origin .cut-1-left-para-line-second {
@@ -1423,7 +1491,7 @@
   color: #cfb38e;
 }
 #origin .cut-2-link a h3 {
-  font-size: 1.1vw;
+  font-size: 0.9vw;
   font-weight: 400;
 }
 @media all and (max-width: 1024px) {
@@ -1466,6 +1534,7 @@
 #origin .cut-2-right p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -1473,7 +1542,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -1481,7 +1550,7 @@
     font-size: 9.75vw;
   }
   #origin .cut-2-right h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #origin .cut-2-right p {
@@ -1543,6 +1612,9 @@
 #origin .cut-2-right-top-para h3 {
   text-align: center;
 }
+#origin .cut-2-right-top-para h3 br {
+  display: none;
+}
 #origin .cut-2-right-top-para .line {
   margin-top: 0.5vw;
   margin-bottom: 4vw;
@@ -1562,6 +1634,9 @@
     text-align: center;
     order: -1;
     margin-top: 12%;
+  }
+  #origin .cut-2-right-top-para h3 br {
+    display: block;
   }
   #origin .cut-2-right-top-para .line {
     margin-bottom: 7vw;
@@ -1592,16 +1667,16 @@
 }
 @keyframes shine {
   0% {
-    color: #666666;
+    color: #000000;
   }
   20% {
     color: yellow;
   }
   40% {
-    color: #666666;
+    color: #000000;
   }
   100% {
-    color: #666666;
+    color: #000000;
   }
 }
 #origin .cut-2-right-people {
@@ -1612,7 +1687,8 @@
   overflow: hidden;
 }
 #origin .cut-2-right-people img {
-  opacity: 0;
+  position: relative;
+  left: var(--peopeleLeft);
 }
 #origin .cut-2-right-people::after {
   content: "";
@@ -1651,6 +1727,7 @@
 #origin .cut-2-right-middle-para p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -1658,7 +1735,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -1666,7 +1743,7 @@
     font-size: 9.75vw;
   }
   #origin .cut-2-right-middle-para h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #origin .cut-2-right-middle-para p {
@@ -1805,6 +1882,7 @@
 #origin .cut-2-right-bottom-heng-hong-para-top p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -1812,7 +1890,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -1820,7 +1898,7 @@
     font-size: 9.75vw;
   }
   #origin .cut-2-right-bottom-heng-hong-para-top h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #origin .cut-2-right-bottom-heng-hong-para-top p {
@@ -1898,7 +1976,7 @@
 }
 @media all and (max-width: 1024px) {
   #origin .heng-hong-circle-1 {
-    top: -12%;
+    top: -15%;
     right: -2.5%;
     transform: translate(-30vw, 24vw);
   }
@@ -1923,7 +2001,7 @@
 @media all and (max-width: 1024px) {
   #origin .heng-hong-circle-3 {
     right: 32%;
-    top: 53%;
+    top: 48%;
     transform: translate(-0.6vw, -42.5vw);
   }
 }
@@ -2024,7 +2102,7 @@
 @media all and (max-width: 1024px) {
   #history .cut-1-left-para-first {
     width: 65%;
-    gap: 9vw;
+    gap: 4vw;
     margin-left: 10vw;
     justify-content: space-between;
   }
@@ -2041,7 +2119,7 @@
   #history .cut-1-left-para-line {
     top: 2vw;
     left: unset;
-    width: 100%;
+    width: 45%;
     height: 1px;
   }
 }
@@ -2060,17 +2138,7 @@
     position: relative;
     font-size: 5.5vw;
     width: 100%;
-    padding-bottom: 1vw;
     font-weight: 500;
-  }
-  #history .cut-1-left-para-second > h4::after {
-    content: "";
-    position: absolute;
-    bottom: -30%;
-    height: 1px;
-    width: 100%;
-    background-color: black;
-    left: 0;
   }
 }
 #history .cut-1-left-para-line-second {
@@ -2135,8 +2203,29 @@
   #history .cut-1-left-para-first-h1,
   #history .cut-1-left-para-second-h4,
   #history .cut-1-left-para-second-h1 {
-    overflow: unset;
+    overflow: hidden;
   }
+}
+@media all and (max-width: 1024px) {
+  #history .cut-1-left-para-first-h1 {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1024px) {
+  #history .cut-1-left-para-second-h4 {
+    margin-top: 2vw;
+  }
+}
+@media all and (max-width: 1024px) {
+  #history .cut-1-left-para-second-h1 {
+    width: 35%;
+  }
+}
+#history .bottom-line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 2vw;
 }
 @keyframes history_shine {
   0% {
@@ -2205,7 +2294,7 @@
   color: #cfb38e;
 }
 #history .cut-2-link a h3 {
-  font-size: 1.1vw;
+  font-size: 0.9vw;
   font-weight: 400;
 }
 @media all and (max-width: 1024px) {
@@ -2247,6 +2336,7 @@
 #history .cut-2-right p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -2254,7 +2344,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -2262,7 +2352,7 @@
     font-size: 9.75vw;
   }
   #history .cut-2-right h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #history .cut-2-right p {
@@ -2496,6 +2586,7 @@
 }
 #history .cut-2-swiper-main-content-year h2 {
   font-size: 3.5vw;
+  font-family: "Noto Serif TC", serif;
   font-weight: 400;
   color: #d1af8b;
 }
@@ -2515,7 +2606,7 @@
     border: 1px solid #a37e57;
   }
   #history .cut-2-swiper-main-content-year h2 {
-    font-size: 5.5vw;
+    font-size: 4.5vw;
   }
   #history .cut-2-swiper-main-content-year h5 {
     display: none;
@@ -2565,6 +2656,7 @@
 #history .cut-2-swiper-main-content-para-left p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -2572,7 +2664,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -2580,7 +2672,7 @@
     font-size: 9.75vw;
   }
   #history .cut-2-swiper-main-content-para-left h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #history .cut-2-swiper-main-content-para-left p {
@@ -2664,6 +2756,19 @@
     left: -14.75%;
   }
 }
+#history .to-top {
+  margin: 0 auto;
+  margin-top: 5vw;
+  padding: 0.5vw 4vw;
+  font-size: 0.9vw;
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 2px;
+  border: 1px solid #d0b18d;
+  color: #b69272;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
 #history .cut-3 {
   position: relative;
   width: 100%;
@@ -2706,6 +2811,37 @@
   width: 15vw;
   filter: drop-shadow(1px 1px 1px black);
   z-index: -1;
+}
+#history .cut-2-right-top-para-h1 {
+  position: relative;
+  overflow: hidden;
+}
+#history .cut-2-right-top-para-h1 div {
+  animation-name: history_shine;
+  animation-duration: 3.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: left center;
+}
+@media all and (max-width: 1024px) {
+  #history .cut-2-right-top-para-h1 {
+    overflow: unset;
+  }
+}
+@keyframes history_shine {
+  0% {
+    color: #000000;
+  }
+  20% {
+    color: rgb(201, 201, 0);
+  }
+  40% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
 }
 
 .new_project-cut-1-left-fixed-img {
@@ -2826,18 +2962,8 @@
     position: relative;
     font-size: 5.5vw;
     width: auto;
-    padding-bottom: 1vw;
     letter-spacing: 5px;
     margin-right: 0;
-  }
-  #new_project .cut-1-left-para-first h4::after {
-    content: "";
-    position: absolute;
-    bottom: -30%;
-    height: 1px;
-    width: 90%;
-    background-color: black;
-    left: 0;
   }
 }
 #new_project .cut-1-left-para-line {
@@ -2863,7 +2989,7 @@
 @media all and (max-width: 1024px) {
   #new_project .cut-1-left-para-second {
     width: 65%;
-    gap: 6vw;
+    gap: 0vw;
     margin-left: 10vw;
   }
   #new_project .cut-1-left-para-second > h4 {
@@ -2932,6 +3058,24 @@
     flex-direction: column;
   }
 }
+#new_project .cut-1-right-item-img {
+  position: relative;
+  overflow: hidden;
+}
+#new_project .cut-1-right-item-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: rotate(55deg) scale(2.5);
+}
+@media all and (max-width: 1024px) {
+  #new_project .cut-1-right-item-white {
+    display: none;
+  }
+}
 #new_project .cut-1-right-item:hover .cut-1-right-item-more {
   opacity: 1;
   transition: all 0.75s;
@@ -2966,6 +3110,7 @@
 #new_project .cut-1-right-item-more p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -2973,7 +3118,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -2981,7 +3126,7 @@
     font-size: 9.75vw;
   }
   #new_project .cut-1-right-item-more h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #new_project .cut-1-right-item-more p {
@@ -3021,7 +3166,7 @@
   }
   #new_project .cut-1-right-item-more h3 {
     width: 100%;
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     display: flex;
     align-items: center;
     margin-bottom: 5vw;
@@ -3079,15 +3224,22 @@
 #new_project .cut-1-left-para-first-h1 {
   padding-left: 1vw;
 }
+@media all and (max-width: 1024px) {
+  #new_project .cut-1-left-para-first-h1 {
+    padding-bottom: 2vw;
+  }
+}
 #new_project .cut-1-left-para-second-h1,
 #new_project .cut-1-left-para-second-h2,
-#new_project .cut-1-left-para-first-h1 {
+#new_project .cut-1-left-para-first-h1,
+#new_project .cut-1-left-para-first-h4 {
   position: relative;
   overflow: hidden;
 }
 #new_project .cut-1-left-para-second-h1 div,
 #new_project .cut-1-left-para-second-h2 div,
-#new_project .cut-1-left-para-first-h1 div {
+#new_project .cut-1-left-para-first-h1 div,
+#new_project .cut-1-left-para-first-h4 div {
   animation-name: new_project_shine;
   animation-duration: 3.8s;
   animation-fill-mode: both;
@@ -3098,9 +3250,21 @@
 @media all and (max-width: 1024px) {
   #new_project .cut-1-left-para-second-h1,
   #new_project .cut-1-left-para-second-h2,
-  #new_project .cut-1-left-para-first-h1 {
-    overflow: unset;
+  #new_project .cut-1-left-para-first-h1,
+  #new_project .cut-1-left-para-first-h4 {
+    overflow: hidden;
   }
+}
+@media all and (max-width: 1024px) {
+  #new_project .cut-1-left-para-second-h1 {
+    width: 95%;
+  }
+}
+#new_project .bottom-line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 2vw;
 }
 @keyframes new_project_shine {
   0% {
@@ -3160,6 +3324,7 @@
 #new_project-inner .cut-1-title p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -3167,7 +3332,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -3175,7 +3340,7 @@
     font-size: 9.75vw;
   }
   #new_project-inner .cut-1-title h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #new_project-inner .cut-1-title p {
@@ -3212,7 +3377,7 @@
     justify-content: center;
   }
   #new_project-inner .cut-1-title h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
   }
   #new_project-inner .cut-1-title h1 {
     font-size: 9.75vw;
@@ -3308,6 +3473,7 @@
 #new_project-inner .cut-2-right-top p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -3315,7 +3481,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -3323,7 +3489,7 @@
     font-size: 9.75vw;
   }
   #new_project-inner .cut-2-right-top h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #new_project-inner .cut-2-right-top p {
@@ -3356,7 +3522,7 @@
     margin-bottom: 7vw;
   }
   #new_project-inner .cut-2-right-top h1 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     font-weight: 600;
   }
   #new_project-inner .cut-2-right-top h2 {
@@ -3478,6 +3644,7 @@
   justify-content: center;
   flex-direction: column;
   text-decoration: none;
+  overflow: hidden;
 }
 #new_project-inner .cut-2-right-bottom-li-content {
   display: flex;
@@ -3879,6 +4046,7 @@
 #renew .cut-2-item-content p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -3886,7 +4054,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -3894,7 +4062,7 @@
     font-size: 9.75vw;
   }
   #renew .cut-2-item-content h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #renew .cut-2-item-content p {
@@ -4014,6 +4182,7 @@
 #renew-inner .cut-1-title p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -4021,7 +4190,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -4029,7 +4198,7 @@
     font-size: 9.75vw;
   }
   #renew-inner .cut-1-title h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #renew-inner .cut-1-title p {
@@ -4066,7 +4235,7 @@
     justify-content: center;
   }
   #renew-inner .cut-1-title h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
   }
   #renew-inner .cut-1-title span {
     font-size: 4.75vw;
@@ -4146,6 +4315,7 @@
 #renew-inner .cut-1-pic-para p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -4153,7 +4323,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -4161,7 +4331,7 @@
     font-size: 9.75vw;
   }
   #renew-inner .cut-1-pic-para h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #renew-inner .cut-1-pic-para p {
@@ -4252,6 +4422,7 @@
 #renew-inner .cut-2-item p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -4259,7 +4430,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -4267,7 +4438,7 @@
     font-size: 9.75vw;
   }
   #renew-inner .cut-2-item h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #renew-inner .cut-2-item p {
@@ -4852,6 +5023,24 @@
     display: none;
   }
 }
+#last-news .cut-2-news-item-img-pic {
+  position: relative;
+  overflow: hidden;
+}
+#last-news .cut-2-news-item-img-pic-ani-white {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: rotate(55deg) scale(2.5);
+}
+@media all and (max-width: 1024px) {
+  #last-news .cut-2-news-item-img-pic-ani-white {
+    display: none;
+  }
+}
 @media screen and (max-width: 1920px) {
   #last-news .cut-2-news-item-img::after {
     left: -21.6%;
@@ -4976,7 +5165,7 @@
 }
 @media all and (max-width: 1024px) {
   #last-news .cut-2-news-item-para-time {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
   }
 }
 #last-news .cut-2-news-item-para-title {
@@ -4988,7 +5177,7 @@
 }
 @media all and (max-width: 1024px) {
   #last-news .cut-2-news-item-para-title {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-top: 4vw;
   }
 }
@@ -5078,6 +5267,7 @@
 #last-news-inner .cut-1-title p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -5085,7 +5275,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -5093,7 +5283,7 @@
     font-size: 9.75vw;
   }
   #last-news-inner .cut-1-title h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #last-news-inner .cut-1-title p {
@@ -5130,7 +5320,7 @@
     justify-content: center;
   }
   #last-news-inner .cut-1-title h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
   }
   #last-news-inner .cut-1-title span {
     font-size: 4.75vw;
@@ -5184,6 +5374,7 @@
 #last-news-inner .cut-2-top-left p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -5191,7 +5382,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -5199,7 +5390,7 @@
     font-size: 9.75vw;
   }
   #last-news-inner .cut-2-top-left h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #last-news-inner .cut-2-top-left p {
@@ -5227,10 +5418,10 @@
 }
 @media all and (max-width: 1024px) {
   #last-news-inner .cut-2-top-left h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
   }
   #last-news-inner .cut-2-top-left h1 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     text-align: center;
   }
   #last-news-inner .cut-2-top-left .line {
@@ -5289,6 +5480,7 @@
 #last-news-inner .cut-2-content p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -5296,7 +5488,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -5304,7 +5496,7 @@
     font-size: 9.75vw;
   }
   #last-news-inner .cut-2-content h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #last-news-inner .cut-2-content p {
@@ -5349,6 +5541,7 @@
 #last-news-inner .cut-2-basic p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -5356,7 +5549,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -5364,7 +5557,7 @@
     font-size: 9.75vw;
   }
   #last-news-inner .cut-2-basic h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #last-news-inner .cut-2-basic p {
@@ -5486,8 +5679,8 @@
   top: 0;
   writing-mode: vertical-rl;
   line-height: 1;
-  margin-left: 60%;
-  margin-top: 4.5vw;
+  margin-left: 17vw;
+  margin-top: 1vw;
 }
 #classic .cut-1-left-para h1 {
   font-size: 9vw;
@@ -5557,7 +5750,7 @@
   justify-content: space-between;
   gap: 1vw;
   margin-top: 0.25vw;
-  margin-right: 4vw;
+  margin-right: 3vw;
 }
 @media all and (max-width: 1024px) {
   #classic .cut-1-left-para-second {
@@ -5618,72 +5811,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 7vw;
   margin-top: 3vw;
+  gap: 5vw;
 }
 @media all and (max-width: 1024px) {
   #classic .cut-1-right-date-picker {
     width: 85%;
-    margin-left: 0vw;
     margin: 0 auto;
     margin-top: 10vw;
+    flex-wrap: wrap;
   }
 }
-#classic .date-picker-zh,
-#classic .date-picker-en {
-  font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
-}
-@media all and (max-width: 1024px) {
-  #classic .date-picker-zh,
-  #classic .date-picker-en {
-    font-size: 3.75vw;
-  }
-}
-#classic .date-picker-zh {
-  color: #918781;
-  margin-right: 1vw;
-  letter-spacing: 2px;
-}
-@media all and (max-width: 1024px) {
-  #classic .date-picker-zh {
-    margin-right: 2vw;
-  }
-}
-#classic .date-picker-en {
-  color: #cfb38e;
-  margin-right: 2.5vw;
-}
-@media all and (max-width: 1024px) {
-  #classic .date-picker-en {
-    margin-right: 4.5vw;
-  }
-}
-#classic .date-picker-main {
+#classic .date-picker {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ba9274;
-  padding: 0.25vw 0.75vw;
-}
-#classic .date-picker-main select {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  font-size: 0.8vw;
-  letter-spacing: 5px;
   font-family: "Noto Serif TC", serif;
-  -moz-text-align-last: center;
-       text-align-last: center;
-  padding-right: 0.25vw;
+  font-size: 0.8vw;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+#classic .date-picker p {
+  font-family: "Noto Serif TC", serif;
+  font-size: 0.8vw;
+}
+#classic .date-picker .date-picker-line {
+  width: 2vw;
+  height: 1px;
+  margin: 0 0.5vw;
+  margin-top: 0.1vw;
+  background-color: black;
 }
 @media all and (max-width: 1024px) {
-  #classic .date-picker-main {
-    padding: 1.25vw 3.5vw;
+  #classic .date-picker {
+    font-size: 3.75vw;
   }
-  #classic .date-picker-main select {
-    font-size: 3.25vw;
+  #classic .date-picker p {
+    font-size: 3.75vw;
+  }
+  #classic .date-picker .date-picker-line {
+    width: 5vw;
+    margin: 0 2vw;
+    margin-top: 0.5vw;
   }
 }
 #classic .date-picker-time {
@@ -5698,20 +5867,6 @@
   #classic .date-icon {
     width: 3vw;
     padding-top: 0.25vw;
-  }
-}
-#classic .date-picker-line {
-  width: 1vw;
-  height: 1px;
-  background-color: black;
-  margin: 0vw 1vw;
-  margin-top: 0.1vw;
-}
-@media all and (max-width: 1024px) {
-  #classic .date-picker-line {
-    margin: 0vw 2vw;
-    margin-top: 1vw;
-    width: 3vw;
   }
 }
 #classic .date-picker-button button {
@@ -5746,7 +5901,7 @@
   width: 100%;
   height: 74vh;
   overflow: hidden;
-  margin-top: 1.1vw;
+  margin-top: 1.6vw;
 }
 @media screen and (max-width: 1920px) {
   #classic .cut-1-right-item-container {
@@ -5791,6 +5946,8 @@
 #classic .swiper-slide-item-img {
   position: relative;
   height: 100%;
+  display: block;
+  text-decoration: none;
 }
 #classic .swiper-slide-item-img img {
   height: 100%;
@@ -5832,6 +5989,7 @@
 #classic .swiper-slide-item-img-back p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -5839,7 +5997,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -5847,7 +6005,7 @@
     font-size: 9.75vw;
   }
   #classic .swiper-slide-item-img-back h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #classic .swiper-slide-item-img-back p {
@@ -5895,6 +6053,8 @@
 }
 #classic .right-item-img {
   width: 100%;
+  display: block;
+  text-decoration: none;
 }
 #classic .right-item-para {
   display: flex;
@@ -5915,6 +6075,7 @@
 #classic .right-item-para p {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
+  color: #333333;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -5922,7 +6083,7 @@
   background-color: black;
   width: 5vw;
   height: 1px;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
   margin-bottom: 3vw;
 }
 @media all and (max-width: 1024px) {
@@ -5930,7 +6091,7 @@
     font-size: 9.75vw;
   }
   #classic .right-item-para h3 {
-    font-size: 4.25vw;
+    font-size: 4.5vw;
     margin-bottom: 5vw;
   }
   #classic .right-item-para p {
@@ -6063,6 +6224,9 @@
   #contact .cut-1-para h1 {
     font-size: 14vw;
   }
+  #contact .cut-1-para h4 {
+    font-size: 4.5vw;
+  }
 }
 #contact .cut-1-para-first {
   display: flex;
@@ -6074,8 +6238,8 @@
 }
 @media all and (max-width: 1024px) {
   #contact .cut-1-para-first {
-    width: 63%;
-    gap: 6vw;
+    width: 65%;
+    gap: 0vw;
     margin-left: 0vw;
     justify-content: space-between;
   }
@@ -6091,7 +6255,7 @@
   #contact .cut-1-para-line {
     top: 2vw;
     left: unset;
-    width: 100%;
+    width: 23%;
     height: 1px;
   }
 }
@@ -6103,17 +6267,7 @@
 }
 #contact .cut-1-para-second h4 {
   position: relative;
-  width: 33%;
   margin-top: 2vw;
-}
-#contact .cut-1-para-second h4::after {
-  content: "";
-  position: absolute;
-  bottom: -70%;
-  height: 1px;
-  width: 96%;
-  background-color: black;
-  left: 0;
 }
 #contact .cut-1-para-second h1 {
   line-height: 0.8;
@@ -6123,6 +6277,7 @@
     width: 61%;
     gap: 3vw;
     margin-left: 0vw;
+    align-items: baseline;
   }
   #contact .cut-1-para-second > h4 {
     position: relative;
@@ -6131,14 +6286,25 @@
     padding-bottom: 1vw;
     font-weight: 500;
   }
-  #contact .cut-1-para-second > h4::after {
-    content: "";
-    position: absolute;
-    bottom: -30%;
-    height: 1px;
-    width: 143%;
-    background-color: black;
-    left: 0;
+}
+#contact .cut-1-para-second-left {
+  width: 100%;
+}
+@media all and (max-width: 1024px) {
+  #contact .cut-1-para-second-left {
+    position: relative;
+  }
+}
+#contact .cut-1-para-second-line {
+  height: 1px;
+  width: 96%;
+  background-color: #000000;
+  margin-top: 1vw;
+}
+@media all and (max-width: 1024px) {
+  #contact .cut-1-para-second-line {
+    width: 145%;
+    margin-top: 3vw;
   }
 }
 #contact .cut-1-para-line-second {
@@ -6146,6 +6312,58 @@
   height: 7vw;
   position: relative;
   background-color: black;
+}
+#contact .cut-1-para-first-h1,
+#contact .cut-1-para-second-h4,
+#contact .cut-1-para-second-h1 {
+  position: relative;
+  overflow: hidden;
+}
+#contact .cut-1-para-first-h1 div,
+#contact .cut-1-para-second-h4 div,
+#contact .cut-1-para-second-h1 div {
+  animation-name: contact_shine;
+  animation-duration: 3.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: left center;
+}
+@media all and (max-width: 1024px) {
+  #contact .cut-1-para-first-h1,
+  #contact .cut-1-para-second-h4,
+  #contact .cut-1-para-second-h1 {
+    overflow: hidden;
+  }
+}
+@media all and (max-width: 1024px) {
+  #contact .cut-1-para-first-h1 {
+    line-height: 0.8;
+  }
+}
+@media all and (max-width: 1024px) {
+  #contact .cut-1-para-second-h4 {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1024px) {
+  #contact .cut-1-para-second-h1 {
+    width: 35%;
+  }
+}
+@keyframes contact_shine {
+  0% {
+    color: #000000;
+  }
+  20% {
+    color: rgb(201, 201, 0);
+  }
+  40% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
 }
 #contact .cut-2 {
   margin-top: 5vw;

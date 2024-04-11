@@ -71,11 +71,12 @@
     gap: 1vw;
     @include tablet {
       width: 65%;
-      gap: 9vw;
+      gap: 4vw;
       margin-left: 10vw;
       justify-content: space-between;
     }
   }
+
   .cut-1-left-para-first-h1,
   .cut-1-left-para-second-h4,
   .cut-1-left-para-second-h1 {
@@ -90,8 +91,32 @@
       transform-origin: left center;
     }
     @include tablet {
-      overflow: unset;
+      overflow: hidden;
     }
+  }
+  .cut-1-left-para-first-h1 {
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  .cut-1-left-para-second-h4 {
+    @include tablet {
+      margin-top: 2vw;
+    }
+  }
+
+  .cut-1-left-para-second-h1 {
+    @include tablet {
+      width: 35%;
+    }
+  }
+
+  .bottom-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 2vw;
   }
 
   @keyframes origin_shine {
@@ -117,7 +142,7 @@
     @include tablet {
       top: 2vw;
       left: unset;
-      width: 100%;
+      width: 45%;
       height: 1px;
     }
   }
@@ -134,17 +159,16 @@
         position: relative;
         font-size: 5.5vw;
         width: 100%;
-        padding-bottom: 1vw;
         font-weight: 500;
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -30%;
-          height: 1px;
-          width: 100%;
-          background-color: black;
-          left: 0;
-        }
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   bottom: -30%;
+        //   height: 1px;
+        //   width: 100%;
+        //   background-color: black;
+        //   left: 0;
+        // }
       }
     }
   }
@@ -240,7 +264,7 @@
         color: #cfb38e;
       }
       h3 {
-        font-size: $subTitle;
+        font-size: $contentSize;
         font-weight: 400;
       }
     }
@@ -312,6 +336,9 @@
     }
     h3 {
       text-align: center;
+      br {
+        display: none;
+      }
     }
     .line {
       margin-top: 0.5vw;
@@ -330,6 +357,9 @@
         text-align: center;
         order: -1;
         margin-top: 12%;
+        br {
+          display: block;
+        }
       }
       .line {
         margin-bottom: 7vw;
@@ -364,16 +394,16 @@
   }
   @keyframes shine {
     0% {
-      color: #666666;
+      color: #000000;
     }
     20% {
       color: yellow;
     }
     40% {
-      color: #666666;
+      color: #000000;
     }
     100% {
-      color: #666666;
+      color: #000000;
     }
   }
   .cut-2-right-people {
@@ -383,7 +413,8 @@
     z-index: 1;
     overflow: hidden;
     img {
-      opacity: 0;
+      position: relative;
+      left: var(--peopeleLeft);
     }
     &::after {
       content: "";
@@ -567,7 +598,7 @@
     right: 4.5%;
     transform: translate(-8vw, 15vw);
     @include tablet {
-      top: -12%;
+      top: -15%;
       right: -2.5%;
       transform: translate(-30vw, 24vw);
     }
@@ -588,7 +619,7 @@
     transform: translate(-0.8vw, -20vw);
     @include tablet {
       right: 32%;
-      top: 53%;
+      top: 48%;
       transform: translate(-0.6vw, -42.5vw);
     }
   }

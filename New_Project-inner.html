@@ -220,6 +220,19 @@
         }
       });
       $(window).on("load", function () {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+        gsap.from(".li-content-des", {
+          scrollTrigger: {
+            trigger: ".cut-2-right",
+            start: "top center",
+          },
+          opacity: 0,
+          filter: "blur(10px)",
+          stagger: 0.25,
+          x: "100",
+          duration: 1,
+        });
+
         //表單內容👇
         $("#form-main")
           .submit(function (e) {

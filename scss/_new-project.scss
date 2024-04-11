@@ -104,18 +104,17 @@
         position: relative;
         font-size: 5.5vw;
         width: auto;
-        padding-bottom: 1vw;
         letter-spacing: 5px;
         margin-right: 0;
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -30%;
-          height: 1px;
-          width: 90%;
-          background-color: black;
-          left: 0;
-        }
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   bottom: -20%;
+        //   height: 1px;
+        //   width: 90%;
+        //   background-color: black;
+        //   left: 0;
+        // }
       }
     }
   }
@@ -138,7 +137,7 @@
     justify-content: space-between;
     @include tablet {
       width: 65%;
-      gap: 6vw;
+      gap: 0vw;
       margin-left: 10vw;
       > h4 {
         position: relative;
@@ -197,6 +196,22 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+    }
+  }
+  .cut-1-right-item-img {
+    position: relative;
+    overflow: hidden;
+  }
+  .cut-1-right-item-white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: rotate(55deg) scale(2.5);
+    @include tablet {
+      display: none;
     }
   }
   .cut-1-right-item:hover {
@@ -305,11 +320,15 @@
 
   .cut-1-left-para-first-h1 {
     padding-left: 1vw;
+    @include tablet {
+      padding-bottom: 2vw;
+    }
   }
 
   .cut-1-left-para-second-h1,
   .cut-1-left-para-second-h2,
-  .cut-1-left-para-first-h1 {
+  .cut-1-left-para-first-h1,
+  .cut-1-left-para-first-h4 {
     position: relative;
     overflow: hidden;
     div {
@@ -321,8 +340,19 @@
       transform-origin: left center;
     }
     @include tablet {
-      overflow: unset;
+      overflow: hidden;
     }
+  }
+  .cut-1-left-para-second-h1 {
+    @include tablet {
+      width: 95%;
+    }
+  }
+  .bottom-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 2vw;
   }
   @keyframes new_project_shine {
     0% {

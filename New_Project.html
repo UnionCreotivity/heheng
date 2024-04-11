@@ -29,7 +29,10 @@
               </div>
               <div class="cut-1-left-para-first">
                 <div class="cut-1-left-para-line pc"></div>
-                <h4 class="ph">熱銷建案</h4>
+                <h4 class="cut-1-left-para-first-h4 ph">
+                  熱銷建案
+                  <div class="bottom-line ph"></div>
+                </h4>
                 <h1 class="cut-1-left-para-first-h1">Project</h1>
               </div>
             </div>
@@ -41,10 +44,13 @@
         <div class="cut-1-right">
           <div class="cut-1-right-item-container">
             <div class="cut-1-right-item">
-              <img
-                src="./img/new_project/news-project-1.webp"
-                alt="news-project-1"
-              />
+              <div class="cut-1-right-item-img">
+                <img
+                  src="./img/new_project/news-project-1.webp"
+                  alt="news-project-1"
+                />
+                <div class="cut-1-right-item-white"></div>
+              </div>
               <div class="cut-1-right-item-more">
                 <h3>
                   恆合機構｜瑋石南京復興案<span>/</span>
@@ -55,10 +61,13 @@
               </div>
             </div>
             <div class="cut-1-right-item">
-              <img
-                src="./img/new_project/news-project-2.webp"
-                alt="news-project-2"
-              />
+              <div class="cut-1-right-item-img">
+                <img
+                  src="./img/new_project/news-project-2.webp"
+                  alt="news-project-2"
+                />
+                <div class="cut-1-right-item-white"></div>
+              </div>
               <div class="cut-1-right-item-more">
                 <h3>
                   恆合機構｜恆合建設中山段<span>/</span>
@@ -69,10 +78,13 @@
               </div>
             </div>
             <div class="cut-1-right-item">
-              <img
-                src="./img/new_project/news-project-3.webp"
-                alt="news-project-3"
-              />
+              <div class="cut-1-right-item-img">
+                <img
+                  src="./img/new_project/news-project-3.webp"
+                  alt="news-project-3"
+                />
+                <div class="cut-1-right-item-white"></div>
+              </div>
               <div class="cut-1-right-item-more">
                 <h3>
                   恆合芝山<span>/</span>
@@ -125,6 +137,7 @@
       $(window).on("load", function () {
         gsap.registerPlugin(ScrollTrigger, SplitText);
 
+        //動畫延遲
         function addDelay(tag, tag1, tag2) {
           let delay = 300;
           $(tag).each(function (index) {
@@ -140,23 +153,36 @@
             delay += 200;
           });
         }
-        if (window.innerWidth > 1024) {
-          const titleSplit = new SplitText(
-            ".cut-1-left-para-second-h1,.cut-1-left-para-second-h2,.cut-1-left-para-first-h1",
-            {
-              type: "chars",
-            }
-          );
-          addDelay(
-            ".cut-1-left-para-second-h1 div",
-            ".cut-1-left-para-second-h2 div",
-            ".cut-1-left-para-first-h1 div"
-          );
+        //大標文字拆字
+        const titleSplit = new SplitText(
+          ".cut-1-left-para-second-h1,.cut-1-left-para-second-h2,.cut-1-left-para-first h4,.cut-1-left-para-first-h1",
+          {
+            type: "chars",
+          }
+        );
 
+        addDelay(
+          ".cut-1-left-para-second-h1 div",
+          ".cut-1-left-para-second-h2 div",
+          ".cut-1-left-para-first-h1 div",
+          ".cut-1-left-para-first-h4 div"
+        );
+        if (window.innerWidth > 1024) {
           gsap.from(titleSplit.chars, {
             stagger: 0.1,
             rotation: "40",
             x: "-110%",
+            duration: 1,
+            delay: 0.5,
+            onComplete: function () {
+              lastNewsAnimation(".cut-1-right-item", 100);
+            },
+          });
+        } else {
+          gsap.from(titleSplit.chars, {
+            stagger: 0.1,
+            rotation: "40",
+            y: "110%",
             duration: 1,
             delay: 0.5,
           });
@@ -170,20 +196,41 @@
         function lastNewsAnimation(selector, xVal) {
           $(selector).each(function () {
             let thisId = $(this)[0].id;
-            gsap.from(`#${thisId}`, {
-              scrollTrigger: {
-                trigger: `#${thisId}`,
-                toggleActions: "play none none none",
-                start: "center bottom",
-              },
-              opacity: 0,
-              x: xVal,
-              duration: 2,
-            });
+            if (window.innerWidth > 1024) {
+              gsap.to(`#${thisId} .cut-1-right-item-white`, {
+                scrollTrigger: {
+                  trigger: `#${thisId}`,
+                  toggleActions: "play none none none",
+                  start: "top 60%",
+                },
+                x: "-250%",
+                duration: 1.75,
+                ease: "power2.out",
+              });
+            } else {
+              gsap.from(`#${thisId}`, {
+                scrollTrigger: {
+                  trigger: `#${thisId}`,
+                  toggleActions: "play none none none",
+                  start: "center bottom",
+                },
+                opacity: 0,
+                x: xVal,
+                duration: 2,
+              });
+            }
+            // gsap.from(`#${thisId}`, {
+            //   scrollTrigger: {
+            //     trigger: `#${thisId}`,
+            //     toggleActions: "play none none none",
+            //     start: "center bottom",
+            //   },
+            //   opacity: 0,
+            //   x: xVal,
+            //   duration: 2,
+            // });
           });
         }
-
-        lastNewsAnimation(".cut-1-right-item", 100);
       });
     </script>
   </body>

@@ -62,10 +62,13 @@
           <div class="cut-2-news-main">
             <div class="cut-2-news-item">
               <div class="cut-2-news-item-img">
-                <img
-                  src="./img/last-news/least-news-pic-1.webp"
-                  alt="least-news-pic-1"
-                />
+                <div class="cut-2-news-item-img-pic">
+                  <img
+                    src="./img/last-news/least-news-pic-1.webp"
+                    alt="least-news-pic-1"
+                  />
+                  <div class="cut-2-news-item-img-pic-ani-white"></div>
+                </div>
                 <a class="cut-2-news-item-img-back" href="Last_News-inner.html">
                   <div class="cut-2-news-item-img-back-circle">more</div>
                 </a>
@@ -79,10 +82,13 @@
             </div>
             <div class="cut-2-news-item">
               <div class="cut-2-news-item-img">
-                <img
-                  src="./img/last-news/least-news-pic-2.webp"
-                  alt="least-news-pic-1"
-                />
+                <div class="cut-2-news-item-img-pic">
+                  <img
+                    src="./img/last-news/least-news-pic-2.webp"
+                    alt="least-news-pic-1"
+                  />
+                  <div class="cut-2-news-item-img-pic-ani-white"></div>
+                </div>
                 <a class="cut-2-news-item-img-back" href="Last_News-inner.html">
                   <div class="cut-2-news-item-img-back-circle">more</div>
                 </a>
@@ -96,10 +102,13 @@
             </div>
             <div class="cut-2-news-item">
               <div class="cut-2-news-item-img">
-                <img
-                  src="./img/last-news/least-news-pic-3.webp"
-                  alt="least-news-pic-1"
-                />
+                <div class="cut-2-news-item-img-pic">
+                  <img
+                    src="./img/last-news/least-news-pic-3.webp"
+                    alt="least-news-pic-1"
+                  />
+                  <div class="cut-2-news-item-img-pic-ani-white"></div>
+                </div>
                 <a class="cut-2-news-item-img-back" href="Last_News-inner.html">
                   <div class="cut-2-news-item-img-back-circle">more</div>
                 </a>
@@ -113,10 +122,13 @@
             </div>
             <div class="cut-2-news-item">
               <div class="cut-2-news-item-img">
-                <img
-                  src="./img/last-news/least-news-pic-4.webp"
-                  alt="least-news-pic-1"
-                />
+                <div class="cut-2-news-item-img-pic">
+                  <img
+                    src="./img/last-news/least-news-pic-4.webp"
+                    alt="least-news-pic-1"
+                  />
+                  <div class="cut-2-news-item-img-pic-ani-white"></div>
+                </div>
                 <a class="cut-2-news-item-img-back" href="Last_News-inner.html">
                   <div class="cut-2-news-item-img-back-circle">more</div>
                 </a>
@@ -130,7 +142,7 @@
             </div>
           </div>
         </div>
-        <div class="load-more"><button type="button">Lear More</button></div>
+        <div class="load-more"><button type="button">Learn More</button></div>
       </section>
     </main>
     <div class="last-news-right-fixed-L">
@@ -157,6 +169,7 @@
     <script src="./js/gsap/gsap.min.js"></script>
     <script src="./js/gsap/ScrollTrigger.min.js"></script>
     <script src="./js/gsap/SplitText.min.js"></script>
+    <script src="./js/gsap/CSSRulePlugin.min.js"></script>
     <script>
       const testContent = [
         {
@@ -248,10 +261,13 @@
             $(".cut-2-news-main").append(`
           <div class="cut-2-news-item" id='news-item-${all}'>
               <div class="cut-2-news-item-img">
+                <div class="cut-2-news-item-img-pic">
                 <img
                   src=${testContent[count].img}
                   alt="least-news-pic"
                 />
+                <div class="cut-2-news-item-img-pic-ani-white"></div>
+                </div>
                 <a class="cut-2-news-item-img-back" href=${testContent[count].href}>
                   <div class="cut-2-news-item-img-back-circle">more</div>
                 </a>
@@ -290,16 +306,29 @@
         function lastNewsAnimation(selector, xVal) {
           $(selector).each(function () {
             let thisId = $(this)[0].id;
-            gsap.from(`#${thisId}`, {
-              scrollTrigger: {
-                trigger: `#${thisId}`,
-                toggleActions: "play none none none",
-                start: "center bottom",
-              },
-              opacity: 0,
-              x: xVal,
-              duration: 2,
-            });
+            if (window.innerWidth > 1024) {
+              gsap.to(`#${thisId} .cut-2-news-item-img-pic-ani-white`, {
+                scrollTrigger: {
+                  trigger: `#${thisId}`,
+                  toggleActions: "play none none none",
+                  start: "top center",
+                },
+                x: "-250%",
+                duration: 1.75,
+                ease: "power2.out",
+              });
+            } else {
+              gsap.from(`#${thisId}`, {
+                scrollTrigger: {
+                  trigger: `#${thisId}`,
+                  toggleActions: "play none none none",
+                  start: "center bottom",
+                },
+                opacity: 0,
+                x: xVal,
+                duration: 2,
+              });
+            }
           });
         }
       });

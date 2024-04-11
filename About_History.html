@@ -27,7 +27,10 @@
             </div>
             <div class="cut-1-left-para-second">
               <div class="cut-1-left-para-line-second pc"></div>
-              <h4 class="cut-1-left-para-second-h4">關於恆合</h4>
+              <h4 class="cut-1-left-para-second-h4">
+                關於恆合
+                <div class="bottom-line ph"></div>
+              </h4>
               <h1 class="cut-1-left-para-second-h1">Us</h1>
             </div>
           </div>
@@ -71,7 +74,7 @@
           </div>
         </aside>
         <div class="cut-2-right">
-          <div class="cut-2-right-top-para">
+          <div class="cut-2-right-top-para" id="cut-2-top">
             <h1 class="cut-2-right-top-para-h1">HENG HO HISTORY</h1>
             <div class="cut-2-right-top-para-line line"></div>
             <h3>恆合機構 穿越歲月長河</h3>
@@ -807,6 +810,7 @@
               </div>
             </div>
           </div>
+          <a class="to-top" href="#cut-2-top">Back Top</a>
         </div>
       </section>
       <section class="cut-3">
@@ -848,6 +852,7 @@
     <script src="./js/gsap/gsap.min.js"></script>
     <script src="./js/gsap/ScrollTrigger.min.js"></script>
     <script src="./js/gsap/SplitText.min.js"></script>
+    <script src="./js/gsap/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script>
       $(document).ready(function () {
@@ -946,13 +951,15 @@
 
         let cut1Tl = gsap.timeline({ delay: 1 });
 
+        //大標題拆字
+        const titleSplit = new SplitText(
+          ".cut-1-left-para-first h1,.cut-1-left-para-second h4,.cut-1-left-para-second h1",
+          {
+            type: "chars",
+          }
+        );
+
         if (window.innerWidth > 1024) {
-          const titleSplit = new SplitText(
-            ".cut-1-left-para-first h1,.cut-1-left-para-second h4,.cut-1-left-para-second h1",
-            {
-              type: "chars",
-            }
-          );
           addDelay(
             ".cut-1-left-para-first-h1 div",
             ".cut-1-left-para-second-h4 div",
@@ -983,23 +990,12 @@
               "<+0.2"
             );
         } else {
-          cut1Tl
-            .from(
-              ".cut-1-right-img-2 img",
-              {
-                y: "-105%",
-                duration: "1.5",
-              },
-              "<+0.5"
-            )
-            .from(
-              ".cut-1-right-img-1 img",
-              {
-                y: "-105%",
-                duration: "1.5",
-              },
-              "<+0.2"
-            );
+          cut1Tl.from(titleSplit.chars, {
+            stagger: 0.1,
+            rotation: "40",
+            y: "110%",
+            duration: 1.5,
+          });
         }
 
         //拆字
@@ -1017,16 +1013,6 @@
           rotation: "40",
           y: "70%",
         });
-        // $(".cut-2-swiper-main-content-para-left").hover(function () {
-        //   const back = document.querySelector(
-        //     ".cut-2-swiper-main-content-para-dot"
-        //   );
-        //   const backPosition = back.getBoundingClientRect().width;
-        //   console.log(backPosition);
-        //   $(".cut-2-swiper-main-content-para-dot-inner").css({
-        //     left: -backPosition / 2,
-        //   });
-        // });
 
         if (window.innerWidth <= 1024) {
           let i = 0;
@@ -1052,6 +1038,18 @@
             });
           });
         }
+
+        //導引至最上層
+        $(".to-top").on("click", function (e) {
+          e.preventDefault();
+          let target = e.target;
+          let hash = target.hash;
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: hash,
+            ease: "Power1.easeInOut",
+          });
+        });
       });
     </script>
   </body>

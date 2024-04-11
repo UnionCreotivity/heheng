@@ -29,7 +29,10 @@
             </div>
             <div class="cut-1-left-para-second">
               <div class="cut-1-left-para-line-second pc"></div>
-              <h4 class="cut-1-left-para-second-h4">關於恆合</h4>
+              <h4 class="cut-1-left-para-second-h4">
+                關於恆合
+                <div class="bottom-line ph"></div>
+              </h4>
               <h1 class="cut-1-left-para-second-h1">Us</h1>
             </div>
           </div>
@@ -131,22 +134,13 @@
               </div>
               <div class="cut-2-right-bottom-heng-hong-para-bottom">
                 <div class="heng-hong-circle heng-hong-circle-1">
-                  <img
-                    src="./img/origin/origin-circle-1.png"
-                    alt="origin-circle-1"
-                  />
+                  <img src="./img/origin/circle-1.png" alt="circle-1" />
                 </div>
                 <div class="heng-hong-circle heng-hong-circle-2">
-                  <img
-                    src="./img/origin/origin-circle-2.png"
-                    alt="origin-circle-2"
-                  />
+                  <img src="./img/origin/circle-2.png" alt="circle-2" />
                 </div>
                 <div class="heng-hong-circle heng-hong-circle-3">
-                  <img
-                    src="./img/origin/origin-circle-3.png"
-                    alt="origin-circle-3"
-                  />
+                  <img src="./img/origin/circle-3.png" alt="circle-3" />
                 </div>
               </div>
             </div>
@@ -197,17 +191,16 @@
         gsap.registerPlugin(ScrollTrigger, SplitText);
 
         let cut1Tl = gsap.timeline({ delay: 0.5 });
-
+        //大標題拆字
+        const titleSplit = new SplitText(
+          ".cut-1-left-para-first h1,.cut-1-left-para-second h4,.cut-1-left-para-second h1",
+          {
+            type: "chars",
+          }
+        );
         if (window.innerWidth > 1024) {
           //第1cut動畫
 
-          //大標題拆字
-          const titleSplit = new SplitText(
-            ".cut-1-left-para-first h1,.cut-1-left-para-second h4,.cut-1-left-para-second h1",
-            {
-              type: "chars",
-            }
-          );
           addDelay(
             ".cut-1-left-para-first-h1 div",
             ".cut-1-left-para-second-h4 div",
@@ -237,23 +230,12 @@
               "<+0.2"
             );
         } else {
-          cut1Tl
-            .from(
-              ".cut-1-right-img-2 img",
-              {
-                y: "-105%",
-                duration: "1.5",
-              },
-              "<+0.5"
-            )
-            .from(
-              ".cut-1-right-img-1 img",
-              {
-                y: "-105%",
-                duration: "1.5",
-              },
-              "<+0.2"
-            );
+          cut1Tl.from(titleSplit.chars, {
+            stagger: 0.1,
+            rotation: "40",
+            y: "150%",
+            duration: 1.5,
+          });
         }
 
         //動畫延遲
@@ -349,18 +331,20 @@
         }
 
         cut2PeopleTl
-          .from(".cut-2-right-people", {
+          .from(".cut-2-right-people,.cut-2-right-people img", {
             "--peopeleLeft": "100%",
-            duration: 1,
+            duration: 0.4,
+            ease: "power3.out",
           })
-          .to(".cut-2-right-people img", {
-            opacity: 1,
-            duration: 0.2,
-          })
-          .to(".cut-2-right-people", {
-            "--peopeleLeft": "-100%",
-            duration: 1,
-          });
+          .to(
+            ".cut-2-right-people",
+            {
+              "--peopeleLeft": "-100%",
+              duration: 0.4,
+              ease: "power3.out",
+            },
+            "<+0.4"
+          );
 
         //圓圈轉進動畫
         const cut2CircleTl = gsap.timeline({
@@ -375,7 +359,7 @@
         cut2CircleTl.add(cut2MaskSet);
         cut2CircleTl
           .from(".cut-2-right-bottom-heng-hong-para-bottom", {
-            rotation: "180",
+            rotation: "360",
             duration: 1.5,
           })
           .to(

@@ -24,7 +24,7 @@ $contentSizeTb: 2.75vw; //內文
 
 //字型大小 手機版
 $mainTitlePH: 9.75vw; //主標
-$subTitlePH: 4.25vw;
+$subTitlePH: 4.5vw;
 $contentSizePH: 3.75vw; //內文
 
 @mixin laptop() {
@@ -61,6 +61,7 @@ $contentSizePH: 3.75vw; //內文
   p {
     font-family: $micro;
     font-size: $contentSize;
+    color: #333333;
     line-height: 2;
     letter-spacing: 2px;
   }
@@ -68,7 +69,7 @@ $contentSizePH: 3.75vw; //內文
     background-color: black;
     width: 5vw;
     height: 1px;
-    margin-top: 1vw;
+    margin-top: 1.5vw;
     margin-bottom: 3vw;
   }
   @include tablet {

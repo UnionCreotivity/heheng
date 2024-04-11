@@ -223,10 +223,14 @@
           <div class="cut-3-para-container">
             <h1 class="cut-3-para-h1">PORTFOLIO</h1>
             <div class="cut-3-para-line line"></div>
-            <h3>恆合機構｜瑋石南京復興案</h3>
-            <p>南京東路-民生.松江.敦北Square</p>
-            <p>台北華爾街 國際飯店╳企總大樓 億級聚場</p>
-            <p>世界掌心中的 菁英棲心居所</p>
+            <div class="cut-3-para-content">
+              <h3>恆合機構｜瑋石南京復興案</h3>
+              <p>
+                南京東路-民生.松江.敦北Square <br />
+                台北華爾街 國際飯店╳企總大樓 億級聚場 <br />
+                世界掌心中的 菁英棲心居所
+              </p>
+            </div>
             <div class="swiper-button">
               <div class="swiper-button-prev swiper-button-prev-1">
                 <img src="./img/share/prev.svg" alt="prev" />
@@ -240,10 +244,10 @@
         </div>
         <div class="cut-3-swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-name="0">
               <img src="./img/home/cut-3-1.webp" alt="cut-3-1" />
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-name="1">
               <img src="./img/home/cut-3-img2.webp" alt="cut-3-2" />
             </div>
           </div>
@@ -261,11 +265,12 @@
                 alt="cut-4-circle-dot"
               />
             </div>
+
             <div class="cut-4-circle-pc pc">
               <!-- <div class="cut-4-center">
                 <img src="./img/home/cut-4-camera.png" alt="cut-4-camera" />
               </div> -->
-              <div class="cut-4-all">
+              <div class="cut-4-all pc">
                 <img src="./img/home/cut-4-all.webp" alt="cut-4-all" />
               </div>
               <a class="cut-4-circle-1" href="javascript:;">
@@ -455,7 +460,11 @@
                 </div>
               </div>
             </div>
+
             <div class="cut-4-swiper ph">
+              <div class="cut-4-all ph">
+                <img src="./img/home/cut-4-all.webp" alt="cut-4-all" />
+              </div>
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img
@@ -670,6 +679,24 @@
     <script src="./js/gsap/SplitText.min.js"></script>
     <script src="./js/textAnimation.js"></script>
     <script>
+      const testContent = [
+        {
+          id: 0,
+          title: "恆合機構｜瑋石南京復興案",
+          content: `  
+          南京東路-民生.松江.敦北Square <br />
+          台北華爾街 國際飯店╳企總大樓 億級聚場 <br />
+          世界掌心中的 菁英棲心居所`,
+        },
+        {
+          id: 1,
+          title: "恆合機構｜捷運雙連站",
+          content: `  
+          捷運中山北路旁 雙綠帶金軸 <br />
+          台北華爾街 國際飯店╳企總大樓 億級聚場 <br />
+          世界掌心中的 菁英棲心居所`,
+        },
+      ];
       $(document).ready(function () {
         if (window.innerWidth <= 1024) {
           $(".pc").remove();
@@ -690,6 +717,19 @@
           breakpoints: {
             1024: {
               slidesPerView: 1.25,
+            },
+          },
+          on: {
+            slideChangeTransitionEnd: function (swiper) {
+              const active = this.activeIndex;
+              const currentSlide = this.slides[active];
+              const currentAttr = currentSlide.getAttribute("data-name");
+
+              const findItem = testContent.filter(
+                (item) => item.id == currentAttr
+              );
+              $(".cut-3-para-content h3").text(findItem[0]?.title);
+              $(".cut-3-para-content p").html(findItem[0]?.content);
             },
           },
         });
@@ -716,8 +756,9 @@
                 zIndex: 3,
                 duration: 1,
               });
-              gsap.from(`${trig2} > img`, {
+              gsap.to(`${trig2} > img`, {
                 scale: "1.2",
+                opacity: 1,
                 duration: 1,
               });
             });
@@ -729,6 +770,7 @@
               });
               gsap.to(`${trig2} >img`, {
                 scale: "1",
+                opacity: 0,
                 duration: 1,
               });
             });
@@ -836,7 +878,7 @@
           scrub: 1,
         });
 
-        //cut3
+        //cut3拆字動畫
 
         const cut3Title = new SplitText(".cut-3-para-h1", {
           type: "chars",
@@ -864,22 +906,22 @@
           });
         }
 
-        //cut4
+        gsap.from(".cut-3-swiper-container", {
+          scrollTrigger: {
+            trigger: ".cut-3",
+            start: "25% center",
+          },
+          y: "-100%",
+          duration: 1.5,
+          ease: "power3.out",
+        });
+
+        //cut4拆字動畫
         const cut4Title = new SplitText(".cut-4-para-h1", {
           type: "chars",
         });
         addDelay(".cut-4-para-h1 div");
-        if (window.innerWidth <= 1024) {
-          const cut4Par = gsap.from(cut4Title.chars, {
-            scrollTrigger: {
-              trigger: ".cut-4-para",
-              start: "25% 75%",
-            },
-            stagger: 0.05,
-            rotation: "40",
-            y: "90%",
-          });
-        } else {
+        if (window.innerWidth > 1024) {
           const cut4Par = gsap.from(cut4Title.chars, {
             scrollTrigger: {
               trigger: ".cut-4",
@@ -889,16 +931,39 @@
             rotation: "40",
             y: "90%",
           });
+        } else {
+          const cut4Par = gsap.from(cut4Title.chars, {
+            scrollTrigger: {
+              trigger: ".cut-4-para",
+              start: "25% 75%",
+            },
+            stagger: 0.05,
+            rotation: "40",
+            y: "90%",
+          });
         }
 
-        const cut4Img = gsap.from(".cut-4-all img", {
-          scrollTrigger: {
-            trigger: ".cut-4",
-            start: "25% 75%",
-          },
-          scale: "3",
-          duration: 1,
-        });
+        //輪播圓圈動畫
+        if (window.innerWidth > 1024) {
+          const cut4Img = gsap.from(".cut-4-all img", {
+            scrollTrigger: {
+              trigger: ".cut-4",
+              start: "25% 75%",
+            },
+            scale: "3",
+            duration: 1,
+          });
+        } else {
+          const cut4Img = gsap.to(".cut-4-all img", {
+            scrollTrigger: {
+              trigger: ".cut-4",
+              start: "25% 75%",
+            },
+            scale: "3",
+            opacity: 0,
+            duration: 1,
+          });
+        }
 
         //cut5
         const cut5Title = new SplitText(".cut-5-left-h1", {
@@ -928,8 +993,67 @@
           });
         }
 
+        const cut5PeopleTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".cut-5",
+            start: "top center",
+          },
+        });
+
+        cut5PeopleTl
+          .from(".cut-5-img3,.cut-5-img3 img", {
+            "--people3Left": "100%",
+            duration: 0.4,
+            ease: "power3.out",
+          })
+          .to(
+            ".cut-5-img3",
+            {
+              "--people3Left": "-100%",
+              duration: 0.4,
+              ease: "power3.out",
+            },
+            "<+0.4"
+          )
+          .from(
+            ".cut-5-img2,.cut-5-img2 img",
+            {
+              "--people2Left": "100%",
+              duration: 0.4,
+              ease: "power3.out",
+            },
+            "<-0.2"
+          )
+          .to(
+            ".cut-5-img2",
+            {
+              "--people2Left": "-100%",
+              duration: 0.4,
+              ease: "power3.out",
+            },
+            "<+0.4"
+          )
+          .from(
+            ".cut-5-img1,.cut-5-img1 img",
+            {
+              "--people1Left": "100%",
+              duration: 0.4,
+              ease: "power3.out",
+            },
+            "<-0.2"
+          )
+          .to(
+            ".cut-5-img1",
+            {
+              "--people1Left": "-100%",
+              duration: 0.4,
+              ease: "power3.out",
+            },
+            "<+0.4"
+          );
+
         let cut5Ymove = window.innerWidth <= 1024 ? "10vw" : "5vw";
-        const cut5ImgTop = gsap.from(".cut-5-img2 img", {
+        const cut5ImgTop = gsap.from(".cut-5-img2", {
           scrollTrigger: {
             trigger: ".cut-5",
             start: "top bottom",
@@ -939,7 +1063,7 @@
           y: `-${cut5Ymove}`,
         });
 
-        const cut5ImgBottom = gsap.from(".cut-5-img1 img,.cut-5-img3 img", {
+        const cut5ImgBottom = gsap.from(".cut-5-img1,.cut-5-img3", {
           scrollTrigger: {
             trigger: ".cut-5",
             start: "top bottom",

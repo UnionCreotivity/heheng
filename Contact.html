@@ -13,12 +13,15 @@
         <div class="cut-1">
           <div class="cut-1-para">
             <div class="cut-1-para-first">
-              <h1>Contact</h1>
+              <h1 class="cut-1-para-first-h1">Contact</h1>
               <div class="cut-1-para-line"></div>
             </div>
             <div class="cut-1-para-second">
-              <h4>聯絡我們</h4>
-              <h1>Us</h1>
+              <div class="cut-1-para-second-left">
+                <h4 class="cut-1-para-second-h4">聯絡我們</h4>
+                <div class="cut-1-para-second-line"></div>
+              </div>
+              <h1 class="cut-1-para-second-h1">Us</h1>
             </div>
           </div>
         </div>
@@ -113,6 +116,50 @@
         }
       });
       $(window).on("load", function () {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        //動畫延遲
+        function addDelay(tag, tag1, tag2) {
+          let delay = 300;
+          $(tag).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 100;
+          });
+          $(tag1).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 100;
+          });
+          $(tag2).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 100;
+          });
+        }
+        const titleSplit = new SplitText(
+          ".cut-1-para-first-h1,.cut-1-para-second-h4,.cut-1-para-second-h1",
+          {
+            type: "chars",
+          }
+        );
+        addDelay(
+          ".cut-1-para-first-h1 div,.cut-1-para-second-h4 div,.cut-1-para-second-h1 div"
+        );
+        if (window.innerWidth > 1024) {
+          gsap.from(titleSplit.chars, {
+            stagger: 0.1,
+            rotation: "60",
+            y: "110%",
+            duration: 1,
+            delay: 0.5,
+          });
+        } else {
+          gsap.from(titleSplit.chars, {
+            stagger: 0.1,
+            rotation: "60",
+            y: "150%",
+            duration: 1.5,
+            delay: 0.5,
+          });
+        }
         //表單內容👇
         $("#form-main")
           .submit(function (e) {
