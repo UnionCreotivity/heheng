@@ -666,6 +666,7 @@
 
   .cut-4-swiper {
     .swiper-slide {
+      overflow: hidden;
       > img {
         transform: scale(1.1);
       }

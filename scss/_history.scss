@@ -45,7 +45,7 @@
     h4 {
       font-family: $serif;
       font-size: 1.75vw;
-      letter-spacing: 5px;
+      letter-spacing: 10px;
       font-weight: 500;
     }
     @include tablet {
@@ -226,13 +226,14 @@
       top: unset;
       > .cut-2-link:nth-child(1) {
         position: relative;
+        width: 95%;
         &::after {
           content: "";
           position: absolute;
           background-color: black;
           width: 1px;
           height: 60%;
-          right: -17%;
+          right: -13%;
         }
       }
     }
@@ -256,20 +257,22 @@
         color: #cfb38e;
       }
       h3 {
-        font-size: $contentSize;
+        font-size: 1vw;
         font-weight: 400;
         letter-spacing: 2px;
         line-height: 2;
       }
     }
     @include tablet {
-      width: auto;
+      width: 100%;
       margin-left: 0;
       a {
         display: flex;
         align-items: center;
         text-decoration: none;
-        gap: 3vw;
+        gap: 2vw;
+        width: 100%;
+        justify-content: space-between;
         > :nth-child(2) {
           letter-spacing: 1px;
         }
@@ -328,7 +331,7 @@
         text-align: center;
         order: 1;
         margin-bottom: 0vw;
-        color: #666666;
+        color: #19191a;
       }
       .line {
         margin-bottom: 7vw;

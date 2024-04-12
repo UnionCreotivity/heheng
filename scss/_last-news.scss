@@ -95,7 +95,7 @@
       h4 {
         position: relative;
         font-size: 5.5vw;
-        letter-spacing: 5px;
+        letter-spacing: 10px;
         margin-right: 0;
         width: 45%;
         // &::after {
@@ -218,6 +218,12 @@
     position: relative;
     margin-bottom: 14vw;
     margin-top: -19.5vw;
+    @media screen and (max-width: 1920px) {
+      margin-top: -19.8vw;
+    }
+    @include tablet {
+      margin-top: -21.6vw;
+    }
     @include tablet {
       margin-top: 0vw;
       margin-bottom: 0vw;
