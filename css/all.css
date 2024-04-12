@@ -1957,7 +1957,7 @@
 @media all and (max-width: 1024px) {
   #origin .cut-2-right-bottom-heng-hong-para-top {
     text-align: center;
-    width: 60%;
+    width: 65%;
     position: relative;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -2015,7 +2015,7 @@
 }
 @media all and (max-width: 1024px) {
   #origin .heng-hong-circle-1 {
-    top: -24%;
+    top: -21%;
     right: 0%;
     transform: translate(-28vw, 31vw);
   }
@@ -2027,8 +2027,8 @@
 }
 @media all and (max-width: 1024px) {
   #origin .heng-hong-circle-2 {
+    top: -21%;
     left: 0%;
-    top: -24%;
     transform: translate(27vw, 31vw);
   }
 }
@@ -2040,7 +2040,7 @@
 @media all and (max-width: 1024px) {
   #origin .heng-hong-circle-3 {
     right: 32%;
-    top: 48%;
+    top: 51%;
     transform: translate(-0.6vw, -42.5vw);
   }
 }
@@ -3665,8 +3665,8 @@
   background-color: #999999;
 }
 #new_project-inner .cut-2-svg-build {
-  width: 1.2vw;
-  height: 1.2vw;
+  width: 1.5vw;
+  height: 1.5vw;
   -webkit-mask-image: url("../img/new_project-inner/new_Project-inner-pic-connect.png");
           mask-image: url("../img/new_project-inner/new_Project-inner-pic-connect.png");
   -webkit-mask-repeat: no-repeat;
@@ -3690,7 +3690,7 @@
 }
 #new_project-inner .cut-2-svg-fb {
   width: 0.6vw;
-  height: 1.2vw;
+  height: 1.5vw;
   -webkit-mask-image: url("../img/new_project-inner/new_Project-inner-pic-fb.png");
           mask-image: url("../img/new_project-inner/new_Project-inner-pic-fb.png");
   -webkit-mask-repeat: no-repeat;

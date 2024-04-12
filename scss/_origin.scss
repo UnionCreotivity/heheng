@@ -591,7 +591,7 @@
         margin-bottom: 1vw;
       }
       text-align: center;
-      width: 60%;
+      width: 65%;
       position: relative;
       transform: translate(-50%, -50%);
       left: 50%;
@@ -632,7 +632,7 @@
     right: 4.5%;
     transform: translate(-8vw, 15vw);
     @include tablet {
-      top: -24%;
+      top: -21%;
       right: 0%;
       transform: translate(-28vw, 31vw);
     }
@@ -642,8 +642,8 @@
     top: 23%;
     transform: translate(24.9vw, -0.8vw);
     @include tablet {
+      top: -21%;
       left: 0%;
-      top: -24%;
       transform: translate(27vw, 31vw);
     }
   }
@@ -653,7 +653,7 @@
     transform: translate(-0.8vw, -20vw);
     @include tablet {
       right: 32%;
-      top: 48%;
+      top: 51%;
       transform: translate(-0.6vw, -42.5vw);
     }
   }
