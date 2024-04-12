@@ -2584,6 +2584,11 @@
   opacity: 0;
   pointer-events: none;
 }
+@media all and (max-width: 1024px) {
+  #history .cut-2-swiper-pagination-main:hover .light-circle {
+    display: none;
+  }
+}
 #history .swiper-pagination-none {
   display: none;
 }

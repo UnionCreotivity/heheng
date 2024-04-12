@@ -457,6 +457,9 @@
       transform: scale(4);
       opacity: 0;
       pointer-events: none;
+      @include tablet {
+        display: none;
+      }
     }
   }
 
