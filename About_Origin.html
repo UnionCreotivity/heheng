@@ -198,14 +198,14 @@
             type: "chars",
           }
         );
+        addDelay(
+          ".cut-1-left-para-first-h1 div",
+          ".cut-1-left-para-second-h4 div",
+          ".cut-1-left-para-second-h1 div"
+        );
         if (window.innerWidth > 1024) {
           //第1cut動畫
 
-          addDelay(
-            ".cut-1-left-para-first-h1 div",
-            ".cut-1-left-para-second-h4 div",
-            ".cut-1-left-para-second-h1 div"
-          );
           cut1Tl
             .from(titleSplit.chars, {
               stagger: 0.1,
@@ -264,18 +264,20 @@
         });
 
         cut2TopImgTl
-          .from(".cut-2-right-top-img", {
+          .from(".cut-2-right-top-img,.cut-2-right-top-img img", {
             "--imgLeft": "100%",
-            duration: 1,
+            duration: 0.4,
+            ease: "power3.out",
           })
-          .to(".cut-2-right-top-img img", {
-            opacity: 1,
-            duration: 0.2,
-          })
-          .to(".cut-2-right-top-img", {
-            "--imgLeft": "-100%",
-            duration: 1,
-          });
+          .to(
+            ".cut-2-right-top-img",
+            {
+              "--imgLeft": "-100%",
+              duration: 0.4,
+              ease: "power3.out",
+            },
+            "<+0.4"
+          );
 
         //拆字
         const cut2TopTitle = new SplitText(".cut-2-right-top-para-h1", {
@@ -357,29 +359,58 @@
           maskSize: "200%",
         });
         cut2CircleTl.add(cut2MaskSet);
-        cut2CircleTl
-          .from(".cut-2-right-bottom-heng-hong-para-bottom", {
-            rotation: "360",
-            duration: 1.5,
-          })
-          .to(
-            ".heng-hong-circle-1,.heng-hong-circle-2,.heng-hong-circle-3",
-            {
-              x: 0,
-              y: 0,
-              duration: 1.5,
-            },
-            "<"
-          )
-          .from(
-            ".cut-2-right-bottom-heng-hong-para-top",
-            {
-              maskSize: "0%",
-              autoAlpha: 0,
-              duration: 3,
-            },
-            "<+1.4"
-          );
+        if (window.innerWidth > 1024) {
+          cut2CircleTl
+            // .from(".cut-2-right-bottom-heng-hong-para-bottom", {
+            //   rotation: "360",
+            //   duration: 1.5,
+            // })
+            .to(
+              ".cut-2-right-bottom-heng-hong-para-bottom,.heng-hong-circle-1,.heng-hong-circle-2,.heng-hong-circle-3",
+              {
+                rotation: "360",
+                x: 0,
+                y: 0,
+                duration: 1.5,
+              }
+            )
+            .from(
+              ".cut-2-right-bottom-heng-hong-para-top",
+              {
+                maskSize: "0%",
+                autoAlpha: 0,
+                duration: 3,
+              },
+              "<+1.5"
+            );
+        } else {
+          cut2CircleTl
+            // .to(".cut-2-right-bottom-heng-hong-para-bottom", {
+            //   rotation: "360",
+            //   x: 0,
+            //   y: 0,
+            //   duration: 1,
+            //   ease: "power3.out",
+            // })
+            .to(
+              ".cut-2-right-bottom-heng-hong-para-bottom,.heng-hong-circle-1,.heng-hong-circle-2,.heng-hong-circle-3",
+              {
+                rotation: "360",
+                x: 0,
+                y: 0,
+                duration: 1.5,
+              }
+            )
+            .from(
+              ".cut-2-right-bottom-heng-hong-para-top",
+              {
+                maskSize: "0%",
+                autoAlpha: 0,
+                duration: 3,
+              },
+              "<+1.4"
+            );
+        }
 
         // gsap.from(".cut-2-right-bottom-heng-hong-para-bottom", {
         //   scrollTrigger: {

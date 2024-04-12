@@ -959,13 +959,13 @@
           }
         );
 
-        if (window.innerWidth > 1024) {
-          addDelay(
-            ".cut-1-left-para-first-h1 div",
-            ".cut-1-left-para-second-h4 div",
-            ".cut-1-left-para-second-h1 div"
-          );
+        addDelay(
+          ".cut-1-left-para-first-h1 div",
+          ".cut-1-left-para-second-h4 div",
+          ".cut-1-left-para-second-h1 div"
+        );
 
+        if (window.innerWidth > 1024) {
           cut1Tl
             .from(titleSplit.chars, {
               stagger: 0.1,

@@ -49,6 +49,18 @@
                 alt="new_Project-inner-pic-3"
               />
             </div>
+            <div class="cut-left-pic">
+              <img
+                src="./img/new_project-inner/new_Project-inner-pic-2.webp"
+                alt="new_Project-inner-pic-2"
+              />
+            </div>
+            <div class="cut-left-pic">
+              <img
+                src="./img/new_project-inner/new_Project-inner-pic-3.webp"
+                alt="new_Project-inner-pic-3"
+              />
+            </div>
           </div>
           <div class="cut-2-right">
             <div class="cut-2-right-top">
@@ -221,6 +233,13 @@
       });
       $(window).on("load", function () {
         gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        let all = 0; //掛載id gasp動畫用
+        $(".cut-left-pic").each(function () {
+          $(this).attr("id", `cut-left-pic-${all}`);
+          all++;
+        });
+
         gsap.from(".li-content-des", {
           scrollTrigger: {
             trigger: ".cut-2-right",
@@ -232,6 +251,39 @@
           x: "100",
           duration: 1,
         });
+
+        slideAnimation(".cut-left-pic", 110);
+
+        function slideAnimation(selector, xVal) {
+          $(selector).each(function () {
+            let thisId = $(this)[0].id;
+            console.log($(this));
+            if (window.innerWidth > 1024) {
+              gsap.from(`#${thisId} img`, {
+                scrollTrigger: {
+                  trigger: `#${thisId}`,
+                  toggleActions: "play none none none",
+                  start: "top 60%",
+                },
+                x: `${xVal}%`,
+                duration: 1.75,
+                ease: "power2.out",
+              });
+            } else {
+              gsap.from(`#${thisId} img`, {
+                scrollTrigger: {
+                  trigger: `#${thisId}`,
+                  toggleActions: "play none none none",
+                  start: "center 75%",
+                  markers: true,
+                },
+                opacity: 0,
+                x: `${xVal}%`,
+                duration: 2,
+              });
+            }
+          });
+        }
 
         //表單內容👇
         $("#form-main")

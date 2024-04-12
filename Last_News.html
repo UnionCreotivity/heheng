@@ -210,7 +210,7 @@
         gsap.registerPlugin(ScrollTrigger, SplitText);
 
         //動畫延遲
-        function addDelay(tag, tag1, tag2) {
+        function addDelay(tag, tag1, tag2, tag3) {
           let delay = 300;
           $(tag).each(function (index) {
             $(this).css("animation-delay", `${delay}ms`);
@@ -224,6 +224,10 @@
             $(this).css("animation-delay", `${delay}ms`);
             delay += 100;
           });
+          $(tag3).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 100;
+          });
         }
 
         const titleSplit = new SplitText(
@@ -232,12 +236,19 @@
             type: "chars",
           }
         );
-        addDelay(
-          ".cut-1-left-para-second-h4 div",
-          ".cut-1-left-para-second-h1 div",
-          ".cut-1-left-para-first-h1 div",
-          ".cut-1-left-para-first-h4 div"
-        );
+        if (window.innerWidth > 1024) {
+          addDelay(
+            ".cut-1-left-para-second-h1 div",
+            ".cut-1-left-para-second-h4 div",
+            ".cut-1-left-para-first-h1 div"
+          );
+        } else {
+          addDelay(
+            ".cut-1-left-para-second-h1 div",
+            ".cut-1-left-para-first-h4 div",
+            ".cut-1-left-para-first-h1 div"
+          );
+        }
 
         //大標題文字動畫
         let cut1Tl = gsap.timeline({ delay: 0.5 });
@@ -335,7 +346,6 @@
                   trigger: `#${thisId}`,
                   toggleActions: "play none none none",
                   start: "center 60%",
-                  markers: true,
                 },
                 opacity: 0,
                 x: xVal,

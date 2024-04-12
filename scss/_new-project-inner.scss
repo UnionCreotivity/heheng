@@ -93,6 +93,7 @@
   .cut-left-pic {
     width: 100%;
     margin-top: 2vw;
+    overflow: hidden;
     @include tablet {
       margin-top: 6vw;
     }
@@ -122,6 +123,7 @@
       font-size: 1.25vw;
       margin-bottom: 0.5vw;
       font-weight: 500;
+      font-family: $serif;
     }
     h2 {
       font-family: $micro;
@@ -138,12 +140,13 @@
       h1 {
         font-size: $subTitlePH;
         font-weight: 600;
+        margin-bottom: 2vw;
       }
       h2 {
         font-size: 4vw;
       }
       .line {
-        margin-bottom: 6vw;
+        margin-bottom: 7vw;
       }
     }
   }
@@ -272,7 +275,7 @@
   }
   .li-content-name {
     @include tablet {
-      width: 22%;
+      width: 20%;
     }
   }
   .li-content-des {

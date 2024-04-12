@@ -87,6 +87,7 @@
     h4 {
       position: relative;
       margin-top: 2vw;
+      padding-bottom: 3vw;
       // &::after {
       //   content: "";
       //   position: absolute;
@@ -124,8 +125,9 @@
     }
   }
   .cut-1-para-second-left {
-    width: 100%;
+    width: 34%;
     @include tablet {
+      width: 100%;
       position: relative;
     }
   }
@@ -136,7 +138,8 @@
     margin-top: 1vw;
     @include tablet {
       width: 145%;
-      margin-top: 3vw;
+      // margin-top: 3vw;
+      margin-top: 0vw;
     }
   }
   .cut-1-para-line-second {
@@ -176,6 +179,7 @@
   .cut-1-para-second-h1 {
     @include tablet {
       width: 35%;
+      padding-bottom: 2vw;
     }
   }
 
@@ -337,7 +341,7 @@
   .right-img-fixed {
     position: absolute;
     right: 0;
-    bottom: -15%;
+    bottom: -10%;
     width: 24vw;
     z-index: -1;
     filter: drop-shadow(1px 1px 1px black);
@@ -358,8 +362,4 @@
       filter: drop-shadow(1px 1px 1px black);
     }
   }
-}
-
-#contact ~ #footer {
-  margin-top: 15vw;
 }

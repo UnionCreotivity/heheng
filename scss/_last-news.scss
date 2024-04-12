@@ -94,7 +94,6 @@
       h4 {
         position: relative;
         font-size: 5.5vw;
-        padding-bottom: 1vw;
         letter-spacing: 5px;
         margin-right: 0;
         width: 45%;
@@ -438,7 +437,6 @@
     font-family: $cor;
     font-size: $subTitle;
     color: #999999;
-    letter-spacing: 2px;
     @include tablet {
       font-size: $subTitlePH;
     }

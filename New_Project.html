@@ -144,7 +144,7 @@
         });
 
         //動畫延遲
-        function addDelay(tag, tag1, tag2) {
+        function addDelay(tag, tag1, tag2, tag3) {
           let delay = 300;
           $(tag).each(function (index) {
             $(this).css("animation-delay", `${delay}ms`);
@@ -158,6 +158,10 @@
             $(this).css("animation-delay", `${delay}ms`);
             delay += 200;
           });
+          $(tag3).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 200;
+          });
         }
         //大標文字拆字
         const titleSplit = new SplitText(
@@ -166,13 +170,20 @@
             type: "chars",
           }
         );
+        if (window.innerWidth > 1024) {
+          addDelay(
+            ".cut-1-left-para-second-h1 div",
+            ".cut-1-left-para-second-h2 div",
+            ".cut-1-left-para-first-h1 div"
+          );
+        } else {
+          addDelay(
+            ".cut-1-left-para-second-h1 div",
+            ".cut-1-left-para-first-h4 div",
+            ".cut-1-left-para-first-h1 div"
+          );
+        }
 
-        addDelay(
-          ".cut-1-left-para-second-h1 div",
-          ".cut-1-left-para-second-h2 div",
-          ".cut-1-left-para-first-h1 div",
-          ".cut-1-left-para-first-h4 div"
-        );
         if (window.innerWidth > 1024) {
           gsap.from(titleSplit.chars, {
             stagger: 0.1,
@@ -216,23 +227,12 @@
                   trigger: `#${thisId}`,
                   toggleActions: "play none none none",
                   start: "center 75%",
-                  markers: true,
                 },
                 opacity: 0,
                 x: xVal,
                 duration: 2,
               });
             }
-            // gsap.from(`#${thisId}`, {
-            //   scrollTrigger: {
-            //     trigger: `#${thisId}`,
-            //     toggleActions: "play none none none",
-            //     start: "center bottom",
-            //   },
-            //   opacity: 0,
-            //   x: xVal,
-            //   duration: 2,
-            // });
           });
         }
       });

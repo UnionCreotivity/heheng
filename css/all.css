@@ -1271,7 +1271,7 @@
 #origin .cut-1-left-para h4 {
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   letter-spacing: 5px;
 }
 @media all and (max-width: 1024px) {
@@ -1582,7 +1582,8 @@
     overflow: hidden;
   }
   #origin .cut-2-right-top-img img {
-    opacity: 0;
+    left: var(--imgLeft);
+    position: relative;
   }
   #origin .cut-2-right-top-img::after {
     content: "";
@@ -1616,7 +1617,7 @@
   display: none;
 }
 #origin .cut-2-right-top-para .line {
-  margin-top: 0.5vw;
+  margin-top: 1vw;
   margin-bottom: 4vw;
 }
 @media all and (max-width: 1024px) {
@@ -1627,13 +1628,21 @@
     display: block;
   }
   #origin .cut-2-right-top-para h1 {
-    font-size: 4vw;
-    color: #666666;
+    font-size: 6vw;
+    margin-top: 12vw;
+    margin-bottom: 5vw;
+    color: #19191a;
+  }
+  #origin .cut-2-right-top-para h1 div {
+    font-weight: 500;
+    color: #19191a;
   }
   #origin .cut-2-right-top-para h3 {
     text-align: center;
-    order: -1;
-    margin-top: 12%;
+    color: #666666;
+    order: 1;
+    margin-bottom: 0vw;
+    font-size: 4vw;
   }
   #origin .cut-2-right-top-para h3 br {
     display: block;
@@ -1641,15 +1650,17 @@
   #origin .cut-2-right-top-para .line {
     margin-bottom: 7vw;
     margin-top: 7vw;
+    order: 2;
   }
   #origin .cut-2-right-top-para p {
     text-align: start;
+    order: 3;
   }
   #origin .cut-2-right-top-para p br {
     display: none;
   }
   #origin .cut-2-right-top-para .cut-2-right-top-para-h1 div {
-    font-size: 4vw;
+    font-size: 6vw;
     color: #666666;
   }
 }
@@ -1667,16 +1678,16 @@
 }
 @keyframes shine {
   0% {
-    color: #000000;
+    color: #19191a;
   }
   20% {
     color: yellow;
   }
   40% {
-    color: #000000;
+    color: #19191a;
   }
   100% {
-    color: #000000;
+    color: #19191a;
   }
 }
 #origin .cut-2-right-people {
@@ -1757,7 +1768,7 @@
   }
 }
 #origin .cut-2-right-middle-para .line {
-  margin-top: 0.5vw;
+  margin-top: 1vw;
   margin-bottom: 4vw;
 }
 @media all and (max-width: 1024px) {
@@ -1771,21 +1782,28 @@
   #origin .cut-2-right-middle-para h1 {
     display: flex;
     align-items: center;
-    color: #666666;
-    font-size: 4vw;
+    font-size: 6vw;
     gap: 0vw;
     letter-spacing: 2px;
+    margin-bottom: 5vw;
   }
   #origin .cut-2-right-middle-para h1 br {
     display: none;
   }
+  #origin .cut-2-right-middle-para h1 div {
+    font-size: 6vw;
+    font-weight: 500;
+  }
   #origin .cut-2-right-middle-para h3 {
-    order: -1;
-    margin-bottom: 3vw;
+    order: 1;
+    color: #666666;
+    margin-bottom: 1vw;
+    font-size: 4vw;
   }
   #origin .cut-2-right-middle-para .line {
     margin-top: 5vw;
     margin-bottom: 5vw;
+    order: 2;
   }
 }
 #origin .cut-2-right-middle-para-h1 {
@@ -1959,6 +1977,11 @@
   height: 100%;
   transform-origin: 60% 35%;
 }
+@media all and (max-width: 1024px) {
+  #origin .cut-2-right-bottom-heng-hong-para-bottom {
+    transform-origin: 50% 30%;
+  }
+}
 #origin .heng-hong-circle {
   position: absolute;
   top: 0;
@@ -1978,7 +2001,7 @@
   #origin .heng-hong-circle-1 {
     top: -15%;
     right: -2.5%;
-    transform: translate(-30vw, 24vw);
+    transform: translate(-30vw, 22vw);
   }
 }
 #origin .heng-hong-circle-2 {
@@ -1990,7 +2013,7 @@
   #origin .heng-hong-circle-2 {
     left: 1.5%;
     top: -15%;
-    transform: translate(26vw, 27vw);
+    transform: translate(26vw, 22vw);
   }
 }
 #origin .heng-hong-circle-3 {
@@ -2073,7 +2096,7 @@
 }
 #history .cut-1-left-para h4 {
   font-family: "Noto Serif TC", serif;
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   letter-spacing: 5px;
   font-weight: 500;
 }
@@ -2388,7 +2411,7 @@
   text-align: center;
 }
 #history .cut-2-right-top-para .line {
-  margin-top: 0.5vw;
+  margin-top: 1vw;
   margin-bottom: 4vw;
 }
 @media all and (max-width: 1024px) {
@@ -2399,20 +2422,26 @@
     display: block;
   }
   #history .cut-2-right-top-para h1 {
-    font-size: 4vw;
-    color: #666666;
+    font-size: 6vw;
+    color: #19191a;
+    margin-top: 12vw;
+    margin-bottom: 5vw;
   }
   #history .cut-2-right-top-para h3 {
+    font-size: 4vw;
     text-align: center;
-    order: -1;
-    margin-top: 12%;
+    order: 1;
+    margin-bottom: 0vw;
+    color: #666666;
   }
   #history .cut-2-right-top-para .line {
     margin-bottom: 7vw;
     margin-top: 7vw;
+    order: 2;
   }
   #history .cut-2-right-top-para p {
     text-align: start;
+    order: 3;
   }
   #history .cut-2-right-top-para p br {
     display: none;
@@ -2428,7 +2457,7 @@
   overflow: hidden;
 }
 #history .cut-2-swiper-nav-line {
-  width: 85%;
+  width: 90%;
   height: 1px;
   background-color: #d1af8b;
   position: relative;
@@ -2443,7 +2472,7 @@
 }
 #history .cut-2-swiper-button-prev {
   width: 2vw;
-  left: -3vw;
+  left: -2.75vw;
 }
 @media all and (max-width: 1024px) {
   #history .cut-2-swiper-button-prev {
@@ -2453,7 +2482,7 @@
 }
 #history .cut-2-swiper-button-next {
   width: 2vw;
-  right: -3vw;
+  right: -2.75vw;
 }
 @media all and (max-width: 1024px) {
   #history .cut-2-swiper-button-next {
@@ -2837,16 +2866,16 @@
 }
 @keyframes history_shine {
   0% {
-    color: #000000;
+    color: #19191a;
   }
   20% {
     color: rgb(201, 201, 0);
   }
   40% {
-    color: #000000;
+    color: #19191a;
   }
   100% {
-    color: #000000;
+    color: #19191a;
   }
 }
 
@@ -3435,6 +3464,7 @@
 #new_project-inner .cut-left-pic {
   width: 100%;
   margin-top: 2vw;
+  overflow: hidden;
 }
 @media all and (max-width: 1024px) {
   #new_project-inner .cut-left-pic {
@@ -3512,6 +3542,7 @@
   font-size: 1.25vw;
   margin-bottom: 0.5vw;
   font-weight: 500;
+  font-family: "Noto Serif TC", serif;
 }
 #new_project-inner .cut-2-right-top h2 {
   font-family: "Microsoft JhengHei";
@@ -3530,12 +3561,13 @@
   #new_project-inner .cut-2-right-top h1 {
     font-size: 4.5vw;
     font-weight: 600;
+    margin-bottom: 2vw;
   }
   #new_project-inner .cut-2-right-top h2 {
     font-size: 4vw;
   }
   #new_project-inner .cut-2-right-top .line {
-    margin-bottom: 6vw;
+    margin-bottom: 7vw;
   }
 }
 #new_project-inner .cut-2-right-middle {
@@ -3673,7 +3705,7 @@
 }
 @media all and (max-width: 1024px) {
   #new_project-inner .li-content-name {
-    width: 22%;
+    width: 20%;
   }
 }
 @media all and (max-width: 1024px) {
@@ -4822,7 +4854,6 @@
   #last-news .cut-1-left-para-first h4 {
     position: relative;
     font-size: 5.5vw;
-    padding-bottom: 1vw;
     letter-spacing: 5px;
     margin-right: 0;
     width: 45%;
@@ -5178,7 +5209,6 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 1.1vw;
   color: #999999;
-  letter-spacing: 2px;
 }
 @media all and (max-width: 1024px) {
   #last-news .cut-2-news-item-para-time {
@@ -5426,6 +5456,7 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 1.1vw;
   color: #999999;
+  letter-spacing: 0px;
 }
 #last-news-inner .cut-2-top-left h1 {
   font-size: 1.25vw;
@@ -5622,6 +5653,8 @@
 #last-news-inner .back button {
   text-decoration: none;
   font-size: 0.9vw;
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 2px;
   padding: 0.5vw 4vw;
   background-color: #ba9274;
   border: none;
@@ -5728,7 +5761,7 @@
 }
 #classic .cut-1-left-para h4 {
   font-family: "Noto Serif TC", serif;
-  font-size: 2vw;
+  font-size: 1.75vw;
   font-weight: 500;
   letter-spacing: 10px;
 }
@@ -5800,7 +5833,6 @@
     font-size: 5.5vw;
     font-weight: 500;
     width: 100%;
-    padding-bottom: 1vw;
     letter-spacing: 5px;
   }
 }
@@ -6306,6 +6338,7 @@
 #contact .cut-1-para-second h4 {
   position: relative;
   margin-top: 2vw;
+  padding-bottom: 3vw;
 }
 #contact .cut-1-para-second h1 {
   line-height: 0.8;
@@ -6326,10 +6359,11 @@
   }
 }
 #contact .cut-1-para-second-left {
-  width: 100%;
+  width: 34%;
 }
 @media all and (max-width: 1024px) {
   #contact .cut-1-para-second-left {
+    width: 100%;
     position: relative;
   }
 }
@@ -6342,7 +6376,7 @@
 @media all and (max-width: 1024px) {
   #contact .cut-1-para-second-line {
     width: 145%;
-    margin-top: 3vw;
+    margin-top: 0vw;
   }
 }
 #contact .cut-1-para-line-second {
@@ -6387,6 +6421,7 @@
 @media all and (max-width: 1024px) {
   #contact .cut-1-para-second-h1 {
     width: 35%;
+    padding-bottom: 2vw;
   }
 }
 @keyframes contact_shine {
@@ -6556,7 +6591,7 @@
 #contact .right-img-fixed {
   position: absolute;
   right: 0;
-  bottom: -15%;
+  bottom: -10%;
   width: 24vw;
   z-index: -1;
   filter: drop-shadow(1px 1px 1px black);
@@ -6580,10 +6615,6 @@
     z-index: -1;
     filter: drop-shadow(1px 1px 1px black);
   }
-}
-
-#contact ~ #footer {
-  margin-top: 15vw;
 }
 
 *,

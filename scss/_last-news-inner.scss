@@ -77,6 +77,7 @@
       font-family: $cor;
       font-size: $subTitle;
       color: #999999;
+      letter-spacing: 0px;
     }
     h1 {
       font-size: 1.25vw;
@@ -182,6 +183,8 @@
     button {
       text-decoration: none;
       font-size: $contentSize;
+      font-family: $micro;
+      letter-spacing: 2px;
       padding: 0.5vw 4vw;
       background-color: #ba9274;
       border: none;

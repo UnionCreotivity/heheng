@@ -894,6 +894,15 @@
             rotation: "40",
             y: "90%",
           });
+          gsap.from(".cut-3-swiper-container", {
+            scrollTrigger: {
+              trigger: ".cut-3",
+              start: "top center",
+            },
+            y: "-100%",
+            duration: 1.5,
+            ease: "power3.out",
+          });
         } else {
           const cut3Par = gsap.from(cut3Title.chars, {
             scrollTrigger: {
@@ -904,17 +913,16 @@
             rotation: "40",
             y: "90%",
           });
+          gsap.from(".cut-3-swiper-container", {
+            scrollTrigger: {
+              trigger: ".cut-3",
+              start: "25% center",
+            },
+            y: "-100%",
+            duration: 1.5,
+            ease: "power3.out",
+          });
         }
-
-        gsap.from(".cut-3-swiper-container", {
-          scrollTrigger: {
-            trigger: ".cut-3",
-            start: "25% center",
-          },
-          y: "-100%",
-          duration: 1.5,
-          ease: "power3.out",
-        });
 
         //cut4拆字動畫
         const cut4Title = new SplitText(".cut-4-para-h1", {

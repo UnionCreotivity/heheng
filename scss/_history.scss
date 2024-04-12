@@ -43,7 +43,7 @@
     }
     h4 {
       font-family: $serif;
-      font-size: 1.5vw;
+      font-size: 1.75vw;
       letter-spacing: 5px;
       font-weight: 500;
     }
@@ -62,6 +62,7 @@
       }
     }
   }
+
   .cut-1-left-para-first {
     display: flex;
     align-items: center;
@@ -266,10 +267,6 @@
         align-items: center;
         text-decoration: none;
         gap: 3vw;
-        > :nth-child(1) {
-        }
-        > :nth-child(2) {
-        }
         h3 {
           font-size: $contentSizePH;
           font-weight: 400;
@@ -306,7 +303,7 @@
       text-align: center;
     }
     .line {
-      margin-top: 0.5vw;
+      margin-top: 1vw;
       margin-bottom: 4vw;
     }
     @include tablet {
@@ -315,20 +312,26 @@
         display: block;
       }
       h1 {
-        font-size: 4vw;
-        color: #666666;
+        font-size: 6vw;
+        color: #19191a;
+        margin-top: 12vw;
+        margin-bottom: 5vw;
       }
       h3 {
+        font-size: 4vw;
         text-align: center;
-        order: -1;
-        margin-top: 12%;
+        order: 1;
+        margin-bottom: 0vw;
+        color: #666666;
       }
       .line {
         margin-bottom: 7vw;
         margin-top: 7vw;
+        order: 2;
       }
       p {
         text-align: start;
+        order: 3;
         br {
           display: none;
         }
@@ -349,7 +352,7 @@
 
   //輪播按鈕
   .cut-2-swiper-nav-line {
-    width: 85%;
+    width: 90%;
     height: 1px;
     background-color: #d1af8b;
     position: relative;
@@ -362,7 +365,7 @@
   }
   .cut-2-swiper-button-prev {
     width: 2vw;
-    left: -3vw;
+    left: -2.75vw;
     @include tablet {
       width: 8vw;
       left: -12vw;
@@ -370,7 +373,7 @@
   }
   .cut-2-swiper-button-next {
     width: 2vw;
-    right: -3vw;
+    right: -2.75vw;
     @include tablet {
       width: 8vw;
       right: -12vw;
@@ -710,16 +713,16 @@
   }
   @keyframes history_shine {
     0% {
-      color: #000000;
+      color: #19191a;
     }
     20% {
       color: rgb(201 201 0);
     }
     40% {
-      color: #000000;
+      color: #19191a;
     }
     100% {
-      color: #000000;
+      color: #19191a;
     }
   }
 }
