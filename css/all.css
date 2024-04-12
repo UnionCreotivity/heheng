@@ -6104,6 +6104,7 @@
 #classic .right-item {
   padding-bottom: 5vw;
   width: 100%;
+  overflow: hidden;
 }
 #classic .right-item-main {
   width: 100%;
@@ -6296,6 +6297,7 @@
   }
   #contact .cut-1-para h4 {
     font-size: 4.5vw;
+    padding-bottom: 3vw;
   }
 }
 #contact .cut-1-para-first {
@@ -6337,8 +6339,7 @@
 }
 #contact .cut-1-para-second h4 {
   position: relative;
-  margin-top: 2vw;
-  padding-bottom: 3vw;
+  margin-top: 3vw;
 }
 #contact .cut-1-para-second h1 {
   line-height: 0.8;
@@ -6349,13 +6350,6 @@
     gap: 3vw;
     margin-left: 0vw;
     align-items: baseline;
-  }
-  #contact .cut-1-para-second > h4 {
-    position: relative;
-    font-size: 5.5vw;
-    width: 100%;
-    padding-bottom: 1vw;
-    font-weight: 500;
   }
 }
 #contact .cut-1-para-second-left {

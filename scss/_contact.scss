@@ -49,6 +49,7 @@
       }
       h4 {
         font-size: $subTitlePH;
+        padding-bottom: 3vw;
       }
     }
   }
@@ -86,8 +87,8 @@
     width: 100%;
     h4 {
       position: relative;
-      margin-top: 2vw;
-      padding-bottom: 3vw;
+      margin-top: 3vw;
+
       // &::after {
       //   content: "";
       //   position: absolute;
@@ -106,22 +107,22 @@
       gap: 3vw;
       margin-left: 0vw;
       align-items: baseline;
-      > h4 {
-        position: relative;
-        font-size: 5.5vw;
-        width: 100%;
-        padding-bottom: 1vw;
-        font-weight: 500;
-        // &::after {
-        //   content: "";
-        //   position: absolute;
-        //   bottom: -30%;
-        //   height: 1px;
-        //   width: 143%;
-        //   background-color: black;
-        //   left: 0;
-        // }
-      }
+      // > h4 {
+      //   position: relative;
+      //   font-size: 5.5vw;
+      //   width: 100%;
+      //   padding-bottom: 3vw;
+      //   font-weight: 500;
+      //   // &::after {
+      //   //   content: "";
+      //   //   position: absolute;
+      //   //   bottom: -30%;
+      //   //   height: 1px;
+      //   //   width: 143%;
+      //   //   background-color: black;
+      //   //   left: 0;
+      //   // }
+      // }
     }
   }
   .cut-1-para-second-left {

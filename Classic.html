@@ -389,7 +389,34 @@
             y: "130%",
             duration: 1,
           });
+          let all = 0;
+          $(".right-item-main").each(function () {
+            $(this).attr("id", `right-item-main-${all}`);
+            all++;
+          });
+          slideAnimation(".right-item-main", "110");
         }
+
+        //方塊滑行動畫
+        function slideAnimation(selector, xVal) {
+          $(selector).each(function () {
+            let thisId = $(this)[0].id;
+            console.log($(this));
+
+            gsap.from(`#${thisId}`, {
+              scrollTrigger: {
+                trigger: `#${thisId}`,
+                toggleActions: "play none none none",
+                start: "center 75%",
+              },
+              opacity: 0,
+              x: `${xVal}%`,
+              duration: 2,
+            });
+          });
+        }
+
+        //撈資料
         $(".date-picker").on("click", function () {
           const value = $(this).data("value");
           $(".date-picker").css("color", "");
@@ -449,6 +476,11 @@
                   );
                   src = ``;
                 }
+                gsap.from(".swiper-slide-item-img", {
+                  y: "-100%",
+                  stagger: 0.5,
+                  duration: 1.5,
+                });
               } else {
                 for (let i = 0; i < allItems.length; i++) {
                   src += ` <div class="right-item-main">
@@ -467,6 +499,12 @@
                 }
                 $(".right-item").empty().append(src);
                 src = "";
+                let all = 0;
+                $(".right-item-main").each(function () {
+                  $(this).attr("id", `right-item-main-${all}`);
+                  all++;
+                });
+                slideAnimation(".right-item-main", "110");
               }
             },
             error: function (reject) {
