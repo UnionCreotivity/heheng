@@ -1216,11 +1216,6 @@
     margin-bottom: -45vw;
   }
 }
-@media all and (max-width: 500px) {
-  #home .cut-5-fixed-right {
-    margin-bottom: -50vw;
-  }
-}
 
 #origin {
   --imgTop: 0%;
