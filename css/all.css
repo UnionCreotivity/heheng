@@ -678,6 +678,7 @@
 #home .cut-4-container {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 #home .cut-4-swiper {
   width: 100%;
@@ -831,6 +832,8 @@
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;
+    overflow: hidden;
+    border-radius: 50%;
   }
 }
 #home .cut-4-circle-1 {
@@ -1258,6 +1261,7 @@
 #origin .cut-1-left-para {
   position: absolute;
   top: 0;
+  left: 0;
   writing-mode: vertical-rl;
   line-height: 1;
   margin-left: 14vw;
@@ -1476,6 +1480,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  line-height: 2;
 }
 #origin .cut-2-link a {
   display: flex;
@@ -1663,6 +1668,9 @@
   }
   #origin .cut-2-right-top-para p br {
     display: none;
+  }
+  #origin .cut-2-right-top-para .cut-2-right-top-para-h1 {
+    width: 105%;
   }
   #origin .cut-2-right-top-para .cut-2-right-top-para-h1 div {
     font-size: 6vw;
@@ -2089,6 +2097,7 @@
 #history .cut-1-left-para {
   position: absolute;
   top: 0;
+  left: 0;
   writing-mode: vertical-rl;
   line-height: 1;
   margin-left: 14vw;
@@ -2284,7 +2293,6 @@
 @media all and (max-width: 1024px) {
   #history .cut-2-left {
     position: relative;
-    width: 100%;
     flex-direction: row;
     width: 85%;
     gap: 10vw;
@@ -2299,14 +2307,15 @@
     position: absolute;
     background-color: black;
     width: 1px;
-    height: 70%;
-    right: -18%;
+    height: 60%;
+    right: -17%;
   }
 }
 #history .cut-2-link {
   display: flex;
   align-items: center;
   width: 100%;
+  line-height: 2;
 }
 #history .cut-2-link a {
   display: flex;
@@ -2324,6 +2333,8 @@
 #history .cut-2-link a h3 {
   font-size: 0.9vw;
   font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 2;
 }
 @media all and (max-width: 1024px) {
   #history .cut-2-link {
@@ -2335,6 +2346,9 @@
     align-items: center;
     text-decoration: none;
     gap: 3vw;
+  }
+  #history .cut-2-link a > :nth-child(2) {
+    letter-spacing: 1px;
   }
   #history .cut-2-link a h3 {
     font-size: 3.75vw;
@@ -2940,6 +2954,21 @@
   top: 12vw;
   width: 26vw;
 }
+@media all and (max-width: 1600px) {
+  #new_project .cut-1-left-banner img {
+    height: 86vh;
+  }
+}
+@media screen and (max-width: 1440px) {
+  #new_project .cut-1-left-banner img {
+    height: 87vh;
+  }
+}
+@media screen and (max-width: 1370px) {
+  #new_project .cut-1-left-banner img {
+    height: 86vh;
+  }
+}
 @media all and (max-width: 1024px) {
   #new_project .cut-1-left-banner {
     width: 100%;
@@ -2952,6 +2981,7 @@
 #new_project .cut-1-left-para {
   position: absolute;
   top: 0;
+  left: 0;
   writing-mode: vertical-rl;
   line-height: 1;
   margin-left: 13vw;
@@ -3084,6 +3114,7 @@
   #new_project .cut-1-right-item-container {
     width: 85%;
     margin-top: 12vw;
+    margin-bottom: 0vw;
   }
 }
 #new_project .cut-1-right-item {
@@ -3227,7 +3258,7 @@
   #new_project .cut-1-right-item-more a {
     font-size: 3.75vw;
     padding: 1vw 5vw;
-    margin-bottom: 8vw;
+    margin-bottom: 4vw;
   }
 }
 #new_project .cut-1-right-img {
@@ -3710,7 +3741,7 @@
 }
 @media all and (max-width: 1024px) {
   #new_project-inner .li-content-name {
-    width: 20%;
+    width: 22%;
   }
 }
 @media all and (max-width: 1024px) {
@@ -4809,6 +4840,7 @@
 #last-news .cut-1-left-para {
   position: absolute;
   top: 0;
+  left: 0;
   writing-mode: vertical-rl;
   line-height: 1;
   margin-left: 14vw;
@@ -4987,6 +5019,7 @@
 @media all and (max-width: 1024px) {
   #last-news .cut-2 {
     margin-top: 0vw;
+    margin-bottom: 0vw;
   }
 }
 #last-news .cut-2-left-fixed-img {
@@ -5251,7 +5284,7 @@
 @media all and (max-width: 1024px) {
   #last-news .load-more {
     margin-top: 15vw;
-    margin-bottom: -10vw;
+    margin-bottom: 0vw;
   }
   #last-news .load-more button {
     font-size: 3.75vw;
@@ -5372,6 +5405,9 @@
     margin-top: 20vw;
     margin-bottom: 7vw;
     justify-content: center;
+  }
+  #last-news-inner .cut-1-title h1 {
+    font-size: 9.75vw;
   }
   #last-news-inner .cut-1-title h3 {
     font-size: 4.5vw;
@@ -5642,6 +5678,10 @@
   display: flex;
   align-items: center;
 }
+#last-news-inner .cut-2-basic-content-li a {
+  color: black;
+  text-decoration: none;
+}
 @media all and (max-width: 1024px) {
   #last-news-inner .cut-2-basic-content-li {
     display: block;
@@ -5755,6 +5795,7 @@
 #classic .cut-1-left-para {
   position: absolute;
   top: 0;
+  left: 0;
   writing-mode: vertical-rl;
   line-height: 1;
   margin-left: 17vw;
@@ -6114,7 +6155,7 @@
 }
 #classic .right-item-main {
   width: 100%;
-  margin-top: 10vw;
+  margin-top: 13vw;
 }
 #classic .right-item-img {
   width: 100%;
@@ -6186,6 +6227,11 @@
   font-size: 14vw;
   line-height: 0.8;
 }
+@media all and (max-width: 1024px) {
+  #classic .right-item-para {
+    margin-top: 2vw;
+  }
+}
 #classic .cut-1-left-para-first-h1 {
   padding-left: 1vw;
 }
@@ -6242,7 +6288,7 @@
 }
 @media all and (max-width: 1024px) {
   #classic ~ #footer {
-    margin-top: 30vw;
+    margin-top: 25vw;
   }
 }
 
@@ -6464,6 +6510,7 @@
   #contact .cut-3-container {
     flex-direction: column-reverse;
     width: 85%;
+    padding-bottom: 0vw;
   }
 }
 #contact .cut-3-left {
@@ -6938,7 +6985,7 @@ section {
   #footer {
     flex-direction: column;
     font-size: 3vw;
-    margin-top: 30vw;
+    margin-top: 25vw;
     padding-top: 2vw;
     padding-bottom: 2vw;
   }

@@ -76,6 +76,7 @@
   .cut-1-left-para {
     position: absolute;
     top: 0;
+    left: 0;
     writing-mode: vertical-rl;
     line-height: 1;
     margin-left: 17vw;
@@ -453,7 +454,7 @@
   }
   .right-item-main {
     width: 100%;
-    margin-top: 10vw;
+    margin-top: 13vw;
   }
   .right-item-img {
     width: 100%;
@@ -480,6 +481,9 @@
       color: #af9e8e;
       font-size: 14vw;
       line-height: 0.8;
+    }
+    @include tablet {
+      margin-top: 2vw;
     }
   }
 
@@ -532,6 +536,6 @@
   bottom: 0vw;
   margin-top: 0vw;
   @include tablet {
-    margin-top: 30vw;
+    margin-top: 25vw;
   }
 }

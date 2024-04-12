@@ -34,6 +34,7 @@
   .cut-1-left-para {
     position: absolute;
     top: 0;
+    left: 0;
     writing-mode: vertical-rl;
     line-height: 1;
     margin-left: 14vw;
@@ -251,6 +252,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    line-height: 2;
     a {
       display: flex;
       align-items: center;
@@ -388,6 +390,7 @@
         }
       }
       .cut-2-right-top-para-h1 {
+        width: 105%;
         div {
           font-size: 6vw;
           color: #666666;

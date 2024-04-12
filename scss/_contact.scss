@@ -225,6 +225,7 @@
     @include tablet {
       flex-direction: column-reverse;
       width: 85%;
+      padding-bottom: 0vw;
     }
   }
 

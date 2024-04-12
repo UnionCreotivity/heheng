@@ -48,6 +48,21 @@
     width: 26vw;
   }
   .cut-1-left-banner {
+    @include laptop {
+      img {
+        height: 86vh;
+      }
+    }
+    @media screen and (max-width: 1440px) {
+      img {
+        height: 87vh;
+      }
+    }
+    @media screen and (max-width: 1370px) {
+      img {
+        height: 86vh;
+      }
+    }
     @include tablet {
       width: 100%;
       img {
@@ -59,6 +74,7 @@
   .cut-1-left-para {
     position: absolute;
     top: 0;
+    left: 0;
     writing-mode: vertical-rl;
     line-height: 1;
     margin-left: 13vw;
@@ -186,6 +202,7 @@
     @include tablet {
       width: 85%;
       margin-top: 12vw;
+      margin-bottom: 0vw;
     }
   }
   .cut-1-right-item {
@@ -281,7 +298,7 @@
       a {
         font-size: $contentSizePH;
         padding: 1vw 5vw;
-        margin-bottom: 8vw;
+        margin-bottom: 4vw;
       }
     }
   }

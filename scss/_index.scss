@@ -485,6 +485,7 @@
   .cut-4-container {
     width: 100%;
     height: 100%;
+    position: relative;
   }
   .cut-4-swiper {
     width: 100%;
@@ -623,6 +624,8 @@
       opacity: 1;
       z-index: 12;
       user-select: none;
+      overflow: hidden;
+      border-radius: 50%;
     }
   }
   .cut-4-circle-1 {

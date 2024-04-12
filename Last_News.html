@@ -259,6 +259,10 @@
             x: "-110%",
             duration: 1,
             delay: 0.5,
+            onComplete: function () {
+              lastNewsAnimation(".cut-2-news-item:even", 100);
+              lastNewsAnimation(".cut-2-news-item:odd", -100);
+            },
           });
         } else {
           gsap.from(titleSplit.chars, {
@@ -320,10 +324,9 @@
             $(".load-more").remove(); //超過資料長度刪除新增按鈕
           }
         });
-        if (window.innerWidth > 1024) {
-          lastNewsAnimation(".cut-2-news-item:even", 100);
-          lastNewsAnimation(".cut-2-news-item:odd", -100);
-        } else {
+        if (window.innerWidth <= 1024) {
+          // lastNewsAnimation(".cut-2-news-item:even", 100);
+          // lastNewsAnimation(".cut-2-news-item:odd", -100);
           lastNewsAnimation(".cut-2-news-item", 100);
         }
         function lastNewsAnimation(selector, xVal) {

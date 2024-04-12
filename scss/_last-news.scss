@@ -49,6 +49,7 @@
   .cut-1-left-para {
     position: absolute;
     top: 0;
+    left: 0;
     writing-mode: vertical-rl;
     line-height: 1;
     margin-left: 14vw;
@@ -219,6 +220,7 @@
     margin-top: -19.5vw;
     @include tablet {
       margin-top: 0vw;
+      margin-bottom: 0vw;
     }
   }
   .cut-2-left-fixed-img {
@@ -468,7 +470,7 @@
     }
     @include tablet {
       margin-top: 15vw;
-      margin-bottom: -10vw;
+      margin-bottom: 0vw;
       button {
         font-size: 3.75vw;
         padding: 3vw 14vw;
