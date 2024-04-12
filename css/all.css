@@ -1999,9 +1999,9 @@
 }
 @media all and (max-width: 1024px) {
   #origin .heng-hong-circle-1 {
-    top: -15%;
-    right: -2.5%;
-    transform: translate(-30vw, 22vw);
+    top: -24%;
+    right: 0%;
+    transform: translate(-28vw, 31vw);
   }
 }
 #origin .heng-hong-circle-2 {
@@ -2011,9 +2011,9 @@
 }
 @media all and (max-width: 1024px) {
   #origin .heng-hong-circle-2 {
-    left: 1.5%;
-    top: -15%;
-    transform: translate(26vw, 22vw);
+    left: 0%;
+    top: -24%;
+    transform: translate(27vw, 31vw);
   }
 }
 #origin .heng-hong-circle-3 {
@@ -2989,7 +2989,7 @@
 }
 @media all and (max-width: 1024px) {
   #new_project .cut-1-left-para-first {
-    width: 69%;
+    width: 71%;
     gap: 0vw;
     margin-left: 13vw;
   }

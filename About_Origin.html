@@ -316,18 +316,18 @@
 
         //人動畫
         let cut2PeopleTl;
-        if (window.innerWidth <= 1024) {
+        if (window.innerWidth > 1024) {
           cut2PeopleTl = gsap.timeline({
             scrollTrigger: {
               trigger: ".cut-2-right-people",
-              start: "center center",
+              start: "top center",
             },
           });
         } else {
           cut2PeopleTl = gsap.timeline({
             scrollTrigger: {
               trigger: ".cut-2-right-people",
-              start: "top center",
+              start: "25% center",
             },
           });
         }
