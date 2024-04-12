@@ -432,7 +432,7 @@
     @include mobile {
       h4 {
         font-size: 3.75vw !important;
-        margin-bottom: 2vw;
+        margin-bottom: 2vw !important;
       }
       .cut-2-swiper-pagination-main-circle {
         width: 3vw !important;

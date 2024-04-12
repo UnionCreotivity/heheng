@@ -1887,7 +1887,7 @@
 }
 #origin .cut-2-right-bottom-heng-hong-para-top {
   text-align: center;
-  width: 42%;
+  width: 50%;
   position: relative;
   transform: translate(-50%, -50%);
   left: 64%;
@@ -2561,7 +2561,7 @@
 @media all and (max-width: 500px) {
   #history .cut-2-swiper-pagination-main h4 {
     font-size: 3.75vw !important;
-    margin-bottom: 2vw;
+    margin-bottom: 2vw !important;
   }
   #history .cut-2-swiper-pagination-main .cut-2-swiper-pagination-main-circle {
     width: 3vw !important;
