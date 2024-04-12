@@ -1396,7 +1396,7 @@
     font-size: 5.5vw;
     width: 100%;
     font-weight: 500;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
   }
 }
 #origin .cut-1-left-para-line-second {
@@ -1459,7 +1459,7 @@
     position: relative;
     flex-direction: row;
     width: 85%;
-    gap: 10vw;
+    gap: 8vw;
     padding-left: 0%;
     top: unset;
   }
@@ -1473,7 +1473,7 @@
     background-color: black;
     width: 1px;
     height: 60%;
-    right: -13%;
+    right: -11%;
   }
 }
 #origin .cut-2-link {
@@ -1652,7 +1652,7 @@
   }
   #origin .cut-2-right-top-para h3 {
     text-align: center;
-    color: #666666;
+    color: #19191a;
     order: 1;
     margin-bottom: 0vw;
     font-size: 4vw;
@@ -2179,7 +2179,7 @@
     font-size: 5.5vw;
     width: 100%;
     font-weight: 500;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
   }
 }
 #history .cut-1-left-para-line-second {
@@ -2299,7 +2299,7 @@
     position: relative;
     flex-direction: row;
     width: 85%;
-    gap: 10vw;
+    gap: 8vw;
     padding-left: 0%;
     top: unset;
   }
@@ -2313,7 +2313,7 @@
     background-color: black;
     width: 1px;
     height: 60%;
-    right: -13%;
+    right: -11%;
   }
 }
 #history .cut-2-link {
@@ -4898,7 +4898,7 @@
   #last-news .cut-1-left-para-first h4 {
     position: relative;
     font-size: 5.5vw;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     margin-right: 0;
     width: 45%;
   }
@@ -5528,6 +5528,7 @@
 @media all and (max-width: 1024px) {
   #last-news-inner .cut-2-top-left h3 {
     font-size: 4.5vw;
+    text-align: center;
   }
   #last-news-inner .cut-2-top-left h1 {
     font-size: 4.5vw;
@@ -5897,7 +5898,7 @@
     font-size: 5.5vw;
     font-weight: 500;
     width: 100%;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
   }
 }
 #classic .cut-1-left-para-line-second {
@@ -5938,7 +5939,7 @@
 }
 @media all and (max-width: 1024px) {
   #classic .cut-1-right-date-picker {
-    width: 85%;
+    width: 65%;
     margin: 0 auto;
     margin-top: 10vw;
     flex-wrap: wrap;
@@ -6367,6 +6368,7 @@
   #contact .cut-1-para h4 {
     font-size: 4.5vw;
     padding-bottom: 3vw;
+    letter-spacing: 3px;
   }
 }
 #contact .cut-1-para-first {

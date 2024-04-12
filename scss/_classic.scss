@@ -152,7 +152,7 @@
         font-size: 5.5vw;
         font-weight: 500;
         width: 100%;
-        letter-spacing: 5px;
+        letter-spacing: 3px;
         // &::after {
         //   content: "";
         //   position: absolute;
@@ -199,7 +199,7 @@
     margin-top: 3vw;
     gap: 5vw;
     @include tablet {
-      width: 85%;
+      width: 65%;
       margin: 0 auto;
       margin-top: 10vw;
       flex-wrap: wrap;

@@ -104,7 +104,7 @@
         font-size: 5.5vw;
         width: 100%;
         font-weight: 500;
-        letter-spacing: 5px;
+        letter-spacing: 3px;
       }
     }
   }
@@ -222,7 +222,7 @@
       position: relative;
       flex-direction: row;
       width: 85%;
-      gap: 10vw;
+      gap: 8vw;
       padding-left: 0%;
       top: unset;
       > .cut-2-link:nth-child(1) {
@@ -234,7 +234,7 @@
           background-color: black;
           width: 1px;
           height: 60%;
-          right: -13%;
+          right: -11%;
         }
       }
     }
