@@ -98,21 +98,22 @@
         letter-spacing: 5px;
         margin-right: 0;
         width: 45%;
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -30%;
-          height: 1px;
-          width: 100%;
-          background-color: black;
-          left: 0;
-        }
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   bottom: -30%;
+        //   height: 1px;
+        //   width: 100%;
+        //   background-color: black;
+        //   left: 0;
+        // }
       }
     }
   }
   .cut-1-left-para-second-h1,
   .cut-1-left-para-second-h4,
-  .cut-1-left-para-first-h1 {
+  .cut-1-left-para-first-h1,
+  .cut-1-left-para-first-h4 {
     position: relative;
     overflow: hidden;
     div {
@@ -124,7 +125,12 @@
       transform-origin: left center;
     }
     @include tablet {
-      overflow: unset;
+      overflow: hidden;
+    }
+  }
+  .cut-1-left-para-first-h4 {
+    @include tablet {
+      margin-top: 2vw;
     }
   }
   @keyframes last_shine {
@@ -199,6 +205,14 @@
       width: 46vw;
     }
   }
+
+  .bottom-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 2vw;
+  }
+
   //第2cut
   .cut-2 {
     position: relative;
@@ -268,11 +282,17 @@
       background-color: #d1af8b;
       width: 10px;
       height: 100%;
-      left: -20.5%;
+      left: 0;
       top: 0;
       bottom: 0;
       opacity: 0;
       transition: all 0.5s;
+      margin-left: -20.6%;
+    }
+    @media screen and (max-width: 1920px) {
+      &::after {
+        margin-left: -21.6%;
+      }
     }
     @include tablet {
       &::after {
@@ -296,13 +316,7 @@
       display: none;
     }
   }
-  @media screen and (max-width: 1920px) {
-    .cut-2-news-item-img {
-      &::after {
-        left: -21.6%;
-      }
-    }
-  }
+
   .cut-2-news-item:nth-child(n + 2) {
     margin-top: -6vw;
     @include tablet {
@@ -330,7 +344,12 @@
         opacity: 0;
         transition: all 0.5s;
         margin-left: unset;
-        margin-right: -6vw;
+        margin-right: -20.6%;
+      }
+      @media screen and (max-width: 1920px) {
+        &::after {
+          margin-right: -21.6%;
+        }
       }
       @include tablet {
         &::after {
@@ -439,7 +458,9 @@
     text-align: center;
     margin-top: 8vw;
     button {
+      font-family: $micro;
       font-size: $contentSize;
+      letter-spacing: 2px;
       padding: 0.5vw 4vw;
       border: 1px solid #d0b18d;
       color: #d0b18d;

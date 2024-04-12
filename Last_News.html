@@ -29,7 +29,10 @@
               </div>
               <div class="cut-1-left-para-first">
                 <div class="cut-1-left-para-line pc"></div>
-                <h4 class="ph">最新消息</h4>
+                <h4 class="cut-1-left-para-first-h4 ph">
+                  最新消息
+                  <div class="bottom-line ph"></div>
+                </h4>
                 <h1 class="cut-1-left-para-first-h1">News</h1>
               </div>
             </div>
@@ -223,24 +226,34 @@
           });
         }
 
+        const titleSplit = new SplitText(
+          ".cut-1-left-para-first h1,.cut-1-left-para-second h4,.cut-1-left-para-second h1,.cut-1-left-para-first-h4",
+          {
+            type: "chars",
+          }
+        );
+        addDelay(
+          ".cut-1-left-para-second-h4 div",
+          ".cut-1-left-para-second-h1 div",
+          ".cut-1-left-para-first-h1 div",
+          ".cut-1-left-para-first-h4 div"
+        );
+
         //大標題文字動畫
         let cut1Tl = gsap.timeline({ delay: 0.5 });
         if (window.innerWidth > 1024) {
-          const titleSplit = new SplitText(
-            ".cut-1-left-para-first h1,.cut-1-left-para-second h4,.cut-1-left-para-second h1",
-            {
-              type: "chars",
-            }
-          );
-          addDelay(
-            ".cut-1-left-para-second-h4 div",
-            ".cut-1-left-para-second-h1 div",
-            ".cut-1-left-para-first-h1 div"
-          );
           gsap.from(titleSplit.chars, {
             stagger: 0.1,
             rotation: "40",
             x: "-110%",
+            duration: 1,
+            delay: 0.5,
+          });
+        } else {
+          gsap.from(titleSplit.chars, {
+            stagger: 0.1,
+            rotation: "40",
+            y: "130%",
             duration: 1,
             delay: 0.5,
           });
@@ -321,7 +334,8 @@
                 scrollTrigger: {
                   trigger: `#${thisId}`,
                   toggleActions: "play none none none",
-                  start: "center bottom",
+                  start: "center 60%",
+                  markers: true,
                 },
                 opacity: 0,
                 x: xVal,

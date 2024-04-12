@@ -137,6 +137,12 @@
       $(window).on("load", function () {
         gsap.registerPlugin(ScrollTrigger, SplitText);
 
+        let all = 0; //掛載id gasp動畫用
+        $(".cut-1-right-item").each(function () {
+          $(this).attr("id", `right-item-${all}`);
+          all++;
+        });
+
         //動畫延遲
         function addDelay(tag, tag1, tag2) {
           let delay = 300;
@@ -186,16 +192,13 @@
             duration: 1,
             delay: 0.5,
           });
+          lastNewsAnimation(".cut-1-right-item", 100);
         }
 
-        let all = 0; //掛載id gasp動畫用
-        $(".cut-1-right-item").each(function () {
-          $(this).attr("id", `right-item-${all}`);
-          all++;
-        });
         function lastNewsAnimation(selector, xVal) {
           $(selector).each(function () {
             let thisId = $(this)[0].id;
+            console.log($(this));
             if (window.innerWidth > 1024) {
               gsap.to(`#${thisId} .cut-1-right-item-white`, {
                 scrollTrigger: {
@@ -212,7 +215,8 @@
                 scrollTrigger: {
                   trigger: `#${thisId}`,
                   toggleActions: "play none none none",
-                  start: "center bottom",
+                  start: "center 75%",
+                  markers: true,
                 },
                 opacity: 0,
                 x: xVal,

@@ -27,7 +27,10 @@
             </div>
             <div class="cut-1-left-para-second">
               <div class="cut-1-left-para-line-second pc"></div>
-              <h4 class="cut-1-left-para-second-h4">經典建案</h4>
+              <h4 class="cut-1-left-para-second-h4">
+                經典建案
+                <div class="bottom-line ph"></div>
+              </h4>
             </div>
           </div>
         </div>
@@ -336,22 +339,25 @@
             delay += 100;
           });
         }
+
+        //拆字
+        const titleSplit = new SplitText(
+          ".cut-1-left-para-first h1,.cut-1-left-para-second h4",
+          {
+            type: "chars",
+          }
+        );
+
+        addDelay(
+          ".cut-1-left-para-first-h1 div",
+          ".cut-1-left-para-second-h4 div"
+        );
+
+        const cut1Animation = gsap.timeline({ delay: 0.75 });
+
         let classicSwiper;
         if (window.innerWidth > 1024) {
-          const titleSplit = new SplitText(
-            ".cut-1-left-para-first h1,.cut-1-left-para-second h4",
-            {
-              type: "chars",
-            }
-          );
-          addDelay(
-            ".cut-1-left-para-first-h1 div",
-            ".cut-1-left-para-second-h4 div"
-          );
-
           //最開始的動畫
-          const cut1Animation = gsap.timeline({ delay: 0.75 });
-
           cut1Animation
             .from(titleSplit.chars, {
               stagger: 0.1,
@@ -375,6 +381,13 @@
             speed: 800,
             slidesPerView: "1",
             spaceBetween: 50,
+          });
+        } else {
+          cut1Animation.from(titleSplit.chars, {
+            stagger: 0.1,
+            rotation: "40",
+            y: "130%",
+            duration: 1,
           });
         }
         $(".date-picker").on("click", function () {

@@ -20,6 +20,7 @@
     @media screen and (max-width: 1920px) {
       width: 29vw;
     }
+
     @include tablet {
       width: 100%;
       img {
@@ -638,6 +639,10 @@
     background-color: transparent;
     cursor: pointer;
     text-decoration: none;
+    @include tablet {
+      font-size: $contentSizePH;
+      padding: 3vw 14vw;
+    }
   }
 
   //cut-3

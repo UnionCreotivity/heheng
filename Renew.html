@@ -136,6 +136,25 @@
           $(".ph").remove();
         }
       });
+      $(window).on("load", function () {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+        //動畫延遲
+        function addDelay(tag, tag1, tag2) {
+          let delay = 300;
+          $(tag).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 200;
+          });
+          $(tag1).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 200;
+          });
+          $(tag2).each(function (index) {
+            $(this).css("animation-delay", `${delay}ms`);
+            delay += 200;
+          });
+        }
+      });
     </script>
   </body>
 </html>
