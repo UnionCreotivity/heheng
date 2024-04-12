@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.67 33.08">
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <g>
+      <rect x="0" width="33.67" height="33.08" fill="#807f81"/>
+      <polygon points="33.67 16.84 33.67 8.2 25.78 0 16.84 0 21.18 4.35 12.49 4.35 16.84 0 7.89 0 0 8.2 0 16.84 6.48 10.36 27.2 10.36 33.67 16.84" fill="#fff"/>
+      <path d="M3.26,13.53V30.18H30.41V13.53H3.26Zm21.45,10.95H8.96v-5.25h15.75v5.25Z" fill="#fff"/>
+      <rect x="8.96" y="19.23" width="15.75" height="5.25" fill="#c81d1d"/>
+    </g>
+  </g>
+</svg>

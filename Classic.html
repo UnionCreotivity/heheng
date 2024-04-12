@@ -7,6 +7,17 @@
     <title>經典建案</title>
   </head>
   <body>
+    <div class="loading-page">
+      <div class="box">
+        <div class="box-img">
+          <img src="./img/share/loading-logo.svg" alt="logo01" />
+        </div>
+        <div class="box-para">
+          <div class="loading-progress">0</div>
+          <span>%</span>
+        </div>
+      </div>
+    </div>
     <nav id="nav"></nav>
     <main id="classic">
       <section class="cut-1">
@@ -294,6 +305,7 @@
     <script src="./js/gsap/ScrollTrigger.min.js"></script>
     <script src="./js/gsap/SplitText.min.js"></script>
     <script src="./js/classic.json"></script>
+    <script src="./js/loading.js"></script>
     <script>
       $(document).ready(function () {
         if (window.innerWidth <= 1024) {
