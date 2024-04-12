@@ -737,10 +737,10 @@
           const cut4Swiper = new Swiper(".cut-4-swiper", {
             slidesPerView: 1,
             spaceBetween: 50,
-            effect: "fade",
+            // effect: "fade",
             // autoplay: true,
-            loop: true,
-            allowTouchMove: false,
+            // loop: true,
+            // allowTouchMove: false,
             navigation: {
               prevEl: ".swiper-button-prev-2",
               nextEl: ".swiper-button-next-2",
@@ -782,8 +782,7 @@
           }
         }
 
-        //gsap動畫設定
-
+        //css動畫延遲
         function addDelay(tag) {
           let delay = 300;
           $(tag).each(function (index) {
@@ -792,28 +791,141 @@
           });
         }
 
+        //gsap動畫設定
+
+        const cut1Animation = gsap.timeline({ delay: 0.75 });
         //cut1
-        gsap.to(
-          ".cut-1-para-first-container,.cut-1-para-second-container,.cut-1-para-third-container",
-          {
-            x: 0,
-            ease: "power3.inOut",
-            duration: 1.5,
-          }
-        );
-        gsap.to(
-          ".cut-1-para-first-img video,.cut-1-para-second-img video,.cut-1-para-third-img video",
-          {
-            top: 0,
-            duration: 1,
-          }
-        );
-        gsap.to(".cut-1-para-third-text", {
-          opacity: 1,
-          filter: "blur(0px)",
-          duration: 1,
-          delay: 0.75,
-        });
+        if (window.innerWidth > 1024) {
+          cut1Animation
+            .to(".cut-1-para-first-container", {
+              x: 0,
+              ease: "power3.inOut",
+              duration: 1.5,
+            })
+            .to(
+              ".cut-1-para-first-img video",
+              {
+                top: 0,
+                duration: 1,
+              },
+              "<+0.2"
+            )
+            .to(
+              ".cut-1-para-second-img video",
+              {
+                top: 0,
+                duration: 1,
+              },
+              "<+0.7"
+            )
+            .to(
+              ".cut-1-para-second-container",
+              {
+                x: 0,
+                ease: "power3.inOut",
+                duration: 1.5,
+              },
+              "<+0.2"
+            )
+            .to(
+              ".cut-1-para-third-img video",
+              {
+                top: 0,
+                duration: 1,
+              },
+              "<+0.7"
+            )
+            .to(
+              ".cut-1-para-third-container",
+              {
+                x: 0,
+                ease: "power3.inOut",
+                duration: 1.5,
+              },
+              "<+0.2"
+            )
+            .to(
+              ".cut-1-para-third-text",
+              {
+                opacity: 1,
+                filter: "blur(0px)",
+                duration: 1,
+              },
+              "<+0.7"
+            );
+        } else {
+          cut1Animation
+            .to(".cut-1-para-first-container", {
+              x: 0,
+              ease: "power3.inOut",
+              duration: 1.5,
+            })
+            .to(
+              ".cut-1-para-first-img video",
+              {
+                top: 0,
+                duration: 1,
+              },
+              "<+0.2"
+            )
+            .to(
+              ".cut-1-para-second-img video",
+              {
+                top: 0,
+                duration: 1,
+              },
+              "<+0.7"
+            )
+            .to(
+              ".cut-1-para-second-container",
+              {
+                x: 0,
+                ease: "power3.inOut",
+                duration: 1.5,
+              },
+              "<+0.2"
+            )
+            .to(
+              ".cut-1-para-third-container",
+              {
+                x: 0,
+                ease: "power3.inOut",
+                duration: 1.5,
+              },
+              "<+0.7"
+            )
+            .to(
+              ".cut-1-para-third-text",
+              {
+                opacity: 1,
+                filter: "blur(0px)",
+                duration: 1,
+              },
+              "<+0.7"
+            );
+        }
+
+        // gsap.to(
+        //   ".cut-1-para-first-container,.cut-1-para-second-container,.cut-1-para-third-container",
+        //   {
+        //     x: 0,
+        //     ease: "power3.inOut",
+        //     duration: 1.5,
+        //   }
+        // );
+        // gsap.to(
+        //   ".cut-1-para-first-img video,.cut-1-para-second-img video,.cut-1-para-third-img video",
+        //   {
+        //     top: 0,
+        //     duration: 1,
+        //   }
+        // );
+        // gsap.to(".cut-1-para-third-text", {
+        //   opacity: 1,
+        //   filter: "blur(0px)",
+        //   duration: 1,
+        //   delay: 0.75,
+        // });
 
         //cut2
         const cut2Title = new SplitText(".cut-2-right-h1", {

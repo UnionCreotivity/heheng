@@ -1468,8 +1468,8 @@
     position: absolute;
     background-color: black;
     width: 1px;
-    height: 70%;
-    right: -18%;
+    height: 60%;
+    right: -17%;
   }
 }
 #origin .cut-2-link {
@@ -1493,6 +1493,8 @@
 #origin .cut-2-link a h3 {
   font-size: 0.9vw;
   font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 2;
 }
 @media all and (max-width: 1024px) {
   #origin .cut-2-link {
@@ -1504,6 +1506,9 @@
     align-items: center;
     text-decoration: none;
     gap: 3vw;
+  }
+  #origin .cut-2-link a > :nth-child(2) {
+    letter-spacing: 1px;
   }
   #origin .cut-2-link a h3 {
     font-size: 3.75vw;
@@ -5465,6 +5470,7 @@
 }
 #last-news-inner .cut-2-top-left .line {
   margin-top: 2vw;
+  margin-bottom: 4vw;
 }
 @media all and (max-width: 1024px) {
   #last-news-inner .cut-2-top-left h3 {
@@ -5483,7 +5489,7 @@
 #last-news-inner .cut-2-top-right {
   display: flex;
   align-items: center;
-  margin-bottom: 2.5vw;
+  margin-bottom: 4vw;
 }
 #last-news-inner .cut-2-top-right p {
   font-family: "Microsoft JhengHei";
@@ -5574,7 +5580,7 @@
 #last-news-inner .cut-2-basic {
   width: 80%;
   margin: 0 auto;
-  margin-top: 4vw;
+  margin-top: 3vw;
 }
 #last-news-inner .cut-2-basic h1 {
   font-family: "Cormorant Garamond", serif;
@@ -5648,7 +5654,7 @@
 }
 #last-news-inner .back {
   text-align: center;
-  margin-top: 15vw;
+  margin-top: 10vw;
 }
 #last-news-inner .back button {
   text-decoration: none;
