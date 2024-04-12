@@ -1396,6 +1396,7 @@
     font-size: 5.5vw;
     width: 100%;
     font-weight: 500;
+    letter-spacing: 5px;
   }
 }
 #origin .cut-1-left-para-line-second {
@@ -2178,6 +2179,7 @@
     font-size: 5.5vw;
     width: 100%;
     font-weight: 500;
+    letter-spacing: 5px;
   }
 }
 #history .cut-1-left-para-line-second {
@@ -2674,7 +2676,7 @@
 }
 @media all and (max-width: 1024px) {
   #history .cut-2-swiper-main-content-para {
-    padding-left: 7vw;
+    padding-left: 4vw;
   }
 }
 #history .cut-2-swiper-main-content-para-dot {
@@ -4896,7 +4898,7 @@
   #last-news .cut-1-left-para-first h4 {
     position: relative;
     font-size: 5.5vw;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     margin-right: 0;
     width: 45%;
   }
