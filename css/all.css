@@ -2566,6 +2566,9 @@
   #history .cut-2-swiper-pagination-main .cut-2-swiper-pagination-main-circle {
     width: 3vw !important;
   }
+  #history .cut-2-swiper-pagination-main .light-circle {
+    display: none;
+  }
 }
 #history .cut-2-swiper-pagination-main:hover h4 {
   font-size: 1vw;
