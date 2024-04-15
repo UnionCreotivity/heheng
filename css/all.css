@@ -1554,6 +1554,8 @@
   gap: 1vw;
   font-family: "Noto Serif TC", serif;
   transition: all 1s;
+  width: 90%;
+  padding: 0vw 1vw;
 }
 #origin .cut-2-link a > :nth-child(1) {
   color: #756861;
@@ -2404,6 +2406,8 @@
   text-decoration: none;
   gap: 1vw;
   font-family: "Noto Serif TC", serif;
+  width: 90%;
+  padding: 0vw 1vw;
 }
 #history .cut-2-link a > :nth-child(1) {
   color: #756861;
@@ -7249,6 +7253,24 @@ section {
   }
 }
 
+.loading-logo {
+  animation: logoScale 2.5s linear infinite;
+}
+
+@keyframes logoScale {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
 .box-para {
   display: flex;
   align-items: center;
