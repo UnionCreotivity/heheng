@@ -195,6 +195,7 @@
     gap: 4vw;
     @include tablet {
       width: 85%;
+      margin-top: -10vw;
     }
   }
 
@@ -245,7 +246,7 @@
         display: inline-block;
         letter-spacing: 2px;
         line-height: 2;
-        margin-top: 4vw;
+        margin-top: 2vw;
       }
       .cut-1-para-third-line {
         display: inline-block;
