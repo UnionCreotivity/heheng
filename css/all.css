@@ -304,7 +304,7 @@
   }
 }
 #home #text-01 .light {
-  transform: matrix(1, 0, 0, 1, 0, -299);
+  transform: matrix(1, 0, 0, 1, 0, -300);
 }
 #home .cut-2-container {
   display: flex;
