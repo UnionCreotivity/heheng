@@ -12,7 +12,10 @@
       height: 100vh;
     }
     @include tablet {
-      height: auto;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
   .cut-1-bg {
