@@ -261,11 +261,12 @@
       text-decoration: none;
       gap: 1vw;
       font-family: $serif;
+      transition: all 1s;
       > :nth-child(1) {
-        color: #918781;
+        color: #756861;
       }
       > :nth-child(2) {
-        color: #cfb38e;
+        color: #c6935c;
       }
       h3 {
         font-size: 1vw;
@@ -292,6 +293,19 @@
           font-weight: 400;
           color: #19191a;
         }
+      }
+    }
+  }
+  //側邊滑鼠經過變色
+  .cut-2-link:hover {
+    a {
+      transition: all 1s;
+      background-color: #918781;
+      > :nth-child(1) {
+        color: #ffffff;
+      }
+      > :nth-child(2) {
+        color: #e5d5c1;
       }
     }
   }

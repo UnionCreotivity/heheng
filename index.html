@@ -12,7 +12,10 @@
     <div class="loading-page">
       <div class="box">
         <div class="box-img">
-          <img src="./img/share/loading-logo.svg" alt="logo01" />
+          <div class="box-img-para">
+            <img src="./img/share/2x/hen@2x.png" alt="hen" />
+          </div>
+          <img src="./img/share/loading-logo02.svg" alt="logo02" />
         </div>
         <div class="box-para">
           <div class="loading-progress">0</div>
@@ -244,11 +247,11 @@
             </div>
             <div class="swiper-button">
               <div class="swiper-button-prev swiper-button-prev-1">
-                <img src="./img/share/prev.svg" alt="prev" />
+                <img src="./img/home/SVG/prev.svg" alt="prev" />
               </div>
               <div class="swiper-line"></div>
               <div class="swiper-button-next swiper-button-next-1">
-                <img src="./img/share/next.svg" alt="next" />
+                <img src="./img/home/SVG/next.svg" alt="next" />
               </div>
             </div>
           </div>
@@ -762,28 +765,28 @@
         if (window.innerWidth > 1024) {
           function opacityChange(trig1, trig2) {
             $(trig1).on("mouseover", function () {
-              gsap.to(trig2, {
-                opacity: 1,
-                zIndex: 3,
-                duration: 1,
-              });
-              gsap.to(`${trig2} > img`, {
-                scale: "1.2",
-                opacity: 1,
-                duration: 1,
-              });
+              // gsap.to(trig2, {
+              //   opacity: 1,
+              //   zIndex: 3,
+              //   duration: 1,
+              // });
+              // gsap.to(`${trig2} > img`, {
+              //   scale: "1.2",
+              //   opacity: 1,
+              //   duration: 1,
+              // });
             });
             $(trig1).on("mouseout", function () {
-              gsap.to(`${trig2}`, {
-                opacity: "0",
-                zIndex: 0,
-                duration: 1,
-              });
-              gsap.to(`${trig2} >img`, {
-                scale: "1",
-                opacity: 0,
-                duration: 1,
-              });
+              // gsap.to(`${trig2}`, {
+              //   opacity: "0",
+              //   zIndex: 0,
+              //   duration: 1,
+              // });
+              // gsap.to(`${trig2} >img`, {
+              //   scale: "1",
+              //   opacity: 0,
+              //   duration: 1,
+              // });
             });
           }
           let temp = 0;
@@ -827,7 +830,7 @@
                 top: 0,
                 duration: 1,
               },
-              "<+0.7"
+              "<+0.5"
             )
             .to(
               ".cut-1-para-second-container",
@@ -844,7 +847,7 @@
                 top: 0,
                 duration: 1,
               },
-              "<+0.7"
+              "<+0.5"
             )
             .to(
               ".cut-1-para-third-container",
@@ -862,7 +865,7 @@
                 filter: "blur(0px)",
                 duration: 1,
               },
-              "<+0.7"
+              "<+0.5"
             );
         } else {
           cut1Animation

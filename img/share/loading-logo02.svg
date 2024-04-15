@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 223.96 223.96">
+  <defs>
+    <radialGradient id="_未命名漸層_2" data-name="未命名漸層 2" cx="-624.77" cy="-11427.91" fx="-624.77" fy="-11427.91" r="111.98" gradientTransform="translate(-512.79 -11315.93) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset=".15" stop-color="#c0915d"/>
+      <stop offset=".39" stop-color="#c0915d" stop-opacity=".82"/>
+      <stop offset=".62" stop-color="#c0915d" stop-opacity=".53"/>
+      <stop offset=".9" stop-color="#c0915d" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#c0915d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="_圖層_5" data-name="圖層 5">
+    <g>
+      <path d="M111.98,0C50.14,0,0,50.14,0,111.98s50.14,111.98,111.98,111.98,111.98-50.14,111.98-111.98S173.82,0,111.98,0Zm0,196.37c-46.61,0-84.39-37.78-84.39-84.39S65.37,27.59,111.98,27.59s84.39,37.78,84.39,84.39-37.78,84.39-84.39,84.39Z" fill="url(#_未命名漸層_2)"/>
+      <circle cx="111.98" cy="111.91" r="94.7" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.04"/>
+    </g>
+  </g>
+</svg>

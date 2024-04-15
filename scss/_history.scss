@@ -252,10 +252,10 @@
       gap: 1vw;
       font-family: $serif;
       > :nth-child(1) {
-        color: #918781;
+        color: #756861;
       }
       > :nth-child(2) {
-        color: #cfb38e;
+        color: #c6935c;
       }
       h3 {
         font-size: 1vw;
@@ -284,17 +284,39 @@
       }
     }
   }
+  //側邊滑鼠經過變色
+  .cut-2-link:hover {
+    a {
+      transition: all 1s;
+      background-color: #918781;
+      > :nth-child(1) {
+        color: #ffffff;
+      }
+      > :nth-child(2) {
+        color: #e5d5c1;
+      }
+    }
+  }
   .cut-2-right {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 80%;
-    padding-right: 20%;
+    padding-right: 15%;
     @include para();
     @include tablet {
       padding-right: 0;
+      flex-direction: column;
     }
+  }
+  .cut-2-right-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .cut-2-right-top-img {
     width: 85%;
@@ -429,7 +451,7 @@
       transform: scale(0);
       pointer-events: none;
     }
-    @include mobile {
+    @include tablet {
       h4 {
         font-size: 3.75vw !important;
         margin-bottom: 2vw !important;
@@ -437,12 +459,9 @@
       .cut-2-swiper-pagination-main-circle {
         width: 3vw !important;
       }
-      .light-circle {
-        display: none;
-      }
     }
   }
-  .cut-2-swiper-pagination-main:hover {
+  .pagination-inactive:hover {
     h4 {
       font-size: 1vw;
       font-family: $serif;
@@ -457,11 +476,42 @@
     }
     .light-circle {
       transition: all 1s;
-      transform: scale(4);
+      transform: scale(3);
       opacity: 0;
       pointer-events: none;
       @include tablet {
         display: none;
+      }
+    }
+  }
+
+  //小圓圈無限轉圈
+  .pagination-active {
+    .light-circle {
+      transition: all 1s;
+      transform: scale(3);
+      pointer-events: none;
+      animation: littleCircle 10s linear infinite;
+      @include tablet {
+        transform: scale(2);
+      }
+    }
+  }
+  @keyframes littleCircle {
+    0% {
+      transform: rotate(0deg) scale(3);
+    }
+    100% {
+      transform: rotate(360deg) scale(3);
+    }
+  }
+  @include tablet {
+    @keyframes littleCircle {
+      0% {
+        transform: rotate(0deg) scale(2);
+      }
+      100% {
+        transform: rotate(360deg) scale(2);
       }
     }
   }
@@ -646,24 +696,6 @@
     }
   }
 
-  .to-top {
-    margin: 0 auto;
-    margin-top: 5vw;
-    padding: 0.5vw 4vw;
-    font-size: $contentSize;
-    font-family: $micro;
-    letter-spacing: 2px;
-    border: 1px solid #d0b18d;
-    color: #b69272;
-    background-color: transparent;
-    cursor: pointer;
-    text-decoration: none;
-    @include tablet {
-      font-size: $contentSizePH;
-      padding: 3vw 14vw;
-    }
-  }
-
   //cut-3
   .cut-3 {
     position: relative;
@@ -739,6 +771,31 @@
     }
     100% {
       color: #19191a;
+    }
+  }
+
+  //向上按鈕
+  .cut-2-to-top {
+    width: 3vw;
+    height: 3vw;
+    position: sticky;
+    top: 12vw;
+    @include tablet {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .to-top {
+    display: block;
+    width: 4vw;
+    margin-top: 5vw;
+    letter-spacing: 2px;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    @include tablet {
+      width: 15vw;
     }
   }
 }

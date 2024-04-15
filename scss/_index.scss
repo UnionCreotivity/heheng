@@ -356,11 +356,12 @@
   //  <------------第3cut------------>
   .cut-3 {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     margin-top: 8%;
     overflow: hidden;
     @include tablet {
+      align-items: center;
       flex-direction: column-reverse;
     }
   }
@@ -399,8 +400,7 @@
       }
     }
   }
-  .cut-3-para-content {
-  }
+
   .cut-3-para-h1 {
     overflow: hidden;
     div {
@@ -424,7 +424,8 @@
     position: relative;
     height: 1vw;
     width: 65%;
-    margin-top: 4vw;
+    margin-top: 7vw;
+    margin-bottom: 0.25vw;
     @include tablet {
       width: 60%;
       margin-top: 8vw;
@@ -554,8 +555,12 @@
     height: 100%;
     z-index: 0;
     opacity: 0;
+    transition: all 1s;
     img {
       position: relative;
+      transition: all 1s;
+      animation: circleScale 8s infinite;
+      animation-play-state: paused;
     }
   }
 
@@ -870,6 +875,31 @@
     right: 0;
     @include tablet {
       margin-bottom: -45vw;
+    }
+  }
+
+  //圓圈動畫
+  $circleMax: 6;
+  @for $i from 1 through $circleMax {
+    .cut-4-circle-#{$i}:hover ~ .cut-4-pic-#{$i} {
+      opacity: 1;
+      transition: all 1s;
+      > img {
+        animation: circleScale 8s infinite;
+        transition: all 1s;
+      }
+    }
+  }
+
+  @keyframes circleScale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 }
