@@ -495,7 +495,7 @@
                 });
               } else {
                 for (let i = 0; i < allItems.length; i++) {
-                  src += ` <div class="right-item-main">
+                  src += ` <a class="right-item-main" href="${allItems[i].link}">
                   <div class="right-item-img">
                     <img
                       src="${allItems[i].img}"
@@ -507,7 +507,7 @@
                     <div class="line"></div>
                     <h3>${allItems[i].title}</h3>
                   </div>
-                </div>`;
+                </a>`;
                 }
                 $(".right-item").empty().append(src);
                 src = "";

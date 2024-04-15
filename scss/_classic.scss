@@ -454,12 +454,13 @@
   }
   .right-item-main {
     width: 100%;
-    margin-top: 13vw;
+    text-decoration: none;
   }
   .right-item-img {
     width: 100%;
     display: block;
     text-decoration: none;
+    margin-top: 13vw;
   }
   .right-item-para {
     display: flex;
@@ -484,6 +485,9 @@
     }
     @include tablet {
       margin-top: 2vw;
+      h3 {
+        color: #000000;
+      }
     }
   }
 

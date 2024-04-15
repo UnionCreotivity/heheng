@@ -6186,12 +6186,13 @@
 }
 #classic .right-item-main {
   width: 100%;
-  margin-top: 13vw;
+  text-decoration: none;
 }
 #classic .right-item-img {
   width: 100%;
   display: block;
   text-decoration: none;
+  margin-top: 13vw;
 }
 #classic .right-item-para {
   display: flex;
@@ -6261,6 +6262,9 @@
 @media all and (max-width: 1024px) {
   #classic .right-item-para {
     margin-top: 2vw;
+  }
+  #classic .right-item-para h3 {
+    color: #000000;
   }
 }
 #classic .cut-1-left-para-first-h1 {
