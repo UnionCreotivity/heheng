@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"); //英文字型
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap"); //日期
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap"); //Roboto
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"); //Montserrat
 @import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"); //swiper css
 @import url("../css/hamburgers.css");
 
@@ -12,6 +13,7 @@ $serif: "Noto Serif TC", serif; //明體
 $cor: "Cormorant Garamond", serif; //英文字型
 $jost: "Jost", sans-serif; //日期
 $micro: "Microsoft JhengHei"; //微軟正黑體
+$mon: "Montserrat", sans-serif;
 
 //字型大小 電腦版
 $mainTitle: 3.5vw; //主標
@@ -19,7 +21,7 @@ $subTitle: 1.3vw;
 $contentSize: 0.9vw; //內文
 
 //字型大小 平板
-$mainTitlePH: 8.75vw; //主標
+$mainTitleTb: 8.75vw; //主標
 $subTitleTb: 4.5vw;
 $contentSizeTb: 2.75vw; //內文
 
