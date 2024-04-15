@@ -5029,11 +5029,16 @@
 #last-news .cut-2 {
   position: relative;
   margin-bottom: 14vw;
-  margin-top: -19.5vw;
+  margin-top: -19.8vw;
 }
 @media screen and (max-width: 1920px) {
   #last-news .cut-2 {
     margin-top: -19.8vw;
+  }
+}
+@media screen and (max-width: 1366px) {
+  #last-news .cut-2 {
+    margin-top: -21.6vw;
   }
 }
 @media all and (max-width: 1024px) {
