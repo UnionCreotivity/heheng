@@ -15,6 +15,6 @@ loading(".loading-progress");
 $(window).on("load", function () {
   console.log("loading");
   gsap.to(".loading-page", {
-    opacity: 0,
+    opacity: 1,
   });
 });

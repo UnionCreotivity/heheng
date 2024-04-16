@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
 @import url("../css/hamburgers.css");
@@ -7360,57 +7360,50 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 3.25vw;
+  width: 8vw;
   position: relative;
 }
 @media all and (max-width: 1024px) {
   .box {
-    width: 16%;
+    width: 30%;
   }
 }
 
 .box-loading {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
-  font-size: 1.75vw;
-  letter-spacing: 2px;
-  color: #878787;
+  font-family: "roboto";
+  font-weight: 300;
+  font-size: 40px;
+  color: #967659;
   margin-top: 1vw;
 }
 @media all and (max-width: 1024px) {
   .box-loading {
-    font-size: 7vw;
-    margin-top: 3vw;
+    font-size: 25px;
+    margin-top: 5vw;
   }
 }
 
 .box-img {
-  width: 3.75vw;
+  width: 2.5vw;
   position: relative;
 }
 .box-img .box-img-para {
   position: absolute;
   width: 4vw;
-  font-family: "Cormorant Garamond", serif;
-  color: #967659;
+  font-family: "roboto";
+  color: #878787;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
 }
 @media all and (max-width: 1024px) {
   .box-img {
-    width: 14vw;
-  }
-  .box-img .box-img-para {
-    width: 12.5vw;
+    width: 10vw;
   }
 }
 @media all and (max-width: 500px) {
   .box-img {
-    width: 14vw;
-  }
-  .box-img .box-img-para {
-    width: 12.5vw;
+    width: 10vw;
   }
 }
 
@@ -7421,7 +7414,7 @@ section {
   width: 100%;
   height: 1px;
   border: none;
-  background-color: #878787;
+  background-color: #967659;
   float: right;
 }
 
@@ -7455,22 +7448,13 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5vw;
-  font-weight: 600;
-  font-family: "Noto Serif TC", serif;
-  letter-spacing: 2px;
-  color: #967659;
+  font-size: 60px;
+  font-family: "roboto";
+  color: #878787;
   margin-top: -10px;
-  margin-top: 0.25vw;
 }
 @media all and (max-width: 1024px) {
   .box-para {
-    margin-top: 1vw;
-    font-size: 7vw;
-  }
-}
-@media all and (max-width: 500px) {
-  .box-para {
-    font-size: 7vw;
+    font-size: 40px;
   }
 }/*# sourceMappingURL=all.css.map */
