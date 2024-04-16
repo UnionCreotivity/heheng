@@ -3221,7 +3221,7 @@
   #history .cut-2-swiper-nav-line {
     width: 100%;
     margin-top: 30vw;
-    margin-bottom: 10vw;
+    margin-bottom: 20vw;
   }
 }
 #history .cut-2-swiper-button-prev {
@@ -3231,7 +3231,8 @@
 @media all and (max-width: 1024px) {
   #history .cut-2-swiper-button-prev {
     width: 8vw;
-    left: 0vw;
+    left: 13vw;
+    top: 15vw;
     z-index: 10;
     background-color: white;
   }
@@ -3243,7 +3244,8 @@
 @media all and (max-width: 1024px) {
   #history .cut-2-swiper-button-next {
     width: 8vw;
-    right: 0vw;
+    right: 13vw;
+    top: 15vw;
     background-color: white;
     z-index: 10;
   }
