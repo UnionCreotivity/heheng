@@ -90,7 +90,11 @@ $(window).on("load", function () {
   }
 
   function svgTwoCircle() {
-    const svgAnimationS = gsap.timeline({ repeat: -1, ease: "linear" });
+    const svgAnimationS = gsap.timeline({
+      repeat: -1,
+      ease: "linear",
+      delay: 0.5,
+    });
     svgAnimationS
       .to("#light-02", {
         motionPath: {
@@ -98,7 +102,7 @@ $(window).on("load", function () {
           align: "#scroll_ball_path_g2",
           alignOrigin: [0.5, 0.5],
           start: 0,
-          end: 0.2,
+          end: 0.1,
         },
         transformOrigin: "50% 50%",
         duration: 1,
@@ -109,8 +113,8 @@ $(window).on("load", function () {
           path: "#scroll_ball_path_g2",
           align: "#scroll_ball_path_g2",
           alignOrigin: [0.5, 0.5],
-          start: 0.2,
-          end: 0.4,
+          start: 0.1,
+          end: 0.3,
         },
         transformOrigin: "50% 50%",
         duration: 3,
@@ -121,8 +125,8 @@ $(window).on("load", function () {
           path: "#scroll_ball_path_g2",
           align: "#scroll_ball_path_g2",
           alignOrigin: [0.5, 0.5],
-          start: 0.4,
-          end: 0.6,
+          start: 0.3,
+          end: 0.5,
         },
         transformOrigin: "50% 50%",
         duration: 1.5,
@@ -133,8 +137,8 @@ $(window).on("load", function () {
           path: "#scroll_ball_path_g2",
           align: "#scroll_ball_path_g2",
           alignOrigin: [0.5, 0.5],
-          start: 0.6,
-          end: 0.7,
+          start: 0.5,
+          end: 0.6,
         },
         transformOrigin: "50% 50%",
         duration: 0.5,
@@ -145,7 +149,7 @@ $(window).on("load", function () {
           path: "#scroll_ball_path_g2",
           align: "#scroll_ball_path_g2",
           alignOrigin: [0.5, 0.5],
-          start: 0.7,
+          start: 0.6,
           end: 0.8,
         },
         transformOrigin: "50% 50%",
@@ -173,13 +177,17 @@ $(window).on("load", function () {
           end: 1,
         },
         transformOrigin: "50% 50%",
-        duration: 1,
+        duration: 2,
         ease: "linear",
       });
   }
 
   function svgThreeCircle() {
-    const svgAnimationT = gsap.timeline({ repeat: -1, ease: "linear" });
+    const svgAnimationT = gsap.timeline({
+      repeat: -1,
+      ease: "linear",
+      delay: 0.5,
+    });
     svgAnimationT
       .to("#light-03", {
         motionPath: {
@@ -187,7 +195,7 @@ $(window).on("load", function () {
           align: "#scroll_ball_path_g3",
           alignOrigin: [0.5, 0.5],
           start: 0,
-          end: 0.2,
+          end: 0.1,
         },
         transformOrigin: "50% 50%",
         duration: 1,
@@ -198,11 +206,11 @@ $(window).on("load", function () {
           path: "#scroll_ball_path_g3",
           align: "#scroll_ball_path_g3",
           alignOrigin: [0.5, 0.5],
-          start: 0.2,
+          start: 0.1,
           end: 0.3,
         },
         transformOrigin: "50% 50%",
-        duration: 2,
+        duration: 3,
         ease: "linear",
       })
       .to("#light-03", {
@@ -211,7 +219,7 @@ $(window).on("load", function () {
           align: "#scroll_ball_path_g3",
           alignOrigin: [0.5, 0.5],
           start: 0.3,
-          end: 0.4,
+          end: 0.5,
         },
         transformOrigin: "50% 50%",
         duration: 1.5,
@@ -222,11 +230,11 @@ $(window).on("load", function () {
           path: "#scroll_ball_path_g3",
           align: "#scroll_ball_path_g3",
           alignOrigin: [0.5, 0.5],
-          start: 0.4,
+          start: 0.5,
           end: 0.6,
         },
         transformOrigin: "50% 50%",
-        duration: 3,
+        duration: 0.5,
         ease: "linear",
       })
       .to("#light-03", {

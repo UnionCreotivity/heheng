@@ -402,14 +402,27 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 5vw;
+  width: 3.25vw;
   position: relative;
   @include tablet {
-    width: 100%;
+    width: 16%;
+  }
+}
+.box-loading {
+  font-family: $cor;
+  font-weight: 400;
+  font-size: 1.75vw;
+  letter-spacing: 2px;
+  color: #878787;
+  margin-top: 1vw;
+  @include tablet {
+    font-size: 7vw;
+    margin-top: 3vw;
   }
 }
 .box-img {
-  width: 10vw;
+  width: 3.75vw;
+  // width: 10vw;
   position: relative;
   .box-img-para {
     position: absolute;
@@ -421,19 +434,29 @@ section {
     left: 50%;
   }
   @include tablet {
-    width: 30vw;
+    width: 14vw;
     .box-img-para {
       width: 12.5vw;
     }
   }
   @include mobile {
-    width: 30vw;
+    width: 14vw;
     .box-img-para {
       width: 12.5vw;
     }
   }
 }
 
+.box-hr {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #878787;
+  float: right;
+}
 .loading-logo {
   animation: logoScale 2.5s linear infinite;
 }
@@ -466,13 +489,17 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 1.5vw;
+  font-weight: 600;
+  font-family: $serif;
   letter-spacing: 2px;
-  color: rgb(128, 127, 129);
+  color: #967659;
+  margin-top: -10px;
+  margin-top: 0.25vw;
   @include tablet {
-    margin-top: 3vw;
-    font-size: 6vw;
+    margin-top: 1vw;
+    font-size: 7vw;
   }
   @include mobile {
-    font-size: 6vw;
+    font-size: 7vw;
   }
 }

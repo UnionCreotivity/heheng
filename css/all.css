@@ -1062,7 +1062,8 @@
   }
   #home .cut-4-para h1,
   #home .cut-4-para h3 {
-    width: auto;
+    width: 100%;
+    text-align: center;
   }
   #home .cut-4-para p {
     width: 100%;
@@ -1578,6 +1579,7 @@
   align-items: center;
   width: 100%;
   line-height: 2;
+  --linkleft: -105%;
 }
 #origin .cut-2-link a {
   position: relative;
@@ -1588,22 +1590,26 @@
   font-family: "Noto Serif TC", serif;
   width: 90%;
   padding: 0vw 1vw;
+  overflow: hidden;
 }
 #origin .cut-2-link a::after {
   content: "";
   position: absolute;
-  width: 0%;
+  width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
+  left: var(--linkleft);
+  top: 0%;
   z-index: -1;
-  transition: all 1s;
+  transition: all 0.5s;
+  background-color: #918781;
 }
 #origin .cut-2-link a > :nth-child(1) {
   color: #756861;
+  transition: all 0.5s;
 }
 #origin .cut-2-link a > :nth-child(2) {
   color: #c6935c;
+  transition: all 0.5s;
 }
 #origin .cut-2-link a h3 {
   font-size: 1vw;
@@ -1635,15 +1641,16 @@
   }
 }
 #origin .cut-2-link:hover a::after {
-  width: 100%;
-  transition: all 1s;
-  background-color: #918781;
+  left: 0%;
+  transition: all 0.5s;
 }
 #origin .cut-2-link:hover a > :nth-child(1) {
   color: #ffffff;
+  transition: all 0.5s;
 }
 #origin .cut-2-link:hover a > :nth-child(2) {
   color: #e5d5c1;
+  transition: all 0.5s;
 }
 @media all and (max-width: 1024px) {
   #origin .cut-2-link:hover a::after {
@@ -1973,6 +1980,7 @@
   align-items: center;
   top: 22vw;
   width: 100%;
+  z-index: -1;
 }
 @media all and (max-width: 1024px) {
   #origin .cut-2-right-people-line {
@@ -2454,6 +2462,7 @@
   align-items: center;
   width: 100%;
   line-height: 2;
+  --linkleft: -105%;
 }
 #history .cut-2-link a {
   position: relative;
@@ -2464,22 +2473,28 @@
   font-family: "Noto Serif TC", serif;
   width: 90%;
   padding: 0vw 1vw;
+  overflow: hidden;
 }
 #history .cut-2-link a::after {
   content: "";
   position: absolute;
-  width: 0%;
+  width: 100%;
   height: 100%;
   left: 0;
   top: 0;
+  left: var(--linkleft);
   z-index: -1;
   transition: all 1s;
+  transition: all 0.5s;
+  background-color: #918781;
 }
 #history .cut-2-link a > :nth-child(1) {
   color: #756861;
+  transition: all 0.5s;
 }
 #history .cut-2-link a > :nth-child(2) {
   color: #c6935c;
+  transition: all 0.5s;
 }
 #history .cut-2-link a h3 {
   font-size: 1vw;
@@ -2509,9 +2524,8 @@
   }
 }
 #history .cut-2-link:hover a::after {
-  width: 100%;
-  transition: all 1s;
-  background-color: #918781;
+  left: 0%;
+  transition: all 0.5s;
 }
 #history .cut-2-link:hover a > :nth-child(1) {
   color: #ffffff;
@@ -6209,10 +6223,23 @@
   color: #c6935c;
   padding: 0.25vw 1vw;
   transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+  --dateLeft: -105%;
 }
 #classic .date-picker p {
   font-family: "Noto Serif TC", serif;
   font-size: 0.8vw;
+}
+#classic .date-picker .date-color-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -105%;
+  background-color: rgb(145, 135, 129);
+  transition: all 0.5s;
+  z-index: -1;
 }
 #classic .date-picker .date-picker-line {
   width: 2vw;
@@ -6236,8 +6263,11 @@
   }
 }
 #classic .date-picker:hover {
-  background-color: #918781;
   color: white;
+  transition: all 0.5s;
+}
+#classic .date-picker:hover .date-color-box {
+  left: 0%;
   transition: all 0.5s;
 }
 #classic .date-picker:hover .date-picker-line {
@@ -7331,17 +7361,32 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 5vw;
+  width: 3.25vw;
   position: relative;
 }
 @media all and (max-width: 1024px) {
   .box {
-    width: 100%;
+    width: 16%;
+  }
+}
+
+.box-loading {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 1.75vw;
+  letter-spacing: 2px;
+  color: #878787;
+  margin-top: 1vw;
+}
+@media all and (max-width: 1024px) {
+  .box-loading {
+    font-size: 7vw;
+    margin-top: 3vw;
   }
 }
 
 .box-img {
-  width: 10vw;
+  width: 3.75vw;
   position: relative;
 }
 .box-img .box-img-para {
@@ -7355,7 +7400,7 @@ section {
 }
 @media all and (max-width: 1024px) {
   .box-img {
-    width: 30vw;
+    width: 14vw;
   }
   .box-img .box-img-para {
     width: 12.5vw;
@@ -7363,11 +7408,22 @@ section {
 }
 @media all and (max-width: 500px) {
   .box-img {
-    width: 30vw;
+    width: 14vw;
   }
   .box-img .box-img-para {
     width: 12.5vw;
   }
+}
+
+.box-hr {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #878787;
+  float: right;
 }
 
 .loading-logo {
@@ -7401,17 +7457,21 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 1.5vw;
+  font-weight: 600;
+  font-family: "Noto Serif TC", serif;
   letter-spacing: 2px;
-  color: rgb(128, 127, 129);
+  color: #967659;
+  margin-top: -10px;
+  margin-top: 0.25vw;
 }
 @media all and (max-width: 1024px) {
   .box-para {
-    margin-top: 3vw;
-    font-size: 6vw;
+    margin-top: 1vw;
+    font-size: 7vw;
   }
 }
 @media all and (max-width: 500px) {
   .box-para {
-    font-size: 6vw;
+    font-size: 7vw;
   }
 }/*# sourceMappingURL=all.css.map */

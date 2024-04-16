@@ -10,19 +10,26 @@
     <div class="loading-page">
       <div class="box">
         <div class="box-img">
-          <div class="box-img-para">
+          <!-- <div class="box-img-para">
             <img src="./img/share/2x/hen@2x.png" alt="hen" />
           </div>
           <img
             class="loading-logo"
             src="./img/share/loading-logo02.svg"
             alt="logo02"
+          /> -->
+          <img
+            class="loading-logo-test"
+            src="./img/share/loading-logo.svg"
+            alt=""
           />
         </div>
+        <div class="box-loading">Loading</div>
         <div class="box-para">
           <div class="loading-progress">0</div>
           <span>%</span>
         </div>
+        <hr class="box-hr" />
       </div>
     </div>
     <nav id="nav"></nav>
@@ -54,21 +61,27 @@
         </div>
         <div class="cut-1-right">
           <div class="cut-1-right-date-picker">
-            <div class="date-picker date-picker-all" data-value="all">ALL</div>
+            <div class="date-picker date-picker-all" data-value="all">
+              ALL
+              <div class="date-color-box"></div>
+            </div>
             <div class="date-picker date-picker-first" data-value="first">
               <p class="date-picker-date">2024</p>
               <div class="date-picker-line"></div>
               <p class="date-picker-date">2021</p>
+              <div class="date-color-box"></div>
             </div>
             <div class="date-picker date-picker-second" data-value="second">
               <p class="date-picker-date">2020</p>
               <div class="date-picker-line"></div>
               <p class="date-picker-date">2011</p>
+              <div class="date-color-box"></div>
             </div>
             <div class="date-picker date-picker-third" data-value="third">
               <p class="date-picker-date">2010</p>
               <div class="date-picker-line"></div>
               <p class="date-picker-date">2006</p>
+              <div class="date-color-box"></div>
             </div>
           </div>
           <div class="cut-1-right-item-container">
@@ -438,14 +451,15 @@
           const value = $(this).data("value");
           if (!value) return;
           //顏色清除
+
+          $(".date-color-box").css("left", "");
           $(".date-picker").css("color", "");
-          $(".date-picker").css("background-color", "");
           $(".date-picker")
             .children(".date-picker-line")
             .css("background-color", "");
 
           //顏色添加
-          $(this).css("background-color", "#918781");
+          $(this).find(".date-color-box").css("left", "0");
           $(this).css("color", "white");
           $(this)
             .children(".date-picker-line")
