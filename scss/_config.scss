@@ -21,8 +21,8 @@ $subTitle: 1.3vw;
 $contentSize: 0.9vw; //內文
 
 //字型大小 平板
-$mainTitleTb: 8.75vw; //主標
-$subTitleTb: 4.5vw;
+$mainTitleTb: 7.75vw; //主標
+$subTitleTb: 3.5vw;
 $contentSizeTb: 2.75vw; //內文
 
 //字型大小 手機版
@@ -76,6 +76,24 @@ $contentSizePH: 3.75vw; //內文
     margin-bottom: 3vw;
   }
   @include tablet {
+    h1 {
+      font-size: $mainTitleTb;
+    }
+    h3 {
+      font-size: $subTitleTb;
+      margin-bottom: 5vw;
+    }
+    p {
+      font-size: $contentSizeTb;
+      line-height: 1.8;
+    }
+    .line {
+      width: 12vw;
+      margin-top: 6vw;
+      margin-bottom: 6vw;
+    }
+  }
+  @include mobile {
     h1 {
       font-size: $mainTitlePH;
     }

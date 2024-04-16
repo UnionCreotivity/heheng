@@ -91,6 +91,13 @@ section {
   @include tablet {
     padding-left: 7vw;
     padding-right: 5vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    background-color: white;
+  }
+  @include tablet {
+    padding-left: 7vw;
+    padding-right: 5vw;
     padding-top: 4vw;
     padding-bottom: 4vw;
     background-color: white;
@@ -99,6 +106,9 @@ section {
 .nav-left-icon {
   width: 6vw;
   @include tablet {
+    width: 15vw;
+  }
+  @include mobile {
     width: 20vw;
   }
 }
@@ -145,14 +155,29 @@ section {
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 2.75vw;
+      font-weight: 400;
+      color: white;
+    }
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    > :last-child {
+      &::after {
+        content: unset;
+      }
+    }
+  }
+  @include mobile {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 3.75vw;
       font-weight: 400;
       color: white;
-      > span:nth-child(1) {
-        // width: 40%;
-      }
     }
-    // display: none;
     width: 100%;
     height: 100vh;
     justify-content: flex-start;
@@ -185,6 +210,22 @@ section {
   }
   @include tablet {
     padding-left: 10vw;
+    margin-top: 8vw;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    &::before {
+      content: "";
+      width: 70%;
+      height: 1px;
+      left: 22%;
+      transform: unset;
+      top: 150%;
+      background-color: white;
+    }
+  }
+  @include mobile {
+    padding-left: 10vw;
     margin-top: 13vw;
     margin-left: 0;
     margin-right: 0;
@@ -204,6 +245,12 @@ section {
   font-size: 3vw;
   letter-spacing: 2px;
   color: #aaaaaa;
+  @include tablet {
+    font-size: 2.5vw;
+  }
+  @include mobile {
+    font-size: 3vw;
+  }
 }
 .nav-right-list-item-line {
   width: 1px;
@@ -218,6 +265,12 @@ section {
   color: #cebb93;
   margin-right: 3%;
   letter-spacing: 2px;
+  @include tablet {
+    font-size: 4vw;
+  }
+  @include mobile {
+    font-size: 5vw;
+  }
 }
 .nav-bottom {
   display: flex;
@@ -236,6 +289,24 @@ section {
     font-family: $micro;
     color: white;
     line-height: 1.8;
+  }
+  @include tablet {
+    width: 80%;
+    .nav-bottom-line {
+      margin-top: 30vw;
+    }
+    span {
+      font-size: 2.5vw;
+    }
+  }
+  @include mobile {
+    width: auto;
+    .nav-bottom-line {
+      margin-top: 40vw;
+    }
+    span {
+      font-size: 3vw;
+    }
   }
 }
 .nav-hamb-icon {
@@ -405,6 +476,9 @@ section {
   width: 7.5vw;
   position: relative;
   @include tablet {
+    width: 20%;
+  }
+  @include mobile {
     width: 30%;
   }
 }
@@ -415,6 +489,10 @@ section {
   color: #967659;
   margin-top: 1vw;
   @include tablet {
+    font-size: 25px;
+    margin-top: 2vw;
+  }
+  @include mobile {
     font-size: 25px;
     margin-top: 5vw;
   }
@@ -433,7 +511,7 @@ section {
     left: 50%;
   }
   @include tablet {
-    width: 10vw;
+    width: 6vw;
   }
   @include mobile {
     width: 10vw;

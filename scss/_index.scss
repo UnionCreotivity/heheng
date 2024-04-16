@@ -907,6 +907,11 @@
     bottom: 0;
     right: 0;
     @include tablet {
+      width: 60vw;
+      margin-bottom: -36vw;
+    }
+    @include mobile {
+      width: 80vw;
       margin-bottom: -45vw;
     }
   }
