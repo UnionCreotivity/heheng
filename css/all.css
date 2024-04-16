@@ -7360,7 +7360,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 8vw;
+  width: 7.5vw;
   position: relative;
 }
 @media all and (max-width: 1024px) {
