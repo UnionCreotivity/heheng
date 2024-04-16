@@ -348,6 +348,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 15vw;
 }
 
 .hamburger-inner,
@@ -476,10 +477,11 @@ section {
   width: 7.5vw;
   position: relative;
   @include tablet {
+    margin-top: -15%;
     width: 20%;
   }
   @include mobile {
-    width: 30%;
+    width: 20%;
   }
 }
 .box-loading {
@@ -489,12 +491,12 @@ section {
   color: #967659;
   margin-top: 1vw;
   @include tablet {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 2vw;
   }
   @include mobile {
-    font-size: 25px;
-    margin-top: 5vw;
+    font-size: 20px;
+    margin-top: 3vw;
   }
 }
 .box-img {
@@ -514,7 +516,7 @@ section {
     width: 6vw;
   }
   @include mobile {
-    width: 10vw;
+    width: 8vw;
   }
 }
 
@@ -565,6 +567,6 @@ section {
   margin-top: -10px;
   font-weight: 500;
   @include tablet {
-    font-size: 40px;
+    font-size: 32px;
   }
 }

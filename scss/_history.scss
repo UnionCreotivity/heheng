@@ -259,6 +259,26 @@
     @include tablet {
       position: relative;
       flex-direction: row;
+      width: 75%;
+      gap: 8vw;
+      padding-left: 0%;
+      top: unset;
+      > .cut-2-link:nth-child(1) {
+        position: relative;
+        width: 95%;
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: black;
+          width: 1px;
+          height: 60%;
+          right: -11%;
+        }
+      }
+    }
+    @include mobile {
+      position: relative;
+      flex-direction: row;
       width: 85%;
       gap: 8vw;
       padding-left: 0%;
@@ -336,8 +356,30 @@
           letter-spacing: 1px;
         }
         h3 {
+          font-size: $contentSizeTb;
+          font-weight: 400;
+        }
+      }
+    }
+    @include mobile {
+      width: 100%;
+      margin-left: 0;
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 0vw;
+        width: 100%;
+        justify-content: space-between;
+
+        > :nth-child(2) {
+          letter-spacing: 1px;
+        }
+        h3 {
           font-size: $contentSizePH;
           font-weight: 400;
+          color: #19191a;
         }
       }
     }
@@ -417,6 +459,37 @@
         display: block;
       }
       h1 {
+        font-size: 5vw;
+        color: #19191a;
+        margin-top: 12vw;
+        margin-bottom: 5vw;
+      }
+      h3 {
+        font-size: 3vw;
+        text-align: center;
+        order: 1;
+        margin-bottom: 0vw;
+        color: #19191a;
+      }
+      .line {
+        margin-bottom: 7vw;
+        margin-top: 7vw;
+        order: 2;
+      }
+      p {
+        text-align: start;
+        order: 3;
+        br {
+          display: none;
+        }
+      }
+    }
+    @include mobile {
+      width: 100%;
+      br {
+        display: block;
+      }
+      h1 {
         font-size: 6vw;
         color: #19191a;
         margin-top: 12vw;
@@ -463,7 +536,7 @@
     position: relative;
     margin-top: 10vw;
     @include tablet {
-      width: 70%;
+      width: 100%;
       margin-top: 30vw;
       margin-bottom: 10vw;
     }
@@ -473,7 +546,9 @@
     left: -2.75vw;
     @include tablet {
       width: 8vw;
-      left: -12vw;
+      left: 0vw;
+      z-index: 10;
+      background-color: white;
     }
   }
   .cut-2-swiper-button-next {
@@ -481,7 +556,9 @@
     right: -2.75vw;
     @include tablet {
       width: 8vw;
-      right: -12vw;
+      right: 0vw;
+      background-color: white;
+      z-index: 10;
     }
   }
 

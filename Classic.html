@@ -431,19 +431,35 @@
 
         //方塊滑行動畫
         function slideAnimation(selector, xVal) {
-          $(selector).each(function () {
-            let thisId = $(this)[0].id;
-            gsap.from(`#${thisId}`, {
-              scrollTrigger: {
-                trigger: `#${thisId}`,
-                toggleActions: "play none none none",
-                start: "center 75%",
-              },
-              opacity: 0,
-              x: `${xVal}%`,
-              duration: 2,
+          if (window.innerWidth > 1024) {
+            $(selector).each(function () {
+              let thisId = $(this)[0].id;
+              gsap.from(`#${thisId}`, {
+                scrollTrigger: {
+                  trigger: `#${thisId}`,
+                  toggleActions: "play none none none",
+                  start: "center 75%",
+                },
+                opacity: 0,
+                x: `${xVal}%`,
+                duration: 2,
+              });
             });
-          });
+          } else {
+            $(selector).each(function () {
+              let thisId = $(this)[0].id;
+              gsap.from(`#${thisId}`, {
+                scrollTrigger: {
+                  trigger: `#${thisId}`,
+                  toggleActions: "play none none none",
+                  start: "top 75%",
+                },
+                opacity: 0,
+                x: `${xVal}%`,
+                duration: 2,
+              });
+            });
+          }
         }
 
         //撈資料

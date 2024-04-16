@@ -2880,6 +2880,28 @@
   #history .cut-2-left {
     position: relative;
     flex-direction: row;
+    width: 75%;
+    gap: 8vw;
+    padding-left: 0%;
+    top: unset;
+  }
+  #history .cut-2-left > .cut-2-link:nth-child(1) {
+    position: relative;
+    width: 95%;
+  }
+  #history .cut-2-left > .cut-2-link:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    height: 60%;
+    right: -11%;
+  }
+}
+@media all and (max-width: 500px) {
+  #history .cut-2-left {
+    position: relative;
+    flex-direction: row;
     width: 85%;
     gap: 8vw;
     padding-left: 0%;
@@ -2960,8 +2982,31 @@
     letter-spacing: 1px;
   }
   #history .cut-2-link a h3 {
+    font-size: 2.75vw;
+    font-weight: 400;
+  }
+}
+@media all and (max-width: 500px) {
+  #history .cut-2-link {
+    width: 100%;
+    margin-left: 0;
+  }
+  #history .cut-2-link a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0vw;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #history .cut-2-link a > :nth-child(2) {
+    letter-spacing: 1px;
+  }
+  #history .cut-2-link a h3 {
     font-size: 3.75vw;
     font-weight: 400;
+    color: #19191a;
   }
 }
 #history .cut-2-link:hover a::after {
@@ -3098,6 +3143,39 @@
     display: block;
   }
   #history .cut-2-right-top-para h1 {
+    font-size: 5vw;
+    color: #19191a;
+    margin-top: 12vw;
+    margin-bottom: 5vw;
+  }
+  #history .cut-2-right-top-para h3 {
+    font-size: 3vw;
+    text-align: center;
+    order: 1;
+    margin-bottom: 0vw;
+    color: #19191a;
+  }
+  #history .cut-2-right-top-para .line {
+    margin-bottom: 7vw;
+    margin-top: 7vw;
+    order: 2;
+  }
+  #history .cut-2-right-top-para p {
+    text-align: start;
+    order: 3;
+  }
+  #history .cut-2-right-top-para p br {
+    display: none;
+  }
+}
+@media all and (max-width: 500px) {
+  #history .cut-2-right-top-para {
+    width: 100%;
+  }
+  #history .cut-2-right-top-para br {
+    display: block;
+  }
+  #history .cut-2-right-top-para h1 {
     font-size: 6vw;
     color: #19191a;
     margin-top: 12vw;
@@ -3141,7 +3219,7 @@
 }
 @media all and (max-width: 1024px) {
   #history .cut-2-swiper-nav-line {
-    width: 70%;
+    width: 100%;
     margin-top: 30vw;
     margin-bottom: 10vw;
   }
@@ -3153,7 +3231,9 @@
 @media all and (max-width: 1024px) {
   #history .cut-2-swiper-button-prev {
     width: 8vw;
-    left: -12vw;
+    left: 0vw;
+    z-index: 10;
+    background-color: white;
   }
 }
 #history .cut-2-swiper-button-next {
@@ -3163,7 +3243,9 @@
 @media all and (max-width: 1024px) {
   #history .cut-2-swiper-button-next {
     width: 8vw;
-    right: -12vw;
+    right: 0vw;
+    background-color: white;
+    z-index: 10;
   }
 }
 #history .swiper-pagination {
@@ -8045,6 +8127,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 15vw;
 }
 
 .hamburger-inner,
@@ -8170,12 +8253,13 @@ section {
 }
 @media all and (max-width: 1024px) {
   .box {
+    margin-top: -15%;
     width: 20%;
   }
 }
 @media all and (max-width: 500px) {
   .box {
-    width: 30%;
+    width: 20%;
   }
 }
 
@@ -8188,14 +8272,14 @@ section {
 }
 @media all and (max-width: 1024px) {
   .box-loading {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 2vw;
   }
 }
 @media all and (max-width: 500px) {
   .box-loading {
-    font-size: 25px;
-    margin-top: 5vw;
+    font-size: 20px;
+    margin-top: 3vw;
   }
 }
 
@@ -8219,7 +8303,7 @@ section {
 }
 @media all and (max-width: 500px) {
   .box-img {
-    width: 10vw;
+    width: 8vw;
   }
 }
 
@@ -8272,6 +8356,6 @@ section {
 }
 @media all and (max-width: 1024px) {
   .box-para {
-    font-size: 40px;
+    font-size: 32px;
   }
 }/*# sourceMappingURL=all.css.map */
