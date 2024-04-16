@@ -325,22 +325,22 @@
         gsap.registerPlugin(ScrollTrigger, SplitText);
 
         //日期選擇防呆
-        $("#date-from-select").on("change", function () {
-          const fromDate = $("#date-from-select").val();
-          const toDate = $("#date-from-to").val();
-          if (fromDate >= toDate) {
-            let plus = Number(fromDate) + 1;
-            $("#date-from-to").val(`${plus}`).change();
-          }
-        });
-        $("#date-from-to").on("change", function () {
-          const fromDate = $("#date-from-select").val();
-          const toDate = $("#date-from-to").val();
-          if (fromDate >= toDate) {
-            let minus = Number(toDate) - 1;
-            $("#date-from-select").val(`${minus}`).change();
-          }
-        });
+        // $("#date-from-select").on("change", function () {
+        //   const fromDate = $("#date-from-select").val();
+        //   const toDate = $("#date-from-to").val();
+        //   if (fromDate >= toDate) {
+        //     let plus = Number(fromDate) + 1;
+        //     $("#date-from-to").val(`${plus}`).change();
+        //   }
+        // });
+        // $("#date-from-to").on("change", function () {
+        //   const fromDate = $("#date-from-select").val();
+        //   const toDate = $("#date-from-to").val();
+        //   if (fromDate >= toDate) {
+        //     let minus = Number(toDate) - 1;
+        //     $("#date-from-select").val(`${minus}`).change();
+        //   }
+        // });
 
         //動畫延遲
         function addDelay(tag, tag1, tag2) {
@@ -420,8 +420,6 @@
         function slideAnimation(selector, xVal) {
           $(selector).each(function () {
             let thisId = $(this)[0].id;
-            console.log($(this));
-
             gsap.from(`#${thisId}`, {
               scrollTrigger: {
                 trigger: `#${thisId}`,
@@ -438,12 +436,22 @@
         //撈資料
         $(".date-picker").on("click", function () {
           const value = $(this).data("value");
-          $(".date-picker").css("color", "");
           if (!value) return;
-          $(this).css("color", "#cfb38e");
+          //顏色清除
+          $(".date-picker").css("color", "");
+          $(".date-picker").css("background-color", "");
+          $(".date-picker")
+            .children(".date-picker-line")
+            .css("background-color", "");
+
+          //顏色添加
+          $(this).css("background-color", "#918781");
+          $(this).css("color", "white");
           $(this)
             .children(".date-picker-line")
-            .css("background-color", "#cfb38e");
+            .css("background-color", "white");
+
+          //撈資料
           $.ajax({
             url: "./js/classic.json",
             type: "GET",
@@ -469,7 +477,7 @@
 
               let src = "";
               let count = 0;
-              console.log(value);
+
               if (window.innerWidth > 1024) {
                 classicSwiper.removeAllSlides(); //刪除全部的swiper-slide
                 for (let i = 0; i < dataLength; i++) {

@@ -94,7 +94,7 @@
 @media all and (max-width: 1024px) {
   #home .cut-1-para-first {
     margin-right: 0%;
-    margin-top: -15%;
+    margin-top: 0%;
   }
 }
 #home .cut-1-para-first-container {
@@ -248,9 +248,9 @@
   filter: blur(10px);
 }
 #home .cut-1-para-third-text h3 {
-  font-family: "Montserrat", sans-serif;
   font-size: 1vw;
   font-weight: 500;
+  font-family: "Cormorant Garamond", serif;
   color: #666666;
   padding-right: 4vw;
 }
@@ -275,6 +275,7 @@
     width: 100%;
   }
   #home .cut-1-para-third-text h3 {
+    font-family: "Montserrat", sans-serif;
     font-size: 2.5vw;
     line-height: 1.5;
     padding-right: 0vw;
@@ -1579,14 +1580,24 @@
   line-height: 2;
 }
 #origin .cut-2-link a {
+  position: relative;
   display: flex;
   align-items: center;
   text-decoration: none;
   gap: 1vw;
   font-family: "Noto Serif TC", serif;
-  transition: all 1s;
   width: 90%;
   padding: 0vw 1vw;
+}
+#origin .cut-2-link a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 1s;
 }
 #origin .cut-2-link a > :nth-child(1) {
   color: #756861;
@@ -1606,10 +1617,11 @@
     margin-left: 0;
   }
   #origin .cut-2-link a {
+    position: relative;
     display: flex;
     align-items: center;
     text-decoration: none;
-    gap: 2vw;
+    gap: 0vw;
     width: 100%;
     justify-content: space-between;
   }
@@ -1622,7 +1634,8 @@
     color: #19191a;
   }
 }
-#origin .cut-2-link:hover a {
+#origin .cut-2-link:hover a::after {
+  width: 100%;
   transition: all 1s;
   background-color: #918781;
 }
@@ -1631,6 +1644,17 @@
 }
 #origin .cut-2-link:hover a > :nth-child(2) {
   color: #e5d5c1;
+}
+@media all and (max-width: 1024px) {
+  #origin .cut-2-link:hover a::after {
+    width: 0%;
+  }
+  #origin .cut-2-link:hover a > :nth-child(1) {
+    color: #756861;
+  }
+  #origin .cut-2-link:hover a > :nth-child(2) {
+    color: #c6935c;
+  }
 }
 #origin .cut-2-right {
   display: flex;
@@ -2432,6 +2456,7 @@
   line-height: 2;
 }
 #history .cut-2-link a {
+  position: relative;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -2439,6 +2464,16 @@
   font-family: "Noto Serif TC", serif;
   width: 90%;
   padding: 0vw 1vw;
+}
+#history .cut-2-link a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 1s;
 }
 #history .cut-2-link a > :nth-child(1) {
   color: #756861;
@@ -2461,7 +2496,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    gap: 2vw;
+    gap: 0vw;
     width: 100%;
     justify-content: space-between;
   }
@@ -2473,7 +2508,8 @@
     font-weight: 400;
   }
 }
-#history .cut-2-link:hover a {
+#history .cut-2-link:hover a::after {
+  width: 100%;
   transition: all 1s;
   background-color: #918781;
 }
@@ -2482,6 +2518,17 @@
 }
 #history .cut-2-link:hover a > :nth-child(2) {
   color: #e5d5c1;
+}
+@media all and (max-width: 1024px) {
+  #history .cut-2-link:hover a::after {
+    width: 0%;
+  }
+  #history .cut-2-link:hover a > :nth-child(1) {
+    color: #756861;
+  }
+  #history .cut-2-link:hover a > :nth-child(2) {
+    color: #c6935c;
+  }
 }
 #history .cut-2-right {
   display: flex;
@@ -2695,6 +2742,7 @@
   }
   #history .cut-2-swiper-pagination-main .cut-2-swiper-pagination-main-circle {
     width: 3vw !important;
+    height: 3vw !important;
   }
 }
 #history .pagination-inactive:hover h4 {
@@ -2710,13 +2758,35 @@
 }
 #history .pagination-inactive:hover .light-circle {
   transition: all 1s;
-  transform: scale(3);
+  animation: circleInfinite 1.5s infinite linear;
   opacity: 0;
   pointer-events: none;
 }
 @media all and (max-width: 1024px) {
   #history .pagination-inactive:hover .light-circle {
     display: none;
+  }
+}
+@keyframes circleInfinite {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(0.75);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scale(2.25);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
   }
 }
 #history .pagination-active .light-circle {
@@ -2727,7 +2797,10 @@
 }
 @media all and (max-width: 1024px) {
   #history .pagination-active .light-circle {
-    transform: scale(2);
+    transform: unset;
+    animation: unset;
+    width: 20vw;
+    top: -4vw;
   }
 }
 @keyframes littleCircle {
@@ -6119,7 +6192,7 @@
 }
 @media all and (max-width: 1024px) {
   #classic .cut-1-right-date-picker {
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 10vw;
     flex-wrap: wrap;
@@ -6133,6 +6206,9 @@
   font-size: 0.8vw;
   letter-spacing: 2px;
   cursor: pointer;
+  color: #cfb38e;
+  padding: 0.25vw 1vw;
+  transition: all 0.5s;
 }
 #classic .date-picker p {
   font-family: "Noto Serif TC", serif;
@@ -6143,7 +6219,8 @@
   height: 1px;
   margin: 0 0.5vw;
   margin-top: 0.1vw;
-  background-color: black;
+  background-color: #cfb38e;
+  transition: all 0.5s;
 }
 @media all and (max-width: 1024px) {
   #classic .date-picker {
@@ -6157,6 +6234,15 @@
     margin: 0 2vw;
     margin-top: 0.5vw;
   }
+}
+#classic .date-picker:hover {
+  background-color: #918781;
+  color: white;
+  transition: all 0.5s;
+}
+#classic .date-picker:hover .date-picker-line {
+  background-color: white;
+  transition: all 0.5s;
 }
 #classic .date-picker-time {
   display: flex;
@@ -6204,7 +6290,7 @@
   width: 100%;
   height: 74vh;
   overflow: hidden;
-  margin-top: 1.6vw;
+  margin-top: 1.4vw;
 }
 @media screen and (max-width: 1920px) {
   #classic .cut-1-right-item-container {
@@ -7293,12 +7379,20 @@ section {
     transform: scale(0.6);
     opacity: 1;
   }
+  25% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
   50% {
-    transform: scale(0.8);
+    transform: scale(1.4);
     opacity: 0.5;
   }
+  75% {
+    transform: scale(1.8);
+    opacity: 0.25;
+  }
   100% {
-    transform: scale(1);
+    transform: scale(2.2);
     opacity: 0;
   }
 }
@@ -7307,7 +7401,6 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 1.5vw;
-  margin-top: 1vw;
   letter-spacing: 2px;
   color: rgb(128, 127, 129);
 }

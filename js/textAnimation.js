@@ -173,7 +173,7 @@ $(window).on("load", function () {
           end: 1,
         },
         transformOrigin: "50% 50%",
-        duration: 2,
+        duration: 1,
         ease: "linear",
       });
   }

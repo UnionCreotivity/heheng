@@ -256,14 +256,24 @@
     width: 100%;
     line-height: 2;
     a {
+      position: relative;
       display: flex;
       align-items: center;
       text-decoration: none;
       gap: 1vw;
       font-family: $serif;
-      transition: all 1s;
       width: 90%;
       padding: 0vw 1vw;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: all 1s;
+      }
       > :nth-child(1) {
         color: #756861;
       }
@@ -281,12 +291,14 @@
       width: 100%;
       margin-left: 0;
       a {
+        position: relative;
         display: flex;
         align-items: center;
         text-decoration: none;
-        gap: 2vw;
+        gap: 0vw;
         width: 100%;
         justify-content: space-between;
+
         > :nth-child(2) {
           letter-spacing: 1px;
         }
@@ -301,13 +313,29 @@
   //側邊滑鼠經過變色
   .cut-2-link:hover {
     a {
-      transition: all 1s;
-      background-color: #918781;
+      &::after {
+        width: 100%;
+        transition: all 1s;
+        background-color: #918781;
+      }
       > :nth-child(1) {
         color: #ffffff;
       }
       > :nth-child(2) {
         color: #e5d5c1;
+      }
+    }
+    @include tablet {
+      a {
+        &::after {
+          width: 0%;
+        }
+        > :nth-child(1) {
+          color: #756861;
+        }
+        > :nth-child(2) {
+          color: #c6935c;
+        }
       }
     }
   }

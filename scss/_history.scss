@@ -246,6 +246,7 @@
     width: 100%;
     line-height: 2;
     a {
+      position: relative;
       display: flex;
       align-items: center;
       text-decoration: none;
@@ -253,6 +254,16 @@
       font-family: $serif;
       width: 90%;
       padding: 0vw 1vw;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: all 1s;
+      }
       > :nth-child(1) {
         color: #756861;
       }
@@ -273,7 +284,7 @@
         display: flex;
         align-items: center;
         text-decoration: none;
-        gap: 2vw;
+        gap: 0vw;
         width: 100%;
         justify-content: space-between;
         > :nth-child(2) {
@@ -289,13 +300,29 @@
   //側邊滑鼠經過變色
   .cut-2-link:hover {
     a {
-      transition: all 1s;
-      background-color: #918781;
+      &::after {
+        width: 100%;
+        transition: all 1s;
+        background-color: #918781;
+      }
       > :nth-child(1) {
         color: #ffffff;
       }
       > :nth-child(2) {
         color: #e5d5c1;
+      }
+    }
+    @include tablet {
+      a {
+        &::after {
+          width: 0%;
+        }
+        > :nth-child(1) {
+          color: #756861;
+        }
+        > :nth-child(2) {
+          color: #c6935c;
+        }
       }
     }
   }
@@ -460,6 +487,7 @@
       }
       .cut-2-swiper-pagination-main-circle {
         width: 3vw !important;
+        height: 3vw !important;
       }
     }
   }
@@ -478,7 +506,8 @@
     }
     .light-circle {
       transition: all 1s;
-      transform: scale(3);
+      // transform: scale(3);
+      animation: circleInfinite 1.5s infinite linear;
       opacity: 0;
       pointer-events: none;
       @include tablet {
@@ -486,7 +515,28 @@
       }
     }
   }
-
+  @keyframes circleInfinite {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    25% {
+      transform: scale(0.75);
+      opacity: 0.75;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+    75% {
+      transform: scale(2.25);
+      opacity: 0.25;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
   //小圓圈無限轉圈
   .pagination-active {
     .light-circle {
@@ -495,7 +545,10 @@
       pointer-events: none;
       animation: littleCircle 10s linear infinite;
       @include tablet {
-        transform: scale(2);
+        transform: unset;
+        animation: unset;
+        width: 20vw;
+        top: -4vw;
       }
     }
   }
