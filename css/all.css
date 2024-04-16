@@ -7450,8 +7450,9 @@ section {
   justify-content: center;
   font-size: 60px;
   font-family: "roboto";
-  color: #878787;
+  color: #7b6c5f;
   margin-top: -10px;
+  font-weight: 500;
 }
 @media all and (max-width: 1024px) {
   .box-para {
