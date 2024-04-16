@@ -739,8 +739,7 @@
         gsap.registerPlugin(ScrollTrigger, SplitText);
 
         const navHeight = $("#nav").outerHeight();
-        console.log(-navHeight);
-        console.log($(".cut-1-para-first").css("marginTop", -navHeight));
+        $(".cut-1-para-first").css("marginTop", -navHeight);
         //輪播設定
         const cut3Swiper = new Swiper(".cut-3-swiper-container", {
           navigation: {
