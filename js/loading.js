@@ -6,7 +6,6 @@ function loading(tag) {
   let timeRun = setInterval(() => {
     test = parse++;
     $(tag).text(test);
-    $(".box-hr").css("width", `${test}%`);
     if (test == 99) clearInterval(timeRun);
   }, 50);
 }

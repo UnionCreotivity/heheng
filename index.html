@@ -10,28 +10,10 @@
   </head>
   <body>
     <div class="loading-page">
-      <div class="box">
-        <div class="box-img">
-          <!-- <div class="box-img-para">
-            <img src="./img/share/2x/hen@2x.png" alt="hen" />
-          </div>
-          <img
-            class="loading-logo"
-            src="./img/share/loading-logo02.svg"
-            alt="logo02"
-          /> -->
-          <img
-            class="loading-logo-test"
-            src="./img/share/loading-logo.svg"
-            alt=""
-          />
-        </div>
-        <div class="box-loading">loading</div>
         <div class="box-para">
           <div class="loading-progress">0</div>
           <span>%</span>
         </div>
-        <hr class="box-hr" />
       </div>
     </div>
     <nav id="nav"></nav>
@@ -1178,7 +1160,7 @@
             "<+0.4"
           );
 
-        let cut5Ymove = window.innerWidth <= 1024 ? "10vw" : "5vw";
+        let cut5Ymove = window.innerWidth <= 1024 ? "15vw" : "5vw";
         const cut5ImgTop = gsap.from(".cut-5-img2", {
           scrollTrigger: {
             trigger: ".cut-5",

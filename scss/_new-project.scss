@@ -64,6 +64,13 @@
       }
     }
     @include tablet {
+      width: 90%;
+      img {
+        width: 50%;
+        height: auto;
+      }
+    }
+    @include mobile {
       width: 100%;
       img {
         width: 50%;
@@ -98,6 +105,20 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      margin-top: 22%;
+      margin-left: 0;
+      padding-left: 4vw;
+      h1 {
+        font-size: 12vw;
+      }
+    }
+    @include mobile {
+      writing-mode: unset;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       margin-top: 27%;
       margin-left: 0;
       padding-left: 4vw;
@@ -113,24 +134,29 @@
     line-height: 1;
     gap: 1vw;
     @include tablet {
+      width: 63%;
+      gap: 0vw;
+      margin-left: 13vw;
+      padding-right: 5vw;
+      h4 {
+        position: relative;
+        font-size: 4.5vw;
+        width: auto;
+        letter-spacing: 5px;
+        margin-right: 0;
+      }
+    }
+    @include mobile {
       width: 71%;
       gap: 0vw;
       margin-left: 13vw;
+      padding-right: 0vw;
       h4 {
         position: relative;
         font-size: 5.5vw;
         width: auto;
         letter-spacing: 5px;
         margin-right: 0;
-        // &::after {
-        //   content: "";
-        //   position: absolute;
-        //   bottom: -20%;
-        //   height: 1px;
-        //   width: 90%;
-        //   background-color: black;
-        //   left: 0;
-        // }
       }
     }
   }
@@ -152,6 +178,17 @@
     align-items: center;
     justify-content: space-between;
     @include tablet {
+      width: 60%;
+      gap: 0vw;
+      margin-left: 10vw;
+      > h4 {
+        position: relative;
+        font-size: 5.5vw;
+        width: 100%;
+        padding-bottom: 1vw;
+      }
+    }
+    @include mobile {
       width: 65%;
       gap: 0vw;
       margin-left: 10vw;
@@ -174,6 +211,15 @@
       position: relative;
       background-color: black;
       margin-top: 3vw;
+      margin-right: 3vw;
+    }
+    @include mobile {
+      width: 100%;
+      height: 1px;
+      position: relative;
+      background-color: black;
+      margin-top: 3vw;
+      margin-right: 0vw;
     }
   }
   .cut-1-right {
@@ -200,6 +246,11 @@
     gap: 3vw;
     z-index: 1;
     @include tablet {
+      width: 75%;
+      margin-top: 12vw;
+      margin-bottom: 0vw;
+    }
+    @include mobile {
       width: 85%;
       margin-top: 12vw;
       margin-bottom: 0vw;
@@ -271,6 +322,38 @@
     }
     transition: all 0.75s;
     @include tablet {
+      align-items: flex-start;
+      opacity: 1;
+      position: relative;
+      color: black;
+      background-color: transparent;
+      h3 {
+        width: 100%;
+        font-size: $subTitleTb;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+        span {
+          color: #666666;
+          margin-left: 3vw;
+          margin-right: 3vw;
+          font-size: 3.5vw;
+        }
+      }
+      p {
+        font-size: 2.5vw;
+        color: #666666;
+        margin-bottom: 0;
+        margin-top: 1vw;
+      }
+      a {
+        font-size: $contentSizeTb;
+        padding: 1vw 5vw;
+        margin-bottom: 4vw;
+      }
+    }
+    @include mobile {
       align-items: flex-start;
       opacity: 1;
       position: relative;

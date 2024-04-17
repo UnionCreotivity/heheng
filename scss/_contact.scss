@@ -45,6 +45,25 @@
       margin-left: 0;
       padding-left: 0vw;
       h1 {
+        font-size: 12vw;
+      }
+      h4 {
+        font-size: $subTitleTb;
+        padding-bottom: 3vw;
+        letter-spacing: 3px;
+      }
+    }
+    @include mobile {
+      writing-mode: unset;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 22%;
+      margin-left: 0;
+      padding-left: 0vw;
+      h1 {
         font-size: 14vw;
       }
       h4 {
@@ -62,6 +81,12 @@
     gap: 1vw;
     width: 100%;
     @include tablet {
+      width: 60%;
+      gap: 0vw;
+      margin-left: 0vw;
+      justify-content: space-between;
+    }
+    @include mobile {
       width: 65%;
       gap: 0vw;
       margin-left: 0vw;
@@ -89,41 +114,21 @@
     h4 {
       position: relative;
       margin-top: 3vw;
-
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   bottom: -70%;
-      //   height: 1px;
-      //   width: 96%;
-      //   background-color: black;
-      //   left: 0;
-      // }
     }
     h1 {
       line-height: 0.8;
     }
     @include tablet {
+      width: 56%;
+      gap: 3vw;
+      margin-left: 0vw;
+      align-items: baseline;
+    }
+    @include mobile {
       width: 61%;
       gap: 3vw;
       margin-left: 0vw;
       align-items: baseline;
-      // > h4 {
-      //   position: relative;
-      //   font-size: 5.5vw;
-      //   width: 100%;
-      //   padding-bottom: 3vw;
-      //   font-weight: 500;
-      //   // &::after {
-      //   //   content: "";
-      //   //   position: absolute;
-      //   //   bottom: -30%;
-      //   //   height: 1px;
-      //   //   width: 143%;
-      //   //   background-color: black;
-      //   //   left: 0;
-      //   // }
-      // }
     }
   }
   .cut-1-para-second-left {
@@ -208,6 +213,10 @@
     width: 80%;
     margin: 0 auto;
     @include tablet {
+      width: 75%;
+      margin-top: 15vw;
+    }
+    @include mobile {
       width: 85%;
       margin-top: 15vw;
     }
@@ -225,6 +234,11 @@
     padding-bottom: 8vw;
     @include tablet {
       flex-direction: column-reverse;
+      width: 75%;
+      padding-bottom: 0vw;
+    }
+    @include mobile {
+      flex-direction: column-reverse;
       width: 85%;
       padding-bottom: 0vw;
     }
@@ -238,7 +252,7 @@
   }
 
   .cut-3-right {
-    width: 50%;
+    width: 45%;
     h3 {
       font-family: $serif;
       font-size: $subTitle;
@@ -293,6 +307,28 @@
     }
     @include tablet {
       label {
+        font-size: $contentSizeTb;
+        font-family: $serif;
+        text-align-last: justify;
+        width: 12%;
+        font-weight: 600;
+      }
+      input {
+        border: none;
+        font-size: $contentSizeTb;
+        font-family: $serif;
+        width: 70%;
+      }
+      textarea {
+        border: none;
+        resize: none;
+        font-size: $contentSizeTb;
+        font-family: $serif;
+        width: 100%;
+      }
+    }
+    @include mobile {
+      label {
         font-size: $contentSizePH;
         font-family: $serif;
         text-align-last: justify;
@@ -335,6 +371,12 @@
     cursor: pointer;
     letter-spacing: 2px;
     @include tablet {
+      font-size: $contentSizeTb;
+      padding: 1.5vw 11vw;
+      margin-top: 8vw;
+      margin-bottom: 8vw;
+    }
+    @include mobile {
       font-size: $contentSizePH;
       padding: 2vw 15vw;
       margin-top: 8vw;

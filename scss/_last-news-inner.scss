@@ -30,6 +30,23 @@
       font-size: 3vw;
     }
     @include tablet {
+      width: 75%;
+      margin-top: 20vw;
+      margin-bottom: 7vw;
+      justify-content: center;
+      h1 {
+        font-size: $mainTitleTb;
+      }
+      h3 {
+        font-size: $subTitleTb;
+      }
+      span {
+        font-size: 4.75vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+      }
+    }
+    @include mobile {
       width: 85%;
       margin-top: 20vw;
       margin-bottom: 7vw;
@@ -51,6 +68,9 @@
     position: relative;
     width: 80%;
     @include tablet {
+      width: 75%;
+    }
+    @include mobile {
       width: 85%;
     }
   }
@@ -70,6 +90,10 @@
     margin: 0 auto;
     margin-top: 4vw;
     @include tablet {
+      width: 75%;
+      margin-top: 7vw;
+    }
+    @include mobile {
       width: 85%;
       margin-top: 7vw;
     }
@@ -92,6 +116,21 @@
       margin-bottom: 4vw;
     }
     @include tablet {
+      h3 {
+        font-size: $subTitleTb;
+        text-align: center;
+      }
+      h1 {
+        font-size: $subTitleTb;
+        text-align: center;
+      }
+      .line {
+        margin: 0 auto;
+        margin-top: 6vw;
+        margin-bottom: 6vw;
+      }
+    }
+    @include mobile {
       h3 {
         font-size: $subTitlePH;
         text-align: center;
@@ -146,6 +185,13 @@
       font-family: $serif;
     }
     @include tablet {
+      width: 75%;
+      h3 {
+        text-align: center;
+        line-height: 1.8;
+      }
+    }
+    @include mobile {
       width: 85%;
       h3 {
         text-align: center;
@@ -160,6 +206,13 @@
     margin-top: 3vw;
     @include para();
     @include tablet {
+      width: 75%;
+      margin-top: 10vw;
+      h3 {
+        text-align: center;
+      }
+    }
+    @include mobile {
       width: 85%;
       margin-top: 10vw;
       h3 {
@@ -202,6 +255,14 @@
       z-index: 10;
     }
     @include tablet {
+      margin-top: 15vw;
+      margin-bottom: -10vw;
+      button {
+        font-size: $contentSizeTb;
+        padding: 1.5vw 11vw;
+      }
+    }
+    @include mobile {
       margin-top: 15vw;
       margin-bottom: -10vw;
       button {

@@ -39,11 +39,14 @@
       width: 29vw;
     }
     @include tablet {
-      width: 100%;
+      width: 90%;
       img {
         width: 50%;
         height: auto;
       }
+    }
+    @include mobile {
+      width: 100%;
     }
   }
   .cut-1-left-para {
@@ -73,6 +76,20 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      margin-top: 22%;
+      margin-left: 0;
+      padding-left: 4vw;
+      h1 {
+        font-size: 12vw;
+      }
+    }
+    @include mobile {
+      writing-mode: unset;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       margin-top: 27%;
       margin-left: 0;
       padding-left: 4vw;
@@ -89,6 +106,19 @@
     gap: 1vw;
     @include tablet {
       justify-content: space-between;
+      width: 60%;
+      gap: 0vw;
+      margin-left: 10vw;
+      h4 {
+        position: relative;
+        font-size: 4.5vw;
+        letter-spacing: 3px;
+        margin-right: 0;
+        width: 45%;
+      }
+    }
+    @include mobile {
+      justify-content: space-between;
       width: 65%;
       gap: 0vw;
       margin-left: 10vw;
@@ -98,15 +128,6 @@
         letter-spacing: 3px;
         margin-right: 0;
         width: 45%;
-        // &::after {
-        //   content: "";
-        //   position: absolute;
-        //   bottom: -30%;
-        //   height: 1px;
-        //   width: 100%;
-        //   background-color: black;
-        //   left: 0;
-        // }
       }
     }
   }
@@ -165,6 +186,17 @@
     justify-content: space-between;
     gap: 1vw;
     @include tablet {
+      width: 60%;
+      gap: 0vw;
+      margin-left: 10vw;
+      > h4 {
+        position: relative;
+        font-size: 4.5vw;
+        width: 100%;
+        padding-bottom: 1vw;
+      }
+    }
+    @include mobile {
       width: 65%;
       gap: 0vw;
       margin-left: 10vw;
@@ -269,6 +301,9 @@
     flex-direction: column;
     width: 70%;
     @include tablet {
+      width: 75%;
+    }
+    @include mobile {
       width: 85%;
     }
   }
@@ -449,6 +484,9 @@
     font-size: $subTitle;
     color: #999999;
     @include tablet {
+      font-size: $subTitleTb;
+    }
+    @include mobile {
       font-size: $subTitlePH;
     }
   }
@@ -459,6 +497,10 @@
     margin-top: 1vw;
     letter-spacing: 2px;
     @include tablet {
+      font-size: $subTitleTb;
+      margin-top: 4vw;
+    }
+    @include mobile {
       font-size: $subTitlePH;
       margin-top: 4vw;
     }

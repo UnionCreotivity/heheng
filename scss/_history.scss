@@ -540,14 +540,26 @@
       margin-top: 30vw;
       margin-bottom: 20vw;
     }
+    @include mobile {
+      width: 100%;
+      margin-top: 30vw;
+      margin-bottom: 25vw;
+    }
   }
   .cut-2-swiper-button-prev {
     width: 2vw;
     left: -2.75vw;
     @include tablet {
       width: 8vw;
-      left: 13vw;
-      top: 15vw;
+      left: 14vw;
+      top: 17vw;
+      z-index: 10;
+      background-color: white;
+    }
+    @include mobile {
+      width: 10vw;
+      left: 12vw;
+      top: 20vw;
       z-index: 10;
       background-color: white;
     }
@@ -557,8 +569,15 @@
     right: -2.75vw;
     @include tablet {
       width: 8vw;
-      right: 13vw;
-      top: 15vw;
+      right: 14vw;
+      top: 17vw;
+      background-color: white;
+      z-index: 10;
+    }
+    @include mobile {
+      width: 10vw;
+      right: 12vw;
+      top: 20vw;
       background-color: white;
       z-index: 10;
     }
@@ -605,12 +624,24 @@
     }
     @include tablet {
       h4 {
+        font-size: 2.75vw !important;
+        margin-bottom: 2vw !important;
+      }
+      .cut-2-swiper-pagination-main-circle {
+        width: 2vw !important;
+        height: 2vw !important;
+        margin-bottom: 0.5vw;
+      }
+    }
+    @include mobile {
+      h4 {
         font-size: 3.75vw !important;
         margin-bottom: 2vw !important;
       }
       .cut-2-swiper-pagination-main-circle {
         width: 3vw !important;
         height: 3vw !important;
+        margin-bottom: 0vw;
       }
     }
   }
@@ -670,8 +701,14 @@
       @include tablet {
         transform: unset;
         animation: unset;
-        width: 20vw;
-        top: -4vw;
+        width: 23vw;
+        top: -6vw;
+      }
+      @include mobile {
+        transform: unset;
+        animation: unset;
+        width: 27vw;
+        top: -7vw;
       }
     }
   }
@@ -765,15 +802,26 @@
     @include tablet {
       z-index: 1;
       background-color: white;
+      width: 11vw;
+      height: 11vw;
+      border-radius: 50%;
+      border: 1px solid #a37e57;
+      h2 {
+        font-size: 3.5vw;
+      }
+      h5 {
+        display: none;
+      }
+    }
+    @include mobile {
+      z-index: 1;
+      background-color: white;
       width: 15vw;
       height: 15vw;
       border-radius: 50%;
       border: 1px solid #a37e57;
       h2 {
         font-size: 4.5vw;
-      }
-      h5 {
-        display: none;
       }
     }
   }
@@ -973,6 +1021,9 @@
     cursor: pointer;
     text-decoration: none;
     @include tablet {
+      width: 11vw;
+    }
+    @include mobile {
       width: 15vw;
     }
   }

@@ -46,6 +46,23 @@
       margin-bottom: 7vw;
       justify-content: center;
       h3 {
+        font-size: $subTitleTb;
+      }
+      h1 {
+        font-size: 7.75vw;
+      }
+      span {
+        font-size: 3.75vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+      }
+    }
+    @include mobile {
+      width: 85%;
+      margin-top: 20vw;
+      margin-bottom: 7vw;
+      justify-content: center;
+      h3 {
         font-size: $subTitlePH;
       }
       h1 {
@@ -61,6 +78,9 @@
   .cut-1-big-pic {
     width: 80%;
     @include tablet {
+      width: 75%;
+    }
+    @include mobile {
       width: 85%;
     }
   }
@@ -76,6 +96,10 @@
     justify-content: space-between;
     margin-top: 6vw;
     @include tablet {
+      width: 75%;
+      flex-direction: column-reverse;
+    }
+    @include mobile {
       width: 85%;
       flex-direction: column-reverse;
     }
@@ -136,6 +160,21 @@
       margin-bottom: 1vw;
     }
     @include tablet {
+      align-items: center;
+      margin-bottom: 7vw;
+      h1 {
+        font-size: $subTitleTb;
+        font-weight: 600;
+        margin-bottom: 2vw;
+      }
+      h2 {
+        font-size: 3vw;
+      }
+      .line {
+        margin-bottom: 7vw;
+      }
+    }
+    @include mobile {
       align-items: center;
       margin-bottom: 7vw;
       h1 {
@@ -270,6 +309,13 @@
       align-items: flex-start;
       line-height: 1.5;
       p {
+        font-size: $contentSizeTb;
+      }
+    }
+    @include mobile {
+      align-items: flex-start;
+      line-height: 1.5;
+      p {
         font-size: $contentSizePH;
       }
     }
@@ -320,6 +366,10 @@
     margin-top: 7vw;
     @include tablet {
       flex-direction: column-reverse;
+      width: 75%;
+    }
+    @include mobile {
+      flex-direction: column-reverse;
       width: 85%;
     }
   }
@@ -339,6 +389,13 @@
       font-size: $subTitle;
     }
     @include tablet {
+      width: 100%;
+      h3 {
+        font-size: $contentSizeTb;
+        text-align: center;
+      }
+    }
+    @include mobile {
       width: 100%;
       h3 {
         font-size: $contentSizePH;
@@ -389,6 +446,27 @@
     }
     @include tablet {
       label {
+        font-size: $contentSizeTb;
+        font-family: $serif;
+        text-align-last: justify;
+        width: 12%;
+      }
+      input {
+        border: none;
+        font-size: $contentSizeTb;
+        font-family: $serif;
+        width: 70%;
+      }
+      textarea {
+        border: none;
+        resize: none;
+        font-size: $contentSizeTb;
+        font-family: $serif;
+        width: 100%;
+      }
+    }
+    @include mobile {
+      label {
         font-size: $contentSizePH;
         font-family: $serif;
         text-align-last: justify;
@@ -428,6 +506,12 @@
     border: none;
     cursor: pointer;
     @include tablet {
+      font-size: $contentSizeTb;
+      padding: 1vw 11vw;
+      margin-top: 8vw;
+      margin-bottom: 8vw;
+    }
+    @include mobile {
       font-size: $contentSizePH;
       padding: 1.5vw 15vw;
       margin-top: 8vw;
