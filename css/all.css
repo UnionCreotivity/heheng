@@ -4093,6 +4093,7 @@
 #new_project .cut-1-right-item-img {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 #new_project .cut-1-right-item-white {
   position: absolute;
