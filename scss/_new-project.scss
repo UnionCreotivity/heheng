@@ -270,6 +270,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    a {
+      display: block;
+      width: 100%;
+    }
   }
   .cut-1-right-item-white {
     position: absolute;

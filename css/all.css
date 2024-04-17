@@ -4095,6 +4095,10 @@
   overflow: hidden;
   width: 100%;
 }
+#new_project .cut-1-right-item-img a {
+  display: block;
+  width: 100%;
+}
 #new_project .cut-1-right-item-white {
   position: absolute;
   top: 0;
